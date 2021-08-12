@@ -46,7 +46,7 @@ class Login extends Controller {
 	public function logout() {
 		$session = session();
 		$session->destroy();
-		return redirect()->to('/');
+		return redirect()->to('/login');
 	}
 
 /*	public function data_row() {
