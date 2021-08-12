@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/assets/css/fancybox.min.css">
     <link rel="stylesheet" href="/assets/css/odometer.min.css">
     <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/stylee.css">
     <link rel="stylesheet" href="/assets/css/respon.css">
     <title>PT Crop Inspirasi Digital</title>

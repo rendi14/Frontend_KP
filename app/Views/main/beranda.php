@@ -13,8 +13,8 @@
 <section class="halaman2beranda">
     <div class="container">
         <div class="section-title">
-            <h2>Kenali ,Crop</h2>
-            <h2>Membangun Kecerdasan Bangsa</h2>
+            <!-- <h2>Kenali ,Crop</h2> -->
+            <h2>Crop Membangun Kecerdasan Bangsa</h2>
             <br>
             <a href="/" class="default-btn">Gabung</a>
         </div>
@@ -148,7 +148,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="project-start-image">
-                        <img src="/assets/img/background/project-start1.png" class="img-fluid animated" alt="image">
+                        <img src="/assets/img/background/student.png" class="img-fluid animated" alt="image">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -236,7 +236,7 @@
 
     <section class="portfolio-area pt-100 pb-70">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title-bgorange">
                 <h2>Layanan Yang di Berikan...</h2>
             </div>
         </div>
@@ -299,7 +299,6 @@
 <!-- halaman 8 home -->
 <div class="halaman8home">
     <div class="section-title pt-70">
-        <h1>Kenali ,Crop</h1>
         <h2>Membangun Kecerdasan Bangsa</h2>
         <br>
         <a href="/" class="default-btn-bgorange">Gabung</a>
@@ -400,13 +399,14 @@
 <!-- halaman 9 home -->
 <div class="halaman9home">
     <div class="section-title-bgorange ptb-70">
-        <h1>perjalanan
+        <h2>perjalanan
             Crop dalam membuat
-            dampak positif!</h1>
-        <h1></h1>
+            dampak positif!</h2>
+
         <br>
         <a href="/" class="default-btn-bgorange">Gabung</a>
     </div>
+
     <div class="animasiimg">
         <img src="/assets/img/background/bumi.png" class="img-fluid animated" alt="image">
     </div>
