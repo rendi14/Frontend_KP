@@ -18,4 +18,7 @@ class sidebarModel extends Model
 //     public function getSideOrder(){
 //         return $this->db->table('menu_admin')->orderBy('menu_kode', 'ASC');
 //    }
+	public function getUpdate($id) {
+		return $this->where(['menu_kode' => $id])->first();
+	}
 }
