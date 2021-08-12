@@ -75,7 +75,7 @@
 
                             <div class="option-item">
                                 <div class="admin">
-                                    <a href="/"><i class="bx bx-user"></i></a>
+                                    <a href="/login"><i class="bx bx-user"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                             </div>
                             <div class="option-item">
                                 <div class="admin">
-                                    <a href=""><i class="bx bx-user"></i></a>
+                                    <a href="/login"><i class="bx bx-user"></i></a>
                                 </div>
                             </div>
                         </div>
