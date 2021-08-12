@@ -1,0 +1,215 @@
+/*Button login dan registrasi*/
+.button-login{
+	width: 50% !important;
+/*	height: 50px !important;*/
+	background-color: #fd7e14 !important;
+	color: white !important;
+	font-weight: bold !important;
+	border:none !important;
+}
+
+.button-login-admin{
+  width: 500px !important;
+  height: 50px !important;
+  background-color: #fd7e14 !important;
+  color: white !important;
+  font-weight: bold !important;
+  border:none !important;
+}
+
+.button-login-profile{
+  width: 50% !important;
+/*  height: 50px !important;*/
+  background-color: #fd7e14 !important;
+  color: white !important;
+  font-weight: bold !important;
+  border:none !important;
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.button-search{
+  border-radius: 8px !important;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+	  font-size: 3.5rem;
+}
+}
+
+.button-login:hover{
+	background-color: #FF7F00; 
+	color: white;
+}
+
+.button{
+	margin-top: 50px;
+}
+
+.kembali{
+	margin-top: 50px;
+}
+
+/*Button dashboard*/
+.button-simpan{
+	width: 500px;
+	height: 50px;
+	background-color: #fd7e14;
+	color: white;
+	font-weight: bold;
+	border:none;
+	margin-top: -50px;
+}
+
+.button-simpan:hover{
+	background-color: #FF7F00; 
+	color: white;
+}
+
+
+
+/*Form data login dan registrasi*/
+
+.form-data{
+	border-radius: 20px !important;
+	font-size: 16px;
+}
+
+.span-register a{
+	color: #198754 ;
+	font-weight: bold;
+}
+
+.span-register a:hover{
+	color: #20c997;
+}
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+/*Background*/
+/*.background{
+	margin-left: 30px;
+}
+*/
+
+.background{
+	background-image: url('/gambar/background.jpg');
+	padding:50px;
+	margin-left: 44px;
+}
+.background-register{
+	margin-left: 30px;
+}
+
+
+.gambar-profile{
+	border-radius: 45px;
+	height: 100px;
+	width: 100px;
+}
+
+/*Dashboard*/
+.badan {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.logout{
+  color: black !important;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  /*background-color: rgba(0, 0, 0, .25);*/
+  /*box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);*/
+}
+
+.fw-bold{
+	font-weight: bold;
+}
+
+.bg-orange{
+	background-color: orangered;
+}
+
+
+.sidebar-divider{
+	background-color: transparent;
+}
+
+/*Mode Handphone*/
+@media (max-width: 767.98px) {
+	.form-data{
+		width: 100%;
+		font-size: 15px;
+		margin-left: 35px;
+	}
+
+	.button-login{
+		margin-top: -20px;
+	}
+
+	.background{
+		margin-left: 1;
+	}
+
+	.form-data{
+		margin-top: 15px;
+	}
+
+  .form-data-editDosen{
+    margin-top: 15px;
+    margin-left: 35px;
+  }
+
+
+  .btn-close-alerts{
+    margin-left: -1000px;
+  }
+
+  .font-size-prodi{
+  	font-size: 13px;
+  	text-align: justify;
+  }
+
+  .image-prodi{
+  	width: 300px;
+  	height: 150px;
+  }
+
+  .image-prodi-response{
+	  width: 200px;
+	  height: 100px;
+  }
+
+}
+
+
+/**/
