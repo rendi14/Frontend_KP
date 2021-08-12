@@ -35,6 +35,13 @@ $routes->get('/', 'Halaman::index');
 $routes->get('/TPMO', 'Halaman::gabungTPMO');
 $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
+$routes->get('/dashboard/', 'Dashboard::index', ['filter' => 'auth']);
+$routes->get('/dashboard/dataAdmin', 'Dashboard::dataAdmin', ['filter' => 'auth']);
+$routes->get('/dashboard/dataDosen', 'Dashboard::dataDosen', ['filter' => 'auth']);
+$routes->get('/dashboard/dataProdi', 'Dashboard::dataProdi', ['filter' => 'auth']);
+$routes->get('/dashboard/dataAkademik', 'Dashboard::dataAkademik', ['filter' => 'auth']);
+$routes->get('/MenuDashboard/', 'MenuDashboard::index', ['filter' => 'auth']);
+$routes->get('/MenuDashboard/tabelMenu', 'MenuDashboard::tabelMenu', ['filter' => 'auth']);
 
 /*
  * --------------------------------------------------------------------
