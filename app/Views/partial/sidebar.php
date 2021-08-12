@@ -8,7 +8,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
                 <div class="sidebar-brand-icon">
-                    <img src="/gambar/crop.ico" alt="" width="70" height="50">
+                    <img src="/gambar/crop.ico" alt="" width="70" height="40">
                 </div>
                 <div class="sidebar-brand-text mx-3">PT.CROP</div>
             </a>
