@@ -37,10 +37,10 @@ DELETE FROM `admin`;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
 INSERT INTO `admin` (`admin_user`, `admin_pass`, `admin_nama`, `admin_alamat`, `admin_telepon`, `admin_ip`, `admin_online`, `admin_level_kode`, `admin_status`) VALUES
 	('admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Bandung', '087820033395', '', 0, 1, 'A'),
-	('ali', '86318e52f5ed4801abe1d13d509443de', 'Ali Abdul Wahid', 'Bandung', '0871821110122', '', 0, 2, 'H'),
+	('ali', '86318e52f5ed4801abe1d13d509443de', 'Ali Abdul Wahid', 'Bandung', '0871821110122', '', 0, 3, 'H'),
 	('nava', '36025797b41dd0fb87797471600acb20', 'Nava Gia Ginasta', 'Cianjur', '087820033395', '', 0, 1, 'A'),
-	('navagigs', 'be57e32188a7320c4d1f252c8799c639', 'Nava Gia Ginasta', 'Cianjur', '087820033395', '', 0, 2, 'A'),
-	('op', '11d8c28a64490a987612f2332502467f', 'operator', '-', '-', '', 0, 2, 'A');
+	('navagigs', 'be57e32188a7320c4d1f252c8799c639', 'Nava Gia Ginasta', 'Cianjur', '087820033395', '', 0, 3, 'A'),
+	('op', '11d8c28a64490a987612f2332502467f', 'operator', '-', '-', '', 0, 3, 'A');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.admin_level
@@ -49,14 +49,15 @@ CREATE TABLE IF NOT EXISTS `admin_level` (
   `admin_level_nama` varchar(30) NOT NULL,
   `admin_level_status` char(1) NOT NULL,
   PRIMARY KEY (`admin_level_kode`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.admin_level: ~2 rows (approximately)
+-- Dumping data for table login_db.admin_level: ~3 rows (approximately)
 DELETE FROM `admin_level`;
 /*!40000 ALTER TABLE `admin_level` DISABLE KEYS */;
 INSERT INTO `admin_level` (`admin_level_kode`, `admin_level_nama`, `admin_level_status`) VALUES
-	(1, 'Administrator', 'A'),
-	(2, 'Operator', 'A');
+	(1, 'Superadmin', 'A'),
+	(2, 'Administrator', 'A'),
+	(3, 'Operator', 'A');
 /*!40000 ALTER TABLE `admin_level` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.agenda
@@ -772,23 +773,22 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `menu_urutan` int(11) NOT NULL,
   `menu_status` char(1) NOT NULL,
   PRIMARY KEY (`menu_kode`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=208 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.menu: ~10 rows (approximately)
 DELETE FROM `menu`;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`menu_kode`, `menu_nama`, `menu_deskripsi`, `menu_url`, `menu_site`, `menu_level`, `menu_subkode`, `menu_urutan`, `menu_status`) VALUES
-	(196, 'Data Dosen', 'fa-users', 'dashboard/dataDosen', 'A', '1', 4, 1, 'H'),
-	(197, 'Data Akademik', 'fa-clock', 'dashboard/dataAkademik', 'A', '1', 3, 2, 'A'),
+	(196, 'Data Dosen', 'fa-users', 'dashboard/dataDosen', 'A', '1', 4, 2, 'H'),
+	(197, 'Data Akademik', 'fa-clock', 'dashboard/dataAkademik', 'A', '1', 3, 1, 'A'),
 	(198, 'Data Prodi', 'fa-school', 'dashboard/dataProdi', 'A', '1', 2, 3, 'H'),
 	(199, 'Home', 'fa-home', '#', 'H', '1', 2, 1, 'H'),
 	(200, 'Agenda', 'fa-clipboard-list', 'agenda', 'A', '3', 0, 5, ''),
-	(201, 'Berita', 'fa-newspaper', 'dashboard/berita', 'A', '3', 0, 4, ''),
+	(201, 'Berita  ', 'fa-newspaper', 'dashboard/berita', 'A', '1', 0, 4, ''),
 	(202, 'Login', '', 'crop/login', 'H', '', 0, 10, ''),
-	(204, 'Data Dosen', 'fa-users', 'dashboard/dataDosen', 'A', '2', 0, 1, 'A'),
-	(205, 'Data Akademik', 'fa-clock', 'dashboard/dataAkademik', 'A', '2', 0, 2, 'A'),
-	(206, 'Data Prodi', 'fa-school', 'dashboard/dataProdi', 'A', '2', 0, 6, ''),
-	(207, 'Agenda', 'fa-clipboard-list', 'Agenda', 'A', '2', 0, 2, '');
+	(207, 'Agenda', 'fa-clipboard-list', 'Agenda', 'A', '2', 0, 2, ''),
+	(208, 'Sidebar', 'fa-arrow-left', 'dashboard/Agenda', 'H', '3', 0, 12, ''),
+	(211, 'Coba', 'fa-trash', 'www.facebook.coim', 'A', '1', 0, 6, '');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.menu_admin
@@ -798,11 +798,10 @@ CREATE TABLE IF NOT EXISTS `menu_admin` (
   `admin_level_kode` int(11) NOT NULL,
   PRIMARY KEY (`menu_admin_kode`) USING BTREE,
   KEY `menu_kode` (`menu_kode`) USING BTREE,
-  KEY `admin_level_kode` (`admin_level_kode`) USING BTREE,
-  CONSTRAINT `FK_menu_admin_menu` FOREIGN KEY (`menu_kode`) REFERENCES `menu` (`menu_kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=293 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+  KEY `admin_level_kode` (`admin_level_kode`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=314 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.menu_admin: ~5 rows (approximately)
+-- Dumping data for table login_db.menu_admin: ~10 rows (approximately)
 DELETE FROM `menu_admin`;
 /*!40000 ALTER TABLE `menu_admin` DISABLE KEYS */;
 INSERT INTO `menu_admin` (`menu_admin_kode`, `menu_kode`, `admin_level_kode`) VALUES
@@ -810,7 +809,12 @@ INSERT INTO `menu_admin` (`menu_admin_kode`, `menu_kode`, `admin_level_kode`) VA
 	(289, 197, 1),
 	(290, 198, 1),
 	(291, 200, 3),
-	(292, 201, 3);
+	(292, 201, 3),
+	(293, 197, 2),
+	(294, 196, 2),
+	(295, 198, 2),
+	(305, 207, 1),
+	(312, 201, 1);
 /*!40000 ALTER TABLE `menu_admin` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.menu_sidebar
@@ -1019,21 +1023,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_email` varchar(50) DEFAULT NULL,
   `user_password` varchar(200) DEFAULT NULL,
   `user_created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `user_level` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+  `admin_level_kode` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `admin_level_kode` (`admin_level_kode`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table login_db.users: ~4 rows (approximately)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`user_id`, `user_name`, `user_profile`, `user_email`, `user_password`, `user_created_at`, `user_level`) VALUES
-	(24, 'Anggito Achmad', 'profile.jpg', 'anggitoachmad21@gmail.com', '$2y$10$G7xWkB1khwFwkUj7GnZSkuYnAcqgHvYKEJPdyFLToE4SnI7Ufj0OW', '2021-07-26 07:27:14', '1'),
-	(32, 'Dimas', 'WIN_20181019_11_07_33_Pro.jpg', 'Dimas21@gmail.com', '$2y$10$k3.0DcQ9ZDGCMetHyXpsLuBermv.d/.m67bMbS77OxhNT.a1AlYli', '2021-07-30 03:33:00', '3'),
-	(35, 'Nina', '', NULL, '$2y$10$I95v4zZHNXyywo0RE55RmO6I8JmnyHD.8eqNmQoStsNUuEpGs0DLi', '2021-08-01 23:36:50', '3'),
-	(36, 'Ucut12', '', NULL, '$2y$10$vDdWlzu0b9BLpAajO2smnOXzu8XVv0QY.qJb3XPP4S8SkfxwGb75e', '2021-08-08 07:16:33', '2');
+INSERT INTO `users` (`user_id`, `user_name`, `user_profile`, `user_email`, `user_password`, `user_created_at`, `admin_level_kode`) VALUES
+	(24, 'Anggito Achmad', 'profile.jpg', 'anggitoachmad21@gmail.com', '$2y$10$G7xWkB1khwFwkUj7GnZSkuYnAcqgHvYKEJPdyFLToE4SnI7Ufj0OW', '2021-07-26 07:27:14', 1),
+	(32, 'Dimas', 'WIN_20181019_11_07_33_Pro.jpg', 'Dimas21@gmail.com', '$2y$10$k3.0DcQ9ZDGCMetHyXpsLuBermv.d/.m67bMbS77OxhNT.a1AlYli', '2021-07-30 03:33:00', 3),
+	(36, 'Ucut12', '', NULL, '$2y$10$vDdWlzu0b9BLpAajO2smnOXzu8XVv0QY.qJb3XPP4S8SkfxwGb75e', '2021-08-08 07:16:33', 2),
+	(39, 'Triana', '', NULL, '$2y$10$2cFFIZ1w.crIZgBd1AlxAenLZ29Ll4IvM5Dk8WvqV7p0Q1jdVmMvS', '2021-08-09 19:09:13', 3);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-menumenu
