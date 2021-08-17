@@ -86,7 +86,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                         <div class="icon-box1">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas2.png" alt="">
+                                <img src="/assets/img/iconcard/mahasiswa.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href=""> Mahasiswa Aktif 6.553</a></h4>
@@ -98,7 +98,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box2">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas3.png" alt="">
+                                <img src="/assets/img/iconcard/lulus.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Lulusan 22.392</a></h4>
@@ -110,7 +110,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box3">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas4.png" alt="">
+                                <img src="/assets/img/iconcard/gedung.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Gedung 26</a></h4>
@@ -122,7 +122,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box4">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas6.png" alt="">
+                                <img src="/assets/img/iconcard/luas.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Luas 5.5</a></h4>
@@ -174,7 +174,7 @@
 <!-- halamam 5 -->
 <div class="containerhalaman5home">
     <div class="bghalaman5home">
-        <img src="/assets/img/background/bghal4.jpg" alt="">
+        <img src="/assets/img/background/bghal4home.jpg" alt="">
     </div>
 
 </div>
@@ -186,40 +186,44 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-boxes-box">
                         <div class="icon">
-                            <i class="flaticon-research"></i>
+                            <!-- <i class="bx bx-car"></i> -->
+                            <img src="/assets/img/stiker/dr5.png" alt="">
                             <div class="circles-box">
                                 <div class="circle-one"></div>
                             </div>
                         </div>
                         <h3><a href="single-services.html">Prodi TPMO</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="/Halaman/TPMO" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-boxes-box">
                         <div class="icon">
-                            <i class="flaticon-speed"></i>
+                            <!-- <i class=""></i> -->
+                            <img src="/assets/img/stiker/dr2.png" alt="">
                             <div class="circles-box">
                                 <div class="circle-one"></div>
                             </div>
                         </div>
                         <h3><a href="single-services.html">Prodi TOPKR4</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
                     <div class="single-boxes-box">
                         <div class="icon">
-                            <i class="flaticon-email-marketing"></i>
+                            <!-- <i class="flaticon-programer"></i> -->
+
+                            <img src="/assets/img/stiker/dr7.png" alt="">
                             <div class="circles-box">
                                 <div class="circle-one"></div>
                             </div>
                         </div>
                         <h3><a href="single-services.html">Prodi Informatika</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
             </div>
@@ -237,7 +241,7 @@
     <section class="portfolio-area pt-100 pb-70">
         <div class="container">
             <div class="section-title-bgorange">
-                <h2>Layanan Yang di Berikan...</h2>
+                <h2>Berita Terkini Bersama Crop...</h2>
             </div>
         </div>
 
@@ -299,7 +303,7 @@
 <!-- halaman 8 home -->
 <div class="halaman8home">
     <div class="section-title pt-70">
-        <h2>Membangun Kecerdasan Bangsa</h2>
+        <h2>Fasilitas Yang disediakan</h2>
         <br>
         <a href="/" class="default-btn-bgorange">Gabung</a>
     </div>

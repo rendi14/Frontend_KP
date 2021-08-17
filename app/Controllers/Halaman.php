@@ -36,4 +36,12 @@ class Halaman extends BaseController
         echo view('main/TPMO');
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function visimisiTPMO()
+    {
+        echo view('layout/header');
+        echo view('main/visimisiTPMO');
+        echo view('layout/footer');
+    }
 }
