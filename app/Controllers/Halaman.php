@@ -44,4 +44,12 @@ class Halaman extends BaseController
         echo view('main/visimisiTPMO');
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function akademik()
+    {
+        echo view('layout/header');
+        echo view('main/akademik');
+        echo view('layout/footer');
+    }
 }

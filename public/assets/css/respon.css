@@ -51,6 +51,12 @@
   }
   /* end beranda hal 2 */
   /* beranda hal 3 */
+
+  .icon-boxes2 {
+    position: relative;
+    z-index: 100;
+    /* margin-left: 5%; */
+  }
   .halaman3beranda .icon-boxes2 {
     position: relative;
     z-index: 100;
@@ -105,6 +111,18 @@
   /* end beranda hal 5 */
 
   /* berandacard */
+
+  /* halamancardhome */
+  .containercardhome {
+    background-color: transparent;
+  }
+  .boxes-area {
+    margin-top: 180px;
+    position: relative;
+    z-index: 1;
+    /* margin-left: 200px; */
+    margin: 0% 0 0 0%;
+  }
 
   /* end beranda card */
 

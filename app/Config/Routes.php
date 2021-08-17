@@ -35,6 +35,7 @@ $routes->get('/', 'Halaman::index');
 $routes->get('/TPMO', 'Halaman::TPMO');
 $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
+$routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/visimisiTPMO', 'Halaman::visimisiTPMO');
 $routes->get('/dashboard/', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/dashboard/dataAdmin', 'Dashboard::dataAdmin', ['filter' => 'auth']);

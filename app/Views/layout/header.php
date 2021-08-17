@@ -45,16 +45,14 @@
                     </a>
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="/" class="nav-link">Beranda</a>
-
-                            </li>
+                            <li class="nav-item"><a href="/" class="nav-link">Beranda</a></li>
+                            <li class="nav-item"><a href="/Halaman/akademik" class="nav-link">Akademik</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Prodi<i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="/Halaman/TPMO" class="nav-link">Prodi Teknik Pemeliharaan Mesin Otomasi (TPMO)</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Prodi Tata Operasi Perakitan Kendaraan Roda 4 (TOPKR4)</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="contact.html" class="nav-link">Karir</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Crop<i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="/Halaman/tentang" class="nav-link">Tentang</a></li>
