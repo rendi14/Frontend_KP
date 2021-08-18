@@ -35,11 +35,11 @@ class Login extends Controller {
 				return redirect()->to('dashboard');
 			} else {
 				$session->setFlashdata('msg', 'Password anda salah');
-				return redirect()->to('/');
+				return redirect()->to('/login');
 			}
 		} else {
 			$session->setFlashdata('msg', 'Username tidak ditemukan');
-			return redirect()->to('/');
+			return redirect()->to('/login');
 		}
 	}
 

@@ -26,7 +26,7 @@
 <!--                     <p>Membutuhkan akun ? <span class="span-register"><a href="/registrasi" class=" text-decoration-none">Registrasi</a></span> sekarang</p> -->
                     <div class="button d-flex justify-content-center">
                     <button type="submit" class="btn mb-2 rounded-pill button-login-admin">Login</button>
-                    <button href="/" class="btn mb-2 rounded-pill button-login-admin">Kembali</button>
+                    <a href="/" class="btn mb-2 rounded-pill button-login-admin">Kembali</a>
                     </div>
                 </form>
             </div>
