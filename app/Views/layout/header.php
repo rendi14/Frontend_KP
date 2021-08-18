@@ -59,7 +59,7 @@
                                     <li class="nav-item"><a href="/Halaman/galeri" class="nav-link">Galeri</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="/" class="nav-link">Agenda</a></li>
+                            <li class="nav-item"><a href="/Halaman/agenda" class="nav-link">Agenda</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Bantuan</a></li>
                         </ul>

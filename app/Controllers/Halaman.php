@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\prodiModel;
 use App\Models\akademikModel;
 use App\Models\dosenModel;
+use App\Models\agendaModel;
 
 class Halaman extends BaseController
 {
@@ -82,8 +83,15 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function agenda()
     {
+        $agenda = new agendaModel;
+        $agenda_user = $agenda->findAll();
+        $data = [
+            'tittle' => 'Agenda || PT.CROP',
+            'agenda_user' => $agenda->paginate(4, 'agenda'),
+            'pager' => $agenda->pager,
+        ];
         echo view('layout/header');
-        echo view('main/agenda');
+        echo view('main/agenda', $data);
         echo view('layout/footer');
     }
 }
