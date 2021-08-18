@@ -35,7 +35,7 @@
                         <h4>Visi Misi</h4>
                         <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                         <div class="btn22">
-                            <a href="" class="default-btn">Gabung</a>
+                            <a href="/Halaman/visimisiTPMO" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>

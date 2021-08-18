@@ -1,10 +1,10 @@
 <section class="banner">
     <video autoplay loop muted>
-        <source src="/assets/img/video/hero beranda.mp4">
+        <source src="/assets/img/video/toyota.mp4">
     </video>
-    <h1>Selamat Datang <span>Praktik Kerja</span></h1>
+    <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
     <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://www.youtube.com/watch?v=5p3V_PbfwbA" class="play-btn"></a>
+        <a href="https://www.youtube.com/watch?v=74B90k9u4wQ" class="play-btn"></a>
     </div>
 </section>
 
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="section-title">
             <!-- <h2>Kenali ,Crop</h2> -->
-            <h2>Crop Membangun Kecerdasan Bangsa</h2>
+            <h2>Akti Membangun Kecerdasan Bangsa</h2>
             <br>
             <a href="/" class="default-btn">Gabung</a>
         </div>
@@ -27,7 +27,7 @@
     <div class="container">
         <section id="icon-boxes2" class="icon-boxes2">
             <div class="row">
-                <div class="col-sm-9 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                <div class="col-sm-9 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                     <div class="icon-box">
                         <div class="icon">
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="icon">
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -49,18 +49,21 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon-box">
                         <div class="icon">
-                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                             <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_9azkhcpb.json" background="transparent" speed="1" style="width: 300px; height: 239px;" loop autoplay></lottie-player>
+                         -->
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_pixockac.json" background="transparent" speed="1" style="width: 300px; height: 239px;" loop autoplay></lottie-player>
                         </div>
-                        <h4 class="title"><a href="">Robot</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <h4 class="title"><a href="">AKTI</a></h4>
+                        <p class="description"> Akademi Komunitas Toyota Indonesia menjalin kerja sama dengan beberapa Kampus baik dari dalam maupun luar negeri.</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
                     <div class="icon-box">
                         <div class="icon">
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -69,13 +72,13 @@
                         <h4 class="title"><a href="">Data Base</a></h4>
                         <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </section>
 
         <div class="section-title-bgorange ptb-70">
-            <h1>Fakta Tentang Crop</h1>
+            <h1>Fakta Tentang Akti</h1>
             <br>
             <a href="/" class="default-btn-bgorange">Gabung</a>
         </div>
@@ -86,7 +89,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                         <div class="icon-box1">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas2.png" alt="">
+                                <img src="/assets/img/iconcard/mahasiswa.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href=""> Mahasiswa Aktif 6.553</a></h4>
@@ -98,7 +101,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box2">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas3.png" alt="">
+                                <img src="/assets/img/iconcard/lulus.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Lulusan 22.392</a></h4>
@@ -110,7 +113,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box3">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas4.png" alt="">
+                                <img src="/assets/img/iconcard/gedung.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Gedung 26</a></h4>
@@ -122,7 +125,7 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box4">
                             <div class="icon">
-                                <img src="/assets/img/iconcard/bgatas6.png" alt="">
+                                <img src="/assets/img/iconcard/luas.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Luas 5.5</a></h4>
@@ -155,7 +158,7 @@
                     <div class="project-start-content">
                         <div class="section-title" data-aos="fade-up">
                             <h2>Udah siap gabung
-                                Bersama Crop?</h2>
+                                Bersama AKTI?</h2>
                         </div>
                         <a href="/" class="default-btn mg-kanan-32">Selengkapnya</a>
                     </div>
@@ -174,7 +177,7 @@
 <!-- halamam 5 -->
 <div class="containerhalaman5home">
     <div class="bghalaman5home">
-        <img src="/assets/img/background/bghal4.jpg" alt="">
+        <img src="/assets/img/background/bghal4home.jpg" alt="">
     </div>
 
 </div>
@@ -183,43 +186,32 @@
     <section class="boxes-area pb-70">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="col-lg-5 col-md-6 col-sm-60">
                     <div class="single-boxes-box">
                         <div class="icon">
-                            <i class="flaticon-research"></i>
-                            <div class="circles-box">
+                            <!-- <i class="bx bx-car"></i> -->
+                            <img src="/assets/img/stiker/dr5.png" alt="">
+                            <!-- <div class="circles-box">
                                 <div class="circle-one"></div>
-                            </div>
+                            </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TPMO</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="/Halaman/TPMO" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="single-boxes-box">
                         <div class="icon">
-                            <i class="flaticon-speed"></i>
-                            <div class="circles-box">
+                            <!-- <i class=""></i> -->
+                            <img src="/assets/img/stiker/dr2.png" alt="">
+                            <!-- <div class="circles-box">
                                 <div class="circle-one"></div>
-                            </div>
+                            </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TOPKR4</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <div class="single-boxes-box">
-                        <div class="icon">
-                            <i class="flaticon-email-marketing"></i>
-                            <div class="circles-box">
-                                <div class="circle-one"></div>
-                            </div>
-                        </div>
-                        <h3><a href="single-services.html">Prodi Informatika</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Learn More <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
             </div>
@@ -237,7 +229,7 @@
     <section class="portfolio-area pt-100 pb-70">
         <div class="container">
             <div class="section-title-bgorange">
-                <h2>Layanan Yang di Berikan...</h2>
+                <h2>Berita Terkini Bersama Akti...</h2>
             </div>
         </div>
 
@@ -299,7 +291,7 @@
 <!-- halaman 8 home -->
 <div class="halaman8home">
     <div class="section-title pt-70">
-        <h2>Membangun Kecerdasan Bangsa</h2>
+        <h2>Fasilitas Yang disediakan</h2>
         <br>
         <a href="/" class="default-btn-bgorange">Gabung</a>
     </div>
@@ -400,7 +392,7 @@
 <div class="halaman9home">
     <div class="section-title-bgorange ptb-70">
         <h2>perjalanan
-            Crop dalam membuat
+            Akti dalam membuat
             dampak positif!</h2>
 
         <br>

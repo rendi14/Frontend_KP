@@ -2886,6 +2886,7 @@ Search Overlay CSS
 .icon-boxes2 {
   position: relative;
   z-index: 100;
+  margin-left: 5%;
 }
 
 .icon-boxes2 .icon-box {
@@ -2941,7 +2942,7 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   background: rgb(102, 214, 80);
-  box-shadow: 5px 10px 29px 0 #95ec9f;
+  box-shadow: 5px 10px 20px 0 #64f074;
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
 }
@@ -2981,7 +2982,7 @@ Search Overlay CSS
   text-align: center;
   margin-top: -20%;
 
-  width: 100px;
+  /* width: 100px; */
   border-radius: 50%;
   /* margin: -40px 0 0 40px; */
   position: relative;
@@ -3135,12 +3136,14 @@ Search Overlay CSS
   margin-top: 180px;
   position: relative;
   z-index: 1;
+  /* margin-left: 200px; */
+  margin: 10% 0 0 20%;
 }
 
 .single-boxes-box {
   margin-bottom: 30px;
   text-align: center;
-  padding: 50px 30px;
+  padding: 50px 90px;
   border-radius: 25px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -4960,6 +4963,68 @@ Search Overlay CSS
 
 /* STAF PENGAJAR */
 /* TPMO */
+
+/* visi misi TPMO */
+.visimisiTPMO {
+  padding-top: 2%;
+  height: auto;
+  background: #f1f8ff;
+}
+/* END visi misi TPMO */
+
+/* akademik */
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.akademik {
+  background: #f1f8ff;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+.akademik .icon-box {
+  padding: 30px;
+  border-radius: 6px;
+  background: #fff;
+  transition: ease-in-out 0.3s;
+}
+
+.akademik .icon-box img {
+  float: left;
+  color: var(--mainColor);
+  font-size: 40px;
+  line-height: 0;
+}
+
+.akademik .icon-box h4 {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.akademik .icon-box h4 a {
+  color: #384046;
+  transition: 0.3s;
+}
+
+.akademik .icon-box p {
+  margin-left: 70px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.akademik .icon-box:hover {
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+  transform: scale(1.04);
+}
+
+.akademik .icon-box:hover h4 a {
+  color: var(--mainColor);
+}
+
+/* end akademik */
 
 /* footer */
 
