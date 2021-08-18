@@ -10,15 +10,17 @@ use App\Models\admin_level;
 use App\Models\sidebarModel;
 use CodeIgniter\Controller;
 
-class Dashboard extends Controller {
-	public function index() {
+class Dashboard extends Controller
+{
+	public function index()
+	{
 		$user = new UserModel;
 		$dosen = new dosenModel;
 		$prodi = new prodiModel;
 		$sidebar = new sidebarModel;
 		$user_count = $user->countAll();
 		$dosen_count = $dosen->countAll();
-		$prodi_count = $prodi->countAll(); 
+		$prodi_count = $prodi->countAll();
 		$side = $sidebar->where('menu_site', 'A')->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$data = [
@@ -32,7 +34,8 @@ class Dashboard extends Controller {
 		return view('dashboard/dashboard', $data);
 	}
 
-	public function dataAdmin() {
+	public function dataAdmin()
+	{
 		$user = new UserModel;
 		$sidebar = new sidebarModel;
 		$adminLevel = new admin_level;
@@ -50,7 +53,8 @@ class Dashboard extends Controller {
 		];
 		return view('dashboard/admin_data', $data);
 	}
-	public function tambahAdmin() {
+	public function tambahAdmin()
+	{
 		$model = new UserModel();
 		$session = session();
 		$data = [
@@ -63,7 +67,8 @@ class Dashboard extends Controller {
 		return redirect()->to('/dashboard/dataAdmin');
 	}
 
-	public function hapusAdmin($id) {
+	public function hapusAdmin($id)
+	{
 		$model = new UserModel();
 		$session = session();
 		$model->delete($id);
@@ -72,7 +77,8 @@ class Dashboard extends Controller {
 	}
 
 	/*Method data dosen*/
-	public function dataDosen() {
+	public function dataDosen()
+	{
 		$model = new dosenModel;
 		/*$user_model = $user->findAll();*/
 		$sidebar = new sidebarModel;
@@ -83,7 +89,6 @@ class Dashboard extends Controller {
 		$cari = $this->request->getVar('cari');
 		if ($cari) {
 			$model->search($cari);
-
 		} else {
 			$orang = $model;
 		}
@@ -98,7 +103,8 @@ class Dashboard extends Controller {
 		return view('dashboard/dosen_data', $data);
 	}
 
-	public function tampilEditData($id) {
+	public function tampilEditData($id)
+	{
 		$user = new dosenModel;
 		$sidebar = new sidebarModel;
 		/*$user_model = $user->findAll();*/
@@ -112,7 +118,8 @@ class Dashboard extends Controller {
 		return view('dashboard/pages/editFormDosen', $data);
 	}
 
-	public function tambahDosen() {
+	public function tambahDosen()
+	{
 		$model = new dosenModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
@@ -131,7 +138,8 @@ class Dashboard extends Controller {
 		return redirect()->to('/dashboard/dataDosen');
 	}
 
-	public function editDataDosen() {
+	public function editDataDosen()
+	{
 		$model = new dosenModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
@@ -150,7 +158,8 @@ class Dashboard extends Controller {
 		return redirect()->to('/dashboard/dataDosen');
 	}
 
-	public function HapusDataDosen($id) {
+	public function HapusDataDosen($id)
+	{
 		$model = new dosenModel();
 		$session = session();
 		$model->delete($id);
@@ -160,8 +169,9 @@ class Dashboard extends Controller {
 
 	/*Ahkir data dosen*/
 
-/*Method akti prodi*/
-	public function dataProdi() {
+	/*Method akti prodi*/
+	public function dataProdi()
+	{
 		$model = new prodiModel;
 		$sidebar = new sidebarModel;
 		/*$user_model = $user->findAll();*/
@@ -172,7 +182,6 @@ class Dashboard extends Controller {
 		$cari = $this->request->getVar('cari');
 		if ($cari) {
 			$model->search($cari);
-
 		} else {
 			$orang = $model;
 		}
@@ -187,7 +196,59 @@ class Dashboard extends Controller {
 		return view('dashboard/prodi_data', $data);
 	}
 
-	public function tambahAktiProdi() {
+	// 
+	public function dataagen()
+	{
+		$model = new prodiModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+		$cari = $this->request->getVar('cari');
+		if ($cari) {
+			$model->search($cari);
+		} else {
+			$orang = $model;
+		}
+		$data = [
+			'tittle' => 'Data Prodi || PT.CROP',
+			/*'user' => $user_model,*/
+			'prodi' => $model->paginate(1, 'prodi'),
+			'pager' => $model->pager,
+			'currentPage' => $currentPage,
+			'sidebar' => $sidebar_side
+		];
+		return view('main/agenda', $data);
+	}
+
+	public function tambahAktiagen()
+	{
+		$model = new prodiModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/prodi');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'prodi_nama' => $this->request->getVar('nama_prodi'),
+			'prodi_tentang' => $this->request->getVar('tentang'),
+			'prodi_foto' => $namaGambar,
+			'prodi_visi' => $this->request->getVar('visi'),
+			'prodi_misi' => $this->request->getVar('misi'),
+			'prodi_dosen' => $this->request->getVar('dosen'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
+		return redirect()->to('/dashboard/dataagen');
+	}
+
+
+	// =============
+
+
+	public function tambahAktiProdi()
+	{
 		$model = new prodiModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
@@ -204,10 +265,10 @@ class Dashboard extends Controller {
 		$model->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
 		return redirect()->to('/dashboard/dataProdi');
-
 	}
 
-	public function tampilEditProdi($id) {
+	public function tampilEditProdi($id)
+	{
 		$user = new prodiModel;
 		$sidebar = new sidebarModel;
 		/*$user_model = $user->findAll();*/
@@ -221,7 +282,8 @@ class Dashboard extends Controller {
 		return view('dashboard/pages/editFormProdi', $data);
 	}
 
-	public function editAktiProdi() {
+	public function editAktiProdi()
+	{
 		$model = new prodiModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
@@ -240,7 +302,8 @@ class Dashboard extends Controller {
 		return redirect()->to('/dashboard/dataProdi');
 	}
 
-	public function hapusProdi($id) {
+	public function hapusProdi($id)
+	{
 		$model = new prodiModel();
 		$session = session();
 		$model->delete($id);
@@ -249,9 +312,10 @@ class Dashboard extends Controller {
 	}
 
 	/*Akhir method akti prodi*/
-/*Method untuk data akademik*/
+	/*Method untuk data akademik*/
 
-	public function dataAkademik() {
+	public function dataAkademik()
+	{
 		$model = new akademikModel;
 		$sidebar = new sidebarModel;
 		$side = $sidebar->where('menu_site', 'A')->findAll();
@@ -261,7 +325,6 @@ class Dashboard extends Controller {
 		$cari = $this->request->getVar('cari');
 		if ($cari) {
 			$model->search($cari);
-
 		} else {
 			$orang = $model;
 		}
@@ -277,7 +340,8 @@ class Dashboard extends Controller {
 	}
 
 	/* Method tambah akti akademik*/
-	public function tambahAktiAkademik() {
+	public function tambahAktiAkademik()
+	{
 		$model = new akademikModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('gambar');
@@ -294,10 +358,10 @@ class Dashboard extends Controller {
 		$model->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
 		return redirect()->to('/dashboard/dataAkademik');
-
 	}
 
-	public function tampilEditAkademik($id) {
+	public function tampilEditAkademik($id)
+	{
 		$user = new akademikModel;
 		$sidebar = new sidebarModel;
 		/*$user_model = $user->findAll();*/
@@ -311,7 +375,8 @@ class Dashboard extends Controller {
 		return view('dashboard/pages/editFormAkademik', $data);
 	}
 
-	public function editAktiAkademik() {
+	public function editAktiAkademik()
+	{
 		$model = new akademikModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('gambar');
@@ -331,7 +396,8 @@ class Dashboard extends Controller {
 		return redirect()->to('/dashboard/dataAkademik');
 	}
 
-	public function hapusAkademik($id) {
+	public function hapusAkademik($id)
+	{
 		$model = new akademikModel();
 		$session = session();
 		$model->delete($id);
@@ -340,6 +406,4 @@ class Dashboard extends Controller {
 	}
 
 	/* Akhir Method Akademik*/
-
-
 }
