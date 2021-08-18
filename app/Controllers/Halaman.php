@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\prodiModel;
 use App\Models\akademikModel;
+use App\Models\dosenModel;
 
 class Halaman extends BaseController
 {
@@ -35,8 +36,14 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function TPMO()
     {
+        $model = new dosenModel;
+        $tpmo = $model->where('dosen_kategori', '7')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'tpmo'  => $tpmo
+        ];
         echo view('layout/header');
-        echo view('main/TPMO');
+        echo view('main/TPMO', $data);
         echo view('layout/footer');
     }
 
@@ -44,12 +51,10 @@ class Halaman extends BaseController
     public function visimisiTPMO()
     {
         $model = new prodiModel;
-        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+        $tpmo = $model->where('prodi_dosen', '7')->findAll();
         $data = [
             'tittle' => 'Prodi || PT.CROP',
-            'prodi' => $model->paginate(1, 'prodi'),
-            'pager' => $model->pager,
-            'currentPage' => $currentPage,
+            'tpmo'  => $tpmo
         ];
 
         echo view('layout/header');

@@ -11,11 +11,11 @@
 
 <div class="visimisiTPMO">
     <section id="features" class="features section-bg">
-        <?php foreach ($prodi as $p) : ?>
+        <?php foreach ($tpmo as $p) : ?>
             <div class="container">
                 <div class="section-title">
                     <h2 data-aos="fade-in">VISI DAN MISI</h2>
-                    <p data-aos="fade-in">visi dan misi Program Studi Teknik Pemeliharaan Mesin Otomasi </p>
+                    <p data-aos="fade-in">visi dan misi <?= $p['prodi_nama']?></p>
                 </div>
 
                 <div class="row content">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
-        <?= $pager->links('prodi', 'dosen_data') ?>
+        
 
     </section>
 
