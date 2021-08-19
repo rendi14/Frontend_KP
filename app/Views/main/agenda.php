@@ -1,4 +1,13 @@
-<section class="history-area ptb-100 bg-f9f9f9">
+<section id="heroagenda" class="d-flex justify-cntent-center align-items-center">
+    <div class="carousel-item active">
+        <div class="section-title-bgorange ptb-70">
+            <h1>Agenda</h1>
+            <h1>Akademi Komunitas Toyota Indonesia</h1>
+        </div>
+    </div>
+</section>
+
+<section class="agenda ptb-100 bg-f9f9f9">
     <div class="container">
         <div class="section-title">
             <h2>Agenda</h2>

@@ -2,7 +2,7 @@
     <div class="carousel-item active">
         <div class="section-title-bgorange ptb-70">
             <h1>Kenali ,TPMO</h1>
-            <h1>lebih dekat Tentang TPMO</h1>
+            <h1>Teknik Pemeliharaan Mesin Otomasi</h1>
         </div>
     </div>
 </section>
@@ -19,10 +19,10 @@
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                 <div class="icon-box">
                     <div class="section-title">
-                        <h4>Sejarah</h4>
+                        <h4>Tentang</h4>
                         <p> deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                         <div class="btn22">
-                            <a href="" class="default-btn">Gabung</a>
+                            <a href="/Halaman/tentangTPMO" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>
@@ -160,18 +160,18 @@
             <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
                     <?php foreach ($tpmo as $p) : ?>
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="/gambar/dosen/<?= $p['dosen_foto']?>" class="testimonial-img" alt="">
-                            <h3><?= $p['dosen_nama']?></h3>
-                            <h4><?= $p['dosen_nip']?></h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/gambar/dosen/<?= $p['dosen_foto'] ?>" class="testimonial-img" alt="">
+                                <h3><?= $p['dosen_nama'] ?></h3>
+                                <h4><?= $p['dosen_nip'] ?></h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
                     <?php endforeach; ?>
                 </div>
                 <div class="swiper-pagination"></div>

@@ -1,8 +1,8 @@
 <section id="tentangbg" class="d-flex justify-cntent-center align-items-center">
     <div class="carousel-item active">
         <div class="section-title-bgorange ptb-70">
-            <h1>Kenali ,Crop</h1>
-            <h1>lebih dekat sama sejarah Crop</h1>
+            <h1>Kenali ,Akti</h1>
+            <h1>lebih dekat sama sejarah Akti</h1>
         </div>
     </div>
 </section>

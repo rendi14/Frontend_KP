@@ -9,7 +9,7 @@ Default CSS
   /* --mainColor: #ff7810; */
   --optionalColor: #4b5280;
   --whiteColor: #ffffff;
-  --background: #f8f9fa;
+  --background: #f1f8ff;
   --blackColor: #080e32;
   --fontSize: 16px;
   --transition: 0.5s;
@@ -4549,6 +4549,66 @@ Search Overlay CSS
   }
 }
 
+/* Akademik */
+#heroagenda {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/background/agenda.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0px;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+#heroagenda:before {
+  content: "";
+  background: rgba(196, 103, 27, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 768px), (max-height: 700px) {
+  #heroagenda {
+    height: 120vh;
+    padding: 100px 0;
+  }
+}
+
+/* Agenda */
+#heroakademik {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/background/akademik.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0px;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+#heroakademik:before {
+  content: "";
+  background: rgba(196, 103, 27, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 768px), (max-height: 700px) {
+  #heroakademik {
+    height: 120vh;
+    padding: 100px 0;
+  }
+}
+
 /* containerTPMO2 */
 .containerTPMO2 {
   width: 100%;
@@ -4972,11 +5032,13 @@ Search Overlay CSS
 }
 /* END visi misi TPMO */
 
-/* akademik */
+.agenda {
+  background: #f1f8ff;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
 
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
+/* akademik */
 .akademik {
   background: #f1f8ff;
   padding-bottom: 70px;
@@ -5089,6 +5151,7 @@ Search Overlay CSS
   margin-bottom: 3px;
   color: var(--blackColor);
   font-weight: 700;
+  margin-right: 10%;
 }
 
 .history-timeline .timeline-block .timeline-date sup {
@@ -5115,6 +5178,14 @@ Search Overlay CSS
 .history-timeline .timeline-block .timeline-content {
   background-color: var(--whiteColor);
   padding: 30px;
+  box-shadow: 0px 2px 22px rgba(8, 6, 6, 0.1);
+}
+
+.history-timeline .timeline-block .timeline-content:hover {
+  background-color: var(--whiteColor);
+  padding: 30px;
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.1);
+  transform: scale(1.04);
 }
 
 .history-timeline .timeline-block .timeline-content .content {
@@ -5129,6 +5200,36 @@ Search Overlay CSS
 
 /* end agenda */
 
+/* tentang tpmo */
+.about {
+  background-color: #f1f8ff;
+}
+
+.about .content h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--mainColor);
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/* end tentang tpmo */
 /* footer */
 
 /*--------------------------------------------------------------

@@ -64,6 +64,21 @@ class Halaman extends BaseController
     }
 
     // -------------------------------------------------
+    public function tentangTPMO()
+    {
+        $model = new prodiModel;
+        $tpmo = $model->where('prodi_dosen', '7')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'tpmo'  => $tpmo
+        ];
+
+        echo view('layout/header');
+        echo view('main/tentangTPMO', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
     public function akademik()
     {
         $model = new akademikModel;

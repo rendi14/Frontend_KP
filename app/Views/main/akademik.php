@@ -1,4 +1,4 @@
-<section id="heroTPMO" class="d-flex justify-cntent-center align-items-center">
+<section id="heroakademik" class="d-flex justify-cntent-center align-items-center">
     <div class="carousel-item active">
         <div class="section-title-bgorange ptb-70">
             <h1>Akademik</h1>

@@ -80,7 +80,7 @@
         <div class="section-title-bgorange ptb-70">
             <h1>Fakta Tentang Akti</h1>
             <br>
-            <a href="/" class="default-btn-bgorange">Gabung</a>
+            <a href="/Halaman/akademik" class="default-btn-bgorange">Gabung</a>
         </div>
 
         <section id="icon-boxes" class="icon-boxes">
@@ -196,7 +196,7 @@
                             </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TPMO</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <p>Teknik Pemeliharaan Mesin Otomasi merupakan perpaduan/kombinasi bidang ilmu antara Teknik Pemeliharaan Mesin Industri dan Teknik Otomasi.</p>
                         <a href="/Halaman/TPMO" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i> Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
                             </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TOPKR4</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <p>Program Studi yang diusulkan adalah Tata Operasi Perakitan Kendaraan Roda 4 (empat) untuk Jenjang Pendidikan Diploma 2 dengan gelar lulusan Ahli Muda</p>
                         <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
@@ -396,7 +396,7 @@
             dampak positif!</h2>
 
         <br>
-        <a href="/" class="default-btn-bgorange">Gabung</a>
+        <a href="/Halaman/agenda" class="default-btn-bgorange">Gabung</a>
     </div>
 
     <div class="animasiimg">
