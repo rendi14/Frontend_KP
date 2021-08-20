@@ -93,7 +93,7 @@
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href=""> Mahasiswa Aktif 6.553</a></h4>
-                                <p class=""> occaecati cupiditate non provident</p>
+                                <p class=""> Membentuk Karakter yang cepat, tanggap dan kompeten</p>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Lulusan 22.392</a></h4>
-                                <p class=""> occaecati cupiditate non provident</p>
+                                <p class=""> Meluluskan mahasiswa-mahasiswa yang berkualitas dan bertanggung jawab</p>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Gedung 26</a></h4>
-                                <p class=""> occaecati cupiditate non provident</p>
+                                <p class=""> Terdapat Gedung dengan kenyamanan dan fasilitas yang memadai</p>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             </div>
                             <div class="section-title-bgorange">
                                 <h4 class=""><a href="">Luas 5.5</a></h4>
-                                <p class=""> occaecati cupiditate non provident</p>
+                                <p class=""> Dengan keluasan seluruh sekte bisa membantu praktik dilapangan lebih mudah</p>
                             </div>
                         </div>
                     </div>
@@ -303,7 +303,7 @@
                 <div class="card-item1">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
+                            <h3><a href="single-portfolio.html">Alat-alat Praktikum yang memadai</a></h3>
                         </div>
                         <div class="member-img">
                             <div class="social">
@@ -319,7 +319,7 @@
                 <div class="card-item2">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
+                            <h3><a href="single-portfolio.html">Teknologi dari setiap sekte daerah</a></h3>
                         </div>
                         <div class="member-img">
                             <div class="social">
