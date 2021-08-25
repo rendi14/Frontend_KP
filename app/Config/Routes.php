@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Halaman::index');
 $routes->get('/TPMO', 'Halaman::TPMO');
+$routes->get('/TOPKR4', 'Halaman::TOPKR4');
 $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
 $routes->get('/akademik', 'Halaman::akademik');

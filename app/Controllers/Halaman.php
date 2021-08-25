@@ -109,4 +109,18 @@ class Halaman extends BaseController
         echo view('main/agenda', $data);
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function TOPKR4()
+    {
+        $model = new dosenModel;
+        $TOPKR4 = $model->where('dosen_kategori', '8')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'tpmo'  => $TOPKR4
+        ];
+        echo view('layout/header');
+        echo view('main/TOPKR4', $data);
+        echo view('layout/footer');
+    }
 }

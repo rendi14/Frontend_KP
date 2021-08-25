@@ -50,7 +50,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">Prodi<i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="/Halaman/TPMO" class="nav-link">Prodi Teknik Pemeliharaan Mesin Otomasi (TPMO)</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Prodi Tata Operasi Perakitan Kendaraan Roda 4 (TOPKR4)</a></li>
+                                    <li class="nav-item"><a href="/Halaman/TOPKR4" class="nav-link">Prodi Tata Operasi Perakitan Kendaraan Roda 4 (TOPKR4)</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Akti<i class='bx bx-chevron-down'></i></a>
