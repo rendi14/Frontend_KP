@@ -123,4 +123,34 @@ class Halaman extends BaseController
         echo view('main/TOPKR4', $data);
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function visimisiTOPKR4()
+    {
+        $model = new prodiModel;
+        $TOPKR4 = $model->where('prodi_dosen', '8')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'TOPKR4'  => $TOPKR4
+        ];
+
+        echo view('layout/header');
+        echo view('main/visimisiTOPKR4', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function tentangTOPKR4()
+    {
+        $model = new prodiModel;
+        $TOPKR4 = $model->where('prodi_dosen', '8')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'TOPKR4'  => $TOPKR4
+        ];
+
+        echo view('layout/header');
+        echo view('main/tentangTOPKR4', $data);
+        echo view('layout/footer');
+    }
 }

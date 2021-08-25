@@ -39,6 +39,8 @@ $routes->get('/galeri', 'Halaman::galeri');
 $routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/agenda', 'Halaman::agenda');
 $routes->get('/visimisiTPMO', 'Halaman::visimisiTPMO');
+$routes->get('/tentangTOPKR4', 'Halaman::tentangTOPKR4');
+$routes->get('/visimisiTOPKR4', 'Halaman::visimisiTOPKR4');
 $routes->get('/dashboard/', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/dashboard/dataAdmin', 'Dashboard::dataAdmin', ['filter' => 'auth']);
 $routes->get('/dashboard/dataDosen', 'Dashboard::dataDosen', ['filter' => 'auth']);

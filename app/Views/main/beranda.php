@@ -211,7 +211,7 @@
                         </div>
                         <h3><a href="single-services.html">Prodi TOPKR4</a></h3>
                         <p>Program Studi yang diusulkan adalah Tata Operasi Perakitan Kendaraan Roda 4 (empat) untuk Jenjang Pendidikan Diploma 2 dengan gelar lulusan Ahli Muda</p>
-                        <a href="#" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
+                        <a href="/Halaman/TOPKR4" class="learn-more-btn"><i class="left-icon flaticon-next-button"></i>Selanjutnya <i class="right-icon flaticon-next-button"></i></a>
                     </div>
                 </div>
             </div>

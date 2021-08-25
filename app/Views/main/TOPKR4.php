@@ -26,7 +26,7 @@
                         <h4>Tentang</h4>
                         <p> deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                         <div class="btn22">
-                            <a href="/Halaman/tentangTPMO" class="default-btn">Gabung</a>
+                            <a href="/Halaman/tentangTOPKR4" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <h4>Visi Misi</h4>
                         <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                         <div class="btn22">
-                            <a href="/Halaman/visimisiTPMO" class="default-btn">Gabung</a>
+                            <a href="/Halaman/visimisiTOPKR4" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>
