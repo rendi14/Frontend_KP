@@ -117,7 +117,7 @@ class Halaman extends BaseController
         $TOPKR4 = $model->where('dosen_kategori', '8')->findAll();
         $data = [
             'tittle' => 'Prodi || PT.CROP',
-            'tpmo'  => $TOPKR4
+            'TOPKR4'  => $TOPKR4
         ];
         echo view('layout/header');
         echo view('main/TOPKR4', $data);
