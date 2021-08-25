@@ -4549,6 +4549,100 @@ Search Overlay CSS
   }
 }
 
+/* TOPKR4*/
+#heroTOPKR4 {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/background/TOPMK4.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0px;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+#heroTOPKR4:before {
+  content: "";
+  background: rgba(196, 103, 27, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 768px), (max-height: 700px) {
+  #heroTOPKR4 {
+    height: 120vh;
+    padding: 100px 0;
+  }
+}
+
+/* containerTOPKR2 */
+.containerTOPKR2 {
+  width: 99%;
+  /* height: 70vh; */
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/background/bg_bumi.png") left center no-repeat;
+  position: relative;
+}
+
+.containerTOPKR2:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.judul2TOPKR {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 5%;
+}
+
+.judul2TOPKR h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: var(--fontFamily);
+  color: var(--blackColor);
+}
+
+.judul2TOPKR h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.judul2TOPKR::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--mainColor);
+  bottom: 78%;
+  left: calc(50% - 20px);
+}
+
+.judul2TOPKR p {
+  margin-bottom: 0;
+}
+
 /* Akademik */
 #heroagenda {
   width: 100%;
