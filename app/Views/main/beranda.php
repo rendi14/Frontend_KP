@@ -306,12 +306,12 @@
                             <h3><a href="single-portfolio.html">Alat-alat Praktikum yang memadai</a></h3>
                         </div>
                         <div class="member-img">
-                            <div class="social">
+                            <!-- <div class="social">
                                 <a href="">disini</a>
                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -322,12 +322,12 @@
                             <h3><a href="single-portfolio.html">Teknologi dari setiap sekte daerah</a></h3>
                         </div>
                         <div class="member-img">
-                            <div class="social">
+                            <!-- <div class="social">
                                 <a href="">disini</a>
                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -335,15 +335,15 @@
                 <div class="card-item3">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
+                            <h3><a href="single-portfolio.html">Akademi yang dapat membentuk karakter</a></h3>
                         </div>
                         <div class="member-img">
-                            <div class="social">
+                            <!-- <div class="social">
                                 <a href="">disini</a>
                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -351,15 +351,15 @@
                 <div class="card-item4">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Sos Media Strategies for Online Shopping Cart</a></h3>
+                            <h3><a href="single-portfolio.html">Sosial Media Strategies for Online Shopping Cart</a></h3>
                         </div>
                         <div class="member-img">
-                            <div class="social">
+                            <!-- <div class="social">
                                 <a href="">disini</a>
                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -372,12 +372,12 @@
                                 <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
                             </div>
                             <div class="member-img">
-                                <div class="social">
+                                <!-- <div class="social">
                                     <a href="">disini</a>
                                     <a href=""><i class="bx bxl-facebook"></i></a>
                                     <a href=""><i class="bx bxl-instagram"></i></a>
                                     <a href=""><i class="bx bxl-linkedin"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
