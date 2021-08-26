@@ -20,9 +20,9 @@
 
                 <div class="row content">
                     <div class="col-md-5" data-aos="fade-right">
-                        <div class="animasitentang1">
+                        <div class="animasiTOPKR41">
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_omszt4va.json" speed="1" loop autoplay></lottie-player>
+                            <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_90qkmurb.json" speed="1" loop autoplay></lottie-player>
                         </div>
                     </div>
 
@@ -36,9 +36,9 @@
 
                 <div class="row content">
                     <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-                        <div class="animasitentang2">
+                        <div class="animasiTOPKR42">
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_vkvdhuhj.json" speed="1" loop autoplay></lottie-player>
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_tb8ugi81.json" speed="1" loop autoplay></lottie-player>
                         </div>
                     </div>
                     <div class="col-md-7 order-2 order-md-1" data-aos="fade-right">

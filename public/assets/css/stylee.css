@@ -4643,6 +4643,22 @@ Search Overlay CSS
   margin-bottom: 0;
 }
 
+.animasiTOPKR41 {
+  background: transparent;
+  width: 250px;
+  height: 250px;
+  margin-left: 5%;
+  margin-top: -10%;
+}
+
+.animasiTOPKR42 {
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  margin-left: 20%;
+  margin-top: -10%;
+}
+
 /* Akademik */
 #heroagenda {
   width: 100%;
