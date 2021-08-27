@@ -38,6 +38,7 @@ $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
 $routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/agenda', 'Halaman::agenda');
+$routes->get('/Tenagakerja', 'Halaman::Tenagakerja');
 $routes->get('/visimisiTPMO', 'Halaman::visimisiTPMO');
 $routes->get('/tentangTOPKR4', 'Halaman::tentangTOPKR4');
 $routes->get('/visimisiTOPKR4', 'Halaman::visimisiTOPKR4');

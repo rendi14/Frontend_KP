@@ -153,4 +153,22 @@ class Halaman extends BaseController
         echo view('main/tentangTOPKR4', $data);
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function Tenagakerja()
+    {
+        $model = new dosenModel;
+        $direktur = $model->where('dosen_kategori', '1')->findAll();
+        $yayasan = $model->where('dosen_kategori', '5')->findAll();
+        $Tenagaunit = $model->where('dosen_kategori', '6')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'Tenagaunit'  => $Tenagaunit,
+            'direktur'  => $direktur,
+            'yayasan'  => $yayasan
+        ];
+        echo view('layout/header');
+        echo view('main/Tenagakerja', $data);
+        echo view('layout/footer');
+    }
 }

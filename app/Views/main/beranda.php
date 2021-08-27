@@ -293,7 +293,7 @@
     <div class="section-title pt-70">
         <h2>Tenaga kerja Akti</h2>
         <br>
-        <a href="/" class="default-btn-bgorange">Gabung</a>
+        <a href="/Halaman/Tenagakerja" class="default-btn-bgorange">Gabung</a>
     </div>
 
     <section class="card-area pb-70">
