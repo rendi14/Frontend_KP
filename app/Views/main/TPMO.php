@@ -58,7 +58,6 @@
 
 
 <div class="TPMO2">
-
     <div class="section-title-bgorange ptb-70">
         <h2>fasilitas</h2>
     </div>
@@ -167,7 +166,7 @@
                                 <h4><?= $p['dosen_nip'] ?></h4>
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                    <?= $p['dosen_jabatan'] ?>
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>

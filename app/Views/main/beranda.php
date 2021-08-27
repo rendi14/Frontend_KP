@@ -291,7 +291,7 @@
 <!-- halaman 8 home -->
 <div class="halaman8home">
     <div class="section-title pt-70">
-        <h2>Fasilitas Yang disediakan</h2>
+        <h2>Tenaga kerja Akti</h2>
         <br>
         <a href="/" class="default-btn-bgorange">Gabung</a>
     </div>
@@ -303,8 +303,19 @@
                 <div class="card-item1">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Alat-alat Praktikum yang memadai</a></h3>
+                            <h3><a href="" class="bx bx-check pb-100">Direktur</a></h3>
+                            <br>
+                            <h3><a href="" class="bx bx-check pb-100">Wakil Direktur I</a></h3>
+                            <br>
+                            <h3><a href="" class="bx bx-check pb-100">Wakil Direktur II</a></h3>
+
+
                         </div>
+
+                        <!-- <div class="content">
+                            <h3><a href="" class="bx bx-check">Kepala Unit Teaching Factory dan P3M</a></h3>
+                        </div> -->
+
                         <div class="member-img">
                             <!-- <div class="social">
                                 <a href="">disini</a>
@@ -319,7 +330,10 @@
                 <div class="card-item2">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Teknologi dari setiap sekte daerah</a></h3>
+                            <h3><a href="" class="bx bx-check pb-100">Ketua Senat</a></h3>
+                            <br>
+                            <h3><a href="" class="bx bx-check">Wakil Ketua Senat</a></h3>
+
                         </div>
                         <div class="member-img">
                             <!-- <div class="social">
@@ -335,7 +349,11 @@
                 <div class="card-item3">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Akademi yang dapat membentuk karakter</a></h3>
+                            <h3><a href="" class="bx bx-check pb-100">Ketua Yayasan</a></h3>
+                            <br>
+                            <h3><a href="" class="bx bx-check pb-100">Sekertaris Yayasan</a></h3>
+                            <br>
+                            <h3><a href="" class="bx bx-check">Bendahara Yayasan</a></h3>
                         </div>
                         <div class="member-img">
                             <!-- <div class="social">
@@ -351,7 +369,16 @@
                 <div class="card-item4">
                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                         <div class="content">
-                            <h3><a href="single-portfolio.html">Sosial Media Strategies for Online Shopping Cart</a></h3>
+                            <h3><a href="" class="bx bx-check pb-100">Kepala Unit Kelembagaan, SDM & Keuangan</a></h3>
+                            <br>
+
+                            <h3><a href="" class="bx bx-check pb-100">Kepala Unit Kemahasiswaan & Alumni</a></h3>
+                            <br>
+
+                            <h3><a href="" class="bx bx-check">Kepala Unit Sarana & Prasarana</a></h3>
+
+
+
                         </div>
                         <div class="member-img">
                             <!-- <div class="social">
@@ -369,7 +396,9 @@
                     <div class="card-item5">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="content">
-                                <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
+                                <h3><a href="" class="bx bx-check pb-100">Ketua Porgram Studi TPMO</a></h3>
+                                <br>
+                                <h3><a href="" class="bx bx-check">Ketua Porgram Studi TOPKR4</a></h3>
                             </div>
                             <div class="member-img">
                                 <!-- <div class="social">
