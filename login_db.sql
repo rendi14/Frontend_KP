@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.4.10-MariaDB - mariadb.org binary distribution
+-- Server version:               10.4.17-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
--- HeidiSQL Version:             10.2.0.5599
+-- HeidiSQL Version:             11.0.0.5919
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.admin: ~5 rows (approximately)
-DELETE FROM `admin`;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
 INSERT INTO `admin` (`admin_user`, `admin_pass`, `admin_nama`, `admin_alamat`, `admin_telepon`, `admin_ip`, `admin_online`, `admin_level_kode`, `admin_status`) VALUES
 	('admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Bandung', '087820033395', '', 0, 1, 'A'),
@@ -52,7 +51,6 @@ CREATE TABLE IF NOT EXISTS `admin_level` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.admin_level: ~3 rows (approximately)
-DELETE FROM `admin_level`;
 /*!40000 ALTER TABLE `admin_level` DISABLE KEYS */;
 INSERT INTO `admin_level` (`admin_level_kode`, `admin_level_nama`, `admin_level_status`) VALUES
 	(1, 'Superadmin', 'A'),
@@ -76,7 +74,6 @@ CREATE TABLE IF NOT EXISTS `agenda` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.agenda: ~6 rows (approximately)
-DELETE FROM `agenda`;
 /*!40000 ALTER TABLE `agenda` DISABLE KEYS */;
 INSERT INTO `agenda` (`agenda_id`, `agenda_tema`, `agenda_deskripsi`, `agenda_mulai`, `agenda_selesai`, `agenda_tempat`, `agenda_jam`, `agenda_gambar`, `agenda_posting`, `admin_nama`) VALUES
 	(9, 'SEMINAR AKTI 2019', '<p>\n	Kegiatan Seminar AKTI 2019 yang diikuti seluruh mahasiwa</p>\n', '2020-12-16', '2020-12-17', 'Kampus AKTI', '9.00 WIB', '1608010120-4.jpg', '2016-01-05 13:02:46', 'Administrator'),
@@ -97,10 +94,9 @@ CREATE TABLE IF NOT EXISTS `akti_akademik` (
   `akademik_keterangan` text NOT NULL,
   `admin_nama` varchar(100) NOT NULL,
   PRIMARY KEY (`akademik_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_akademik: ~10 rows (approximately)
-DELETE FROM `akti_akademik`;
 /*!40000 ALTER TABLE `akti_akademik` DISABLE KEYS */;
 INSERT INTO `akti_akademik` (`akademik_id`, `akademik_title`, `akademik_deskripsi`, `akademik_gambar`, `akademik_kategori`, `akademik_keterangan`, `admin_nama`) VALUES
 	(1, 'Mengapa AKTI ?', 'Akademi Komunitas Toyota Indonesia menjalin kerja sama dengan beberapa Kampus baik dari dalam maupun luar negeri.                                                                                                                                                                                                                                                                                                                   ', '1611204006-Presentation3.jpg', 'Halaman Home', '<p>	Test</p>', 'Administrator'),
@@ -112,7 +108,7 @@ INSERT INTO `akti_akademik` (`akademik_id`, `akademik_title`, `akademik_deskrips
 	(7, 'Kolaborasi', 'Akademi Komunitas Toyota Indonesia memiliki banyak kerjasama yang baik dengan banyak perusahaan di Indonesia.                                                                                        ', '1618540039-Kolaborasi.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
 	(8, 'Fasilitas', 'Akademi Komunitas Toyota Indonesia menyediakan fasilitas yang baik bagi mahasiswa untuk mendukung proses belajar mengajar.                                                                                        ', '1618539927-Fasilitas.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
 	(9, 'Keunggulan', 'Akademi Komunitas Toyota Indonesia memiliki staf pengajar yang berpengalaman di bidangnya dan sejumlah penelitian yang berkualitas.                                                                                                                                    ', '1618540012-Keunggulan.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
-	(19, 'Algoritma', 'Matakuliah alur program', 'WIN_20181228_17_56_57_Pro.jpg', 'Halaman Akademik', '<ul><li>Hahaha</li><li>HEhehe</li><li>HAhaha</li></ul>', 'Superadmin');
+	(19, 'Algoritma', 'Matakuliah alur program  adalah sesuatu yang sangat simpel benernya tapi sangat berarti maka dari itu kita harus belajar', '2mgf_p4dt_210609.jpg', 'Halaman Akademik', '<ul><li>Hahaha</li><li>HEhehe</li><li>HAhaha</li></ul>', 'Superadmin');
 /*!40000 ALTER TABLE `akti_akademik` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.akti_assesor
@@ -126,7 +122,6 @@ CREATE TABLE IF NOT EXISTS `akti_assesor` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_assesor: ~11 rows (approximately)
-DELETE FROM `akti_assesor`;
 /*!40000 ALTER TABLE `akti_assesor` DISABLE KEYS */;
 INSERT INTO `akti_assesor` (`assesor_id`, `assesor_nama`, `assesor_no_sertifikat`, `assesor_status`, `admin_nama`) VALUES
 	(1, 'AINUL RUSMAN', '29100.8211.04.2.0000004.2017', 'Vocation #01', 'Administrator'),
@@ -154,7 +149,6 @@ CREATE TABLE IF NOT EXISTS `akti_contact` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_contact: ~3 rows (approximately)
-DELETE FROM `akti_contact`;
 /*!40000 ALTER TABLE `akti_contact` DISABLE KEYS */;
 INSERT INTO `akti_contact` (`contact_id`, `contact_pengirim`, `contact_email`, `contact_telp`, `contact_deskripsi`, `contact_waktu`) VALUES
 	(5, 'NAVA GIA GINASTA', 'navagiaginasta@gmail.com', '087820033395', '-', '2021-01-08'),
@@ -176,7 +170,6 @@ CREATE TABLE IF NOT EXISTS `akti_dosen` (
 ) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_dosen: ~35 rows (approximately)
-DELETE FROM `akti_dosen`;
 /*!40000 ALTER TABLE `akti_dosen` DISABLE KEYS */;
 INSERT INTO `akti_dosen` (`dosen_id`, `dosen_nip`, `dosen_nama`, `dosen_jabatan`, `dosen_foto`, `dosen_kategori`, `dosen_status`, `admin_nama`) VALUES
 	(1, '12020001', 'Dedi', 'Dosen TOPKR', '1608112050-Dedi_2.jpg', '8', '1', 'Administrator'),
@@ -190,20 +183,20 @@ INSERT INTO `akti_dosen` (`dosen_id`, `dosen_nip`, `dosen_nama`, `dosen_jabatan`
 	(9, '0022020005', 'Rusydi', 'Dosen TPMO', '1608114547-Rusydi.JPG', '7', '1', 'Administrator'),
 	(10, '0022020006', 'Saepudin', 'Dosen TPMO', '1608114575-Saepudin.JPG', '7', '1', 'Administrator'),
 	(11, '123456', 'Amirul Chusni', 'Direktur', '1610946373-1.jpg', '1', '1', 'Administrator'),
-	(12, '123456', 'Sudibyo A.S.', 'Wakil Direktur I', '1610946427-IMG_9244.JPG', '2', '1', 'Administrator'),
-	(13, '123456', 'Mursyid', 'Wakil Direktur II', '1610946485-3.jpg', '2', '1', 'Administrator'),
-	(14, '123456', 'Rusydi', 'Ketua Porgram Studi TPMO', '1610946686-1608114547-Rusydi.JPG', '6', '1', 'Administrator'),
-	(15, '123456', 'Dedi', 'Ketua Porgram Studi TOPKR4', '1610946747-1608109951-Dedi.JPG', '6', '1', 'Administrator'),
+	(12, '123456', 'Sudibyo A.S.', 'Wakil Direktur I', '1610946427-IMG_9244.JPG', '1', '1', 'Administrator'),
+	(13, '123456', 'Mursyid', 'Wakil Direktur II', '1610946485-3.jpg', '1', '1', 'Administrator'),
+	(14, '123456', 'Rusydi', 'Ketua Porgram Studi TPMO', '1610946686-1608114547-Rusydi.JPG', '7', '1', 'Administrator'),
+	(15, '123456', 'Dedi', 'Ketua Porgram Studi TOPKR4', '1610946747-1608109951-Dedi.JPG', '8', '1', 'Administrator'),
 	(16, '123456', 'Suhermanto', 'Kepala Unit Teaching Factory dan  P3M', '1610946801-1608114354-Suhermanto.JPG', '6', '1', 'Administrator'),
 	(18, '123456', 'Akmal', 'Kepala Unit Sarana & Prasarana', '1610946881-1608114396-Akmal.JPG', '6', '1', 'Administrator'),
 	(19, '123456', 'Niman', 'Kepala Unit Kemahasiswaan & Alumni', '1610946915-1608114502-Niman.JPG', '6', '1', 'Administrator'),
 	(20, '123456', 'Praditya Alambara', 'Kepala Unit Kelembagaan, SDM & Keuangan', '1610946963-image001.jpg', '6', '1', 'Administrator'),
-	(21, '123456', 'Kurniansyah', 'Kepala Unit Kerjasama & IT', '1610946994-IMG_4771.JPG', '6', '1', 'Administrator'),
-	(22, '123456', 'Hertyoso Nursasongko, S.T., M.Eng.Sc', 'Ketua Senat', '1610947238-Hertyoso.png', '4', '1', 'Administrator'),
-	(23, '123456', 'Hessa, S.T., M.Kom', 'Wakil Ketua Senat', '1610947276-hessa.png', '4', '1', 'Administrator'),
+	(21, '123456', 'Kurniansyah', 'Kepala Unit Kerjasama & IT', '1610946801-1608114354-Suhermanto_1.jpg', '6', '1', 'Administrator'),
+	(22, '123456', 'Hertyoso Nursasongko, S.T., M.Eng.Sc', 'Ketua Senat', '1610946801-1608114354-Suhermanto_2.jpg', '5', '1', 'Administrator'),
+	(23, '123456', 'Hessa, S.T., M.Kom', 'Wakil Ketua Senat', '1610946881-1608114396-Akmal_1.jpg', '5', '1', 'Administrator'),
 	(24, '123456', 'Afien Wibhawa', 'Ketua Yayasan', '1610947335-Pak Afien.jpg', '5', '1', 'Administrator'),
-	(25, '123456', 'Djatmiko E.S.', 'Sekertaris Yayasan', '1610947489-djatmiko.png', '5', '1', 'Administrator'),
-	(26, '123456', 'Warnoto', 'Bendahara Yayasan', '1610947522-Warnoto.png', '5', '1', 'Administrator'),
+	(25, '123456', 'Djatmiko E.S.', 'Sekertaris Yayasan', '1610946686-1608114547-Rusydi_1.jpg', '5', '1', 'Administrator'),
+	(26, '123456', 'Warnoto', 'Bendahara Yayasan', '1610946881-1608114396-Akmal_2.jpg', '5', '1', 'Administrator'),
 	(27, '123456', 'Hertyoso Nursasongko, S.T., M.Eng.Sc', 'Dosen TPMO', '1610948165-Hertyoso.png', '7', '1', 'Administrator'),
 	(28, '123456', 'Djatmiko E.S., S.T., M.M', 'Dosen TPMO', '1610948196-djatmiko.png', '7', '1', 'Administrator'),
 	(29, '123456', 'Raynaldhi Yudha, S.T.,M.T.', 'Dosen TPMO', '1610948337-Raynaldhi.png', '7', '1', 'Administrator'),
@@ -213,7 +206,7 @@ INSERT INTO `akti_dosen` (`dosen_id`, `dosen_nip`, `dosen_nama`, `dosen_jabatan`
 	(33, '123456', 'Bayu Priyanto, S.T.,M.M.', 'Dosen TOPKR4', '1610948587-Bayu.png', '8', '1', 'Administrator'),
 	(34, '123456', 'Hessa, S.T., M.Kom', 'Dosen TOPKR4', '1610948625-hessa.png', '8', '1', 'Administrator'),
 	(35, '123456', 'Indrawan, S.T.,M.T.', 'Dosen TOPKR4', '1610948680-Indarawan_depan.JPG', '8', '1', 'Administrator'),
-	(66, '152018072', 'Rendi Kuswandi', 'Dosen TPMO', 'WIN_20181230_14_17_07_Pro (2).jpg', '8', NULL, 'Superadmin');
+	(66, '152018072', 'Rendi Kuswandi', 'Dosen TPMO', 'FOTO SAYA.jpg', '8', NULL, 'Superadmin');
 /*!40000 ALTER TABLE `akti_dosen` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.akti_fakta
@@ -228,7 +221,6 @@ CREATE TABLE IF NOT EXISTS `akti_fakta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_fakta: ~9 rows (approximately)
-DELETE FROM `akti_fakta`;
 /*!40000 ALTER TABLE `akti_fakta` DISABLE KEYS */;
 INSERT INTO `akti_fakta` (`id`, `title`, `gambar`, `keterangan`, `kategori`, `admin_nama`) VALUES
 	(1, '10.000 m', '1609828577-1.png', 'Luas Kampus', '1', 'Administrator'),
@@ -255,7 +247,6 @@ CREATE TABLE IF NOT EXISTS `akti_fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_fasilitas: ~0 rows (approximately)
-DELETE FROM `akti_fasilitas`;
 /*!40000 ALTER TABLE `akti_fasilitas` DISABLE KEYS */;
 /*!40000 ALTER TABLE `akti_fasilitas` ENABLE KEYS */;
 
@@ -271,7 +262,6 @@ CREATE TABLE IF NOT EXISTS `akti_pertanyaan` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_pertanyaan: ~3 rows (approximately)
-DELETE FROM `akti_pertanyaan`;
 /*!40000 ALTER TABLE `akti_pertanyaan` DISABLE KEYS */;
 INSERT INTO `akti_pertanyaan` (`pertanyaan_id`, `pertanyaan_pengirim`, `pertanyaan_telp`, `pertanyaan_email`, `pertanyaan_deskripsi`, `pertanyaan_waktu`) VALUES
 	(1, 'Farhan', '081312007117', 'fauzanfarhan11@gmail.com', 'Test', '2021-01-07'),
@@ -292,10 +282,9 @@ CREATE TABLE IF NOT EXISTS `akti_program_studi` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`prodi_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_program_studi: ~2 rows (approximately)
-DELETE FROM `akti_program_studi`;
 /*!40000 ALTER TABLE `akti_program_studi` DISABLE KEYS */;
 INSERT INTO `akti_program_studi` (`prodi_id`, `prodi_nama`, `prodi_tentang`, `prodi_visi`, `prodi_misi`, `prodi_foto`, `prodi_dosen`, `prodi_kurikulum`, `updated_at`, `created_at`) VALUES
 	(12, 'Teknik Pemeliharaan Mesin Otomasi (TPMO)', 'Teknik Pemeliharaan Mesin Otomasi merupakan perpaduan/kombinasi bidang ilmu antara Teknik Pemeliharaan Mesin Industri dan Teknik Otomasi. Perpaduan dua bidang tersebut melahirkan bidang imu yang mampu mengimplementasikan pemeliharaan, perawatan, dan improvement terhadap mesin dan peralatan industri baik yang bersifat manual maupun otomatis (dikontrol oleh program)\r\nTeknik Perawatan Mesin Industri fokus pada kegiatan untuk menjaga, memelihara, mempertahankan, mengembangkan dan memaksimalkan daya guna dari segala peralatan dan sarana yang ada di industri sehingga modal/investasi yang ditanam dapat berhasil guna dan berdaya guna tinggi secara ekonomis. Ruang lingkup perawatan sangat tergantung dari besarnya/ banyaknya sarana dan prasarana dalam suatu lembagan, institusi, industri/ perusahaan serta di pengaruhi oleh kebijakan-kebijakan tertentu. Fungsi perawatan adalah menyelenggarakan teknik-teknik pemeliharaan dan perlindungan dari segala macam kegiatan produksi, non-produksi yang ada dalam lembaga, intitusi, atau perusahaan tersebut. ', 'Menjadi Progam Studi yang unggul dalam bidang Teknik Pemeliharaan Mesin Otomasi pada tahun 2025 untuk menghasilkan lulusan yang tanggap (perceptive), tangkas (agile), dan tangguh (perseverance) sebagai fondasi dalam rangka mendukung perkembangan Industri Otomotif Indonesia.', '', '1613011321-teknik-pemeliharaan-mesin-otomasi-tpmo.jpeg', '7', '', '2021-08-02 03:22:42', '2021-07-30 00:48:35'),
@@ -316,7 +305,6 @@ CREATE TABLE IF NOT EXISTS `akti_shortcourse` (
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_shortcourse: ~21 rows (approximately)
-DELETE FROM `akti_shortcourse`;
 /*!40000 ALTER TABLE `akti_shortcourse` DISABLE KEYS */;
 INSERT INTO `akti_shortcourse` (`sc_id`, `sc_nama`, `sc_telp`, `sc_email`, `sc_program`, `sc_instansi`, `sc_keterangan`, `sc_waktu`) VALUES
 	(3, 'NAVA GIA GINASTA', '087820033395', 'navagiaginasta@gmail.com', 'Basic PLC', '', '', '2021-01-06 11:56:53'),
@@ -356,7 +344,6 @@ CREATE TABLE IF NOT EXISTS `akti_shortcourse_program` (
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_shortcourse_program: ~25 rows (approximately)
-DELETE FROM `akti_shortcourse_program`;
 /*!40000 ALTER TABLE `akti_shortcourse_program` DISABLE KEYS */;
 INSERT INTO `akti_shortcourse_program` (`shortcourse_id`, `shortcourse_parent`, `shortcourse_judul`, `shortcourse_deskripsi`, `shortcourse_status`, `shortcourse_gambar`, `shortcourse_waktu`, `shortcourse_urutan`) VALUES
 	(3, 0, 'Basic', NULL, 'index', NULL, '2020-12-29 18:00:54', NULL),
@@ -394,7 +381,6 @@ CREATE TABLE IF NOT EXISTS `akti_skema_sertifikasi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_skema_sertifikasi: ~18 rows (approximately)
-DELETE FROM `akti_skema_sertifikasi`;
 /*!40000 ALTER TABLE `akti_skema_sertifikasi` DISABLE KEYS */;
 INSERT INTO `akti_skema_sertifikasi` (`skema_id`, `skema_nama`) VALUES
 	(1, 'Press'),
@@ -430,7 +416,6 @@ CREATE TABLE IF NOT EXISTS `akti_unit_kompetensi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_unit_kompetensi: ~103 rows (approximately)
-DELETE FROM `akti_unit_kompetensi`;
 /*!40000 ALTER TABLE `akti_unit_kompetensi` DISABLE KEYS */;
 INSERT INTO `akti_unit_kompetensi` (`unit_id`, `unit_nama`, `unit_judul`, `skema_id`, `unit_gambar`, `unit_waktu`, `unit_urutan`) VALUES
 	(1, 'Skema Operator Press Produksi Rank C ', 'Press', 1, '1609928351-press.png', '2021-01-06', 1),
@@ -550,7 +535,6 @@ CREATE TABLE IF NOT EXISTS `album` (
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.album: ~5 rows (approximately)
-DELETE FROM `album`;
 /*!40000 ALTER TABLE `album` DISABLE KEYS */;
 INSERT INTO `album` (`album_id`, `album_judul`, `album_deskripsi`, `album_gambar`, `album_kategori`, `album_urutan`) VALUES
 	(35, 'Album Assesor Akti', '<p>\r\n	-</p>\r\n', '1608274210-training-assesor.jpg', '', 0),
@@ -573,7 +557,6 @@ CREATE TABLE IF NOT EXISTS `album_galeri` (
 ) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.album_galeri: ~27 rows (approximately)
-DELETE FROM `album_galeri`;
 /*!40000 ALTER TABLE `album_galeri` DISABLE KEYS */;
 INSERT INTO `album_galeri` (`galeri_id`, `galeri_judul`, `galeri_deskripsi`, `galeri_gambar`, `galeri_waktu`, `album_id`) VALUES
 	(68, 'Training Asesor Kompetensi', '<p>\r\n	-</p>\r\n', '1608274235-training-assesor.jpg', '2020-12-18 13:50:35', 35),
@@ -622,7 +605,6 @@ CREATE TABLE IF NOT EXISTS `berita` (
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.berita: ~12 rows (approximately)
-DELETE FROM `berita`;
 /*!40000 ALTER TABLE `berita` DISABLE KEYS */;
 INSERT INTO `berita` (`berita_id`, `berita_judul`, `headline`, `berita_deskripsi`, `berita_waktu`, `berita_gambar`, `berita_hits`, `tags`, `kategori_id`, `admin_nama`) VALUES
 	(4, 'Menyambut Hari Sumpah Pemuda Ke-91', 'Y', '<p>\n	Karawang (26/10), Kementerian Olahraga dan Kementerian Sastra dan Bahasa yang berada di bawah naungan Badan Eksekutif&nbsp; Mahasiswa Akademi Komunitas Toyota Indonesia mengadakan beberapa pertandingan dan perlombaan di Asrama Akademi Komunitas Toyota Indonesia.</p>\n<p>\n	Upacara pembukaan dilaksanakan pada hari Sabtu, 26 Oktober 2019. Kegiatan ini bertujuan untuk menyambut Hari Sumpah Pemuda ke-91, mempererat tali silahturahmi antar mahasiswa/i serta menjaga persatuan dan kesatuan.</p>\n<p>\n	Pertandingan dan perlombaan yang diselenggarakan diantaranya ialah voli, tenis meja, desain poster, dan musikalisasi puisi. Acara berlangsung dengan semarak dan penuh semangat. Para peserta lomba&nbsp; menunjukkan bakat yang mereka miliki&nbsp; dengan penuh totalitas.</p>\n<p>\n	Penyerahan sertifikat dan pembagian hadiah kepada para pemenang juara 1, 2, dan 3 dilaksanakan pada hari Minggu 27 Oktober 2019 dalam upacara penutupan yang didampingi oleh Bapak Sukirman dan&nbsp; Bapak Sudiyono selaku caretaker.</p>\n<p>\n	&nbsp;</p>\n', '2015-11-22 23:47:59', '1611202810-menyambut-hari-sumpah-pemuda-ke91.jpg', 61, '3', 2, 'Nava Gia Ginasta'),
@@ -650,7 +632,6 @@ CREATE TABLE IF NOT EXISTS `captcha` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2606 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.captcha: ~2 rows (approximately)
-DELETE FROM `captcha`;
 /*!40000 ALTER TABLE `captcha` DISABLE KEYS */;
 INSERT INTO `captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
 	(2604, 1608615966, '::1', '0391'),
@@ -668,8 +649,7 @@ CREATE TABLE IF NOT EXISTS `downloads` (
   PRIMARY KEY (`download_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.downloads: ~0 rows (approximately)
-DELETE FROM `downloads`;
+-- Dumping data for table login_db.downloads: ~1 rows (approximately)
 /*!40000 ALTER TABLE `downloads` DISABLE KEYS */;
 INSERT INTO `downloads` (`download_id`, `download_judul`, `download_deskripsi`, `download_file`, `download_hits`, `download_waktu`) VALUES
 	(24, 'Test File', 'Test File', 'Account_Payable1 (1).pdf', 0, '2021-01-06 12:07:04');
@@ -685,8 +665,7 @@ CREATE TABLE IF NOT EXISTS `galeri_video` (
   PRIMARY KEY (`video_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.galeri_video: ~0 rows (approximately)
-DELETE FROM `galeri_video`;
+-- Dumping data for table login_db.galeri_video: ~1 rows (approximately)
 /*!40000 ALTER TABLE `galeri_video` DISABLE KEYS */;
 INSERT INTO `galeri_video` (`video_id`, `video_judul`, `video_deskripsi`, `video_link`, `video_waktu`) VALUES
 	(5, 'Akademi Komunitas Toyota Indonesia Videos', '<p>\r\n	Akademi Komunitas Toyota Indonesia</p>\r\n', 'https://www.youtube.com/embed/fZFaHIVOZcU?feature=oembed', '2020-12-21 16:02:21');
@@ -718,8 +697,7 @@ CREATE TABLE IF NOT EXISTS `identitas` (
   PRIMARY KEY (`identitas_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.identitas: ~0 rows (approximately)
-DELETE FROM `identitas`;
+-- Dumping data for table login_db.identitas: ~1 rows (approximately)
 /*!40000 ALTER TABLE `identitas` DISABLE KEYS */;
 INSERT INTO `identitas` (`identitas_id`, `identitas_website`, `identitas_deskripsi`, `identitas_keyword`, `identitas_alamat`, `identitas_notelp`, `identitas_fb`, `identitas_email`, `identitas_tw`, `identitas_ig`, `identitas_gp`, `identitas_yb`, `identitas_maps`, `identitas_favicon`, `identitas_author`, `identitas_warning`, `identitas_aktif`, `identitas_sambutan`, `identitas_sambutan_jabatan`, `identitas_sambutan_nama`, `identitas_sambutan_foto`) VALUES
 	(1, 'Akademi Komunitas Toyota Indonesia', 'Akademi Komunitas Toyota Indonesia adalah Perguruan Tinggi Vokasi yang mendidik mahasiswa dengan tanggap, tangkas dan Tangguh dengan dibekali pendidikan karakter yang kuat terhadap body and mine yang mana akan menjadikan perguruan tinggi yang unggul dalam bidang manufaktur otomotif dan ikut membangun perkembangan Industri Otomotif di Indonesia', 'Akademi Komunitas Toyota Indonesia, AKTI', 'Jl. Trans Heksa No.01 Desa Margamulya, Kec. Telukjambe Barat, Kab. Karawang – Jawa Barat 41361', '(0276) 644 480', 'https://web.facebook.com/ToyotaIndonesiaAcademy', 'akti@toyota.co.id', 'https://twitter.com/', 'https://www.instagram.com/akti_id/', 'https://plus.google.com/', 'https://www.youtube.com/embed/fZFaHIVOZcU?feature=oembed', '-6.357216094951194, 107.26047754348032', '1608040203-favicon_akti.png', 'www.crop.co.id', 'DEMO WEBSITE IS UP', '2025-07-31 11:18:00', '<p style="text-align: justify;">\r\n	Akademi Komunitas Toyota Indonesia didirikan untuk memenuhi kebutuhan tenaga kerja yang mempunyai kompetensi yang dibutuhkan dunia industri khususnya industri otomotif. Hal ini karena kami sadari bahwa saat ini <em>link and match</em> pendidikan vokasi atau kejuruan dengan dunia industri masih kurang memadai baik dari sisi keilmuan maupun sisi demand-nya. Oleh sebab itu AKTI dirancang dan dibuat sedemikian rupa agar bisa menghasilkan lulusan yang siap kerja di industri manufaktur khususnya industri manufaktur otomotif.</p>\r\n<p style="text-align: justify;">\r\n	Sebagai bukti bahwa lulusan AKTI mempunyai Kompetensi yang dibutuhkan oleh industri maka semua lulusan akti juga harus mengikuti&nbsp; uji komeptensi berbasis SKKNI sehingga mendapat pengakuan dari BNSP melalui sertifikasi Nasional. Karena industri itu sendiri terus berkembang seiring dengan berkembangnya teknologi tentu saja kurikulum di AKTI di buat adaptif mengikuti perkembangan teknologi tersebut, seperti halnya saat ini dikenal dengan revolusi Industri 4.0. Akti juga mulai menyusun dan menerapkan kurikulum yang bisa memenuhi kebutuhan industri dalam menghadapi Revolusi industri tersebut</p>\r\n<p style="text-align: justify;">\r\n	AKTI juga mengemban Visi yang lain yaitu :</p>\r\n<p style="text-align: justify;">\r\n	Pemerataan akses pendidikan untuk membantu mengurangi kesenjangan kualitas pendidikan antar daeran di indonesia, untuk itu&nbsp; &nbsp; &nbsp; &nbsp; AKTI mencari calon mahasiswa di 12 Provinsi ada dari Pulau Jawa dan &nbsp;luar Pulau Jawa.</p>\r\n<p style="text-align: justify;">\r\n	Menjadi model pendidikan vokasi untuk industri manufaktur otomotif, AKTI secara aktif akan mengihabahkan kurikulum dan alat&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />\r\n	peraga pendidikan dari hasil pengembangan bekerjasama dengan industri untuk SMK.</p>\r\n<p style="text-align: justify;">\r\n	Kami sangat berharap dengan berdirinya AKTI bisa bermanfaat dalam memajukan pendidkan nasional yang <em>link and match</em> dengan dunia usaha dan dunia industri. pada akhirnya AKTI ikut berperan dalam mendukung daya saing SDM indonesia dalam mengahadapi kompetensi global.</p>\r\n', 'Amirul Chusni', 'Director', '1610944338-1609928039-Director.png');
@@ -735,7 +713,6 @@ CREATE TABLE IF NOT EXISTS `kategori` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.kategori: ~3 rows (approximately)
-DELETE FROM `kategori`;
 /*!40000 ALTER TABLE `kategori` DISABLE KEYS */;
 INSERT INTO `kategori` (`kategori_id`, `kategori_judul`, `kategori_warna`, `admin_nama`) VALUES
 	(1, 'Pengumuman', '006fff', 'Nava Gia Ginasta'),
@@ -757,7 +734,6 @@ CREATE TABLE IF NOT EXISTS `komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.komentar: ~0 rows (approximately)
-DELETE FROM `komentar`;
 /*!40000 ALTER TABLE `komentar` DISABLE KEYS */;
 /*!40000 ALTER TABLE `komentar` ENABLE KEYS */;
 
@@ -776,7 +752,6 @@ CREATE TABLE IF NOT EXISTS `menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.menu: ~10 rows (approximately)
-DELETE FROM `menu`;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`menu_kode`, `menu_nama`, `menu_deskripsi`, `menu_url`, `menu_site`, `menu_level`, `menu_subkode`, `menu_urutan`, `menu_status`) VALUES
 	(196, 'Data Dosen', 'fa-users', 'dashboard/dataDosen', 'A', '1', 4, 2, 'H'),
@@ -799,10 +774,9 @@ CREATE TABLE IF NOT EXISTS `menu_admin` (
   PRIMARY KEY (`menu_admin_kode`) USING BTREE,
   KEY `menu_kode` (`menu_kode`) USING BTREE,
   KEY `admin_level_kode` (`admin_level_kode`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=314 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=315 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.menu_admin: ~10 rows (approximately)
-DELETE FROM `menu_admin`;
 /*!40000 ALTER TABLE `menu_admin` DISABLE KEYS */;
 INSERT INTO `menu_admin` (`menu_admin_kode`, `menu_kode`, `admin_level_kode`) VALUES
 	(288, 196, 1),
@@ -826,8 +800,7 @@ CREATE TABLE IF NOT EXISTS `menu_sidebar` (
   PRIMARY KEY (`menu_kode_sidebar`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table login_db.menu_sidebar: ~2 rows (approximately)
-DELETE FROM `menu_sidebar`;
+-- Dumping data for table login_db.menu_sidebar: ~1 rows (approximately)
 /*!40000 ALTER TABLE `menu_sidebar` DISABLE KEYS */;
 INSERT INTO `menu_sidebar` (`menu_kode_sidebar`, `menu_title`, `menu_icon`, `menu_url_sidebar`) VALUES
 	(1, 'Data Akti ', '', '#');
@@ -843,7 +816,6 @@ CREATE TABLE IF NOT EXISTS `mitra_kerja` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.mitra_kerja: ~6 rows (approximately)
-DELETE FROM `mitra_kerja`;
 /*!40000 ALTER TABLE `mitra_kerja` DISABLE KEYS */;
 INSERT INTO `mitra_kerja` (`mitra_id`, `mitra_gambar`, `mitra_link`, `mitra_waktu`) VALUES
 	(12, '1611115493-Logo_YTI.jpg', '#', '2020-12-18 13:20:41'),
@@ -863,7 +835,6 @@ CREATE TABLE IF NOT EXISTS `newsletter` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.newsletter: ~2 rows (approximately)
-DELETE FROM `newsletter`;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
 INSERT INTO `newsletter` (`news_id`, `news_email`, `news_post`) VALUES
 	(1, 'navagiaginasta@gmail.com', '2016-01-12 19:29:18'),
@@ -880,8 +851,7 @@ CREATE TABLE IF NOT EXISTS `portal` (
   PRIMARY KEY (`portal_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.portal: ~0 rows (approximately)
-DELETE FROM `portal`;
+-- Dumping data for table login_db.portal: ~1 rows (approximately)
 /*!40000 ALTER TABLE `portal` DISABLE KEYS */;
 INSERT INTO `portal` (`portal_id`, `portal_judul`, `portal_status`, `portal_link`, `portal_waktu`) VALUES
 	(4, 'PROFILE AKTI', 0, 'https://www.youtube.com/embed/fZFaHIVOZcU?feature=oembed', '2020-12-29 16:53:05');
@@ -899,7 +869,6 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.sessions: ~10 rows (approximately)
-DELETE FROM `sessions`;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
 INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
 	('091afb19cd233b9b7e6fa69455aab4c5', '182.2.138.138', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36', 1613013140, 'a:5:{s:9:"user_data";s:0:"";s:10:"admin_user";s:5:"admin";s:10:"admin_nama";s:13:"Administrator";s:11:"admin_level";s:1:"1";s:9:"logged_in";b:1;}'),
@@ -925,7 +894,6 @@ CREATE TABLE IF NOT EXISTS `slide` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.slide: ~2 rows (approximately)
-DELETE FROM `slide`;
 /*!40000 ALTER TABLE `slide` DISABLE KEYS */;
 INSERT INTO `slide` (`slide_id`, `slide_judul`, `slide_gambar`, `slide_deskripsi`, `slide_waktu`) VALUES
 	(1, 'slide3', '1607957961-slide3.png', '<p>\r\n	slide3</p>\r\n', '2020-12-14 21:58:31'),
@@ -944,7 +912,6 @@ CREATE TABLE IF NOT EXISTS `statis` (
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.statis: ~27 rows (approximately)
-DELETE FROM `statis`;
 /*!40000 ALTER TABLE `statis` DISABLE KEYS */;
 INSERT INTO `statis` (`statis_id`, `statis_judul`, `statis_deskripsi`, `statis_gambar`, `statis_status`, `statis_waktu`) VALUES
 	(5, 'Sejarah', '<p>\r\n	PT. Toyota Motor Manufacturing Indonesia (TMMIN) sebagai salah satu produsen mobil untuk merk Toyota di Indonesia ingin membantu pemerintah, khususnya dalam meningkatkan kompetensi SDM Indonesia dalam proses manufaktur kendaraan roda empat. PT. TMMIN berencana untuk mendidik lulusan-lulusan SMK ternama di seluruh Indonesia yang nantinya diharapkan dapat menjadi pemimpin-pemimpin industri otomotif di masa yang akan datang.</p>\r\n<p>\r\n	Melihat adanya tantangan dan persaingan globalisasi di masa mendatang, Toyota merasa perlu untuk berperan aktif dalam transfer teknologi serta pengetahuan sehingga mampu meningkatkan skill dan pengetahuan masyarakat. Hal inilah yang mendasari Toyota Indonesia untuk mengembangkan Akademi Komunitas Toyota Indonesia. Sebagai payung hukum Akademi Komunitas Toyota Indonesia tersebut, maka pada bulan Maret 2015 didirikanlah <strong>Yayasan Toyota Indonesia (YTI).</strong></p>\r\n<p>\r\n	<strong>Yayasan Toyota Indonesia</strong> adalah sebuah institusi independen yang dibentuk oleh manajemen PT. Toyota Motor Manufacturing Indonesia (TMMIN) yang berperan dalam pengembangan sumber daya manusia di bidang otomotif. Tugas utamanya adalah sebagai pengelola dan penanggung jawab&nbsp; Akademi Komunitas Toyota Indonesia.</p>\r\n<p>\r\n	Terkait dengan asal dari calon peserta didik yang akan dididik, Akademi Komunitas Toyota Indonesia berencana akan mendididik calon-calon peserta dari seluruh wilayah di Indonesia, mulai dari Aceh sampai dengan Papua. Mereka akan kami seleksi secara terbuka dan adil (<em>fair</em>) terkait dengan karakter dan mental dasar serta kompetensi dan keahlian dasar yang sudah dimiliki.</p>\r\n<p>\r\n	Selanjutnya, berkaitan dengan rencana penyerapan lulusan peserta didik, mereka akan dapat diserap oleh industri otomotif di Indonesia dan kami juga akan terus menjalin kerja sama dengan institusi pemerintah untuk dapat menyalurkan mereka tidak hanya untuk industri otomotif di Indonesia, tetapi juga mencakup industri otomotif di region Asia Pasifik dan bahkan dunia.</p>\r\n<p>\r\n	Peran Akademi Komunitas Toyota Indonesia diharapkan juga berlaku sebagai <em>agent of change</em> yang memiliki peranan sebagai berikut :</p>\r\n<ol>\r\n	<li>\r\n		Sebagai pusat benchmark pendidikan teknologi manufaktur di Indonesia.</li>\r\n	<li>\r\n		Sebagai pusat benchmark terhadap teknologi baru untuk industri manufaktur.</li>\r\n	<li>\r\n		Sebagai pusat benchmark untuk pengembangan mental dan <em>attitude</em> tenaga kerja manufaktur.</li>\r\n</ol>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	&nbsp;</p>\r\n', '1608128313-sejarah.jpg', 'N', '2015-11-01 13:33:47'),
@@ -985,7 +952,6 @@ CREATE TABLE IF NOT EXISTS `tags` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.tags: ~3 rows (approximately)
-DELETE FROM `tags`;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
 INSERT INTO `tags` (`tag_id`, `tag_judul`, `tag_seo`) VALUES
 	(3, 'Pengumuman', 'pengumuman'),
@@ -1007,7 +973,6 @@ CREATE TABLE IF NOT EXISTS `testimonial` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.testimonial: ~3 rows (approximately)
-DELETE FROM `testimonial`;
 /*!40000 ALTER TABLE `testimonial` DISABLE KEYS */;
 INSERT INTO `testimonial` (`testimonial_id`, `testimonial_nama`, `testimonial_sumber`, `testimonial_kerja`, `testimonial_jabatan`, `testimonial_deskripsi`, `testimonial_gambar`, `testimonial_waktu`) VALUES
 	(5, 'Nava Gia Ginasta, S.Tr.Kom., M.Kom, CISA', 'Lulusan', 'PT Crop Inspirasi Digital', 'Direktur Utama', '<p>\n	<font color="#000000">Akademi Komunitas Toyota Indonesia memberikan materi pembelajaran yang sangat membantu pada dunia kerja</font></p>\n', '1612449885-nava-profile.jpg', '2015-11-22 10:54:50'),
@@ -1026,16 +991,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `admin_level_kode` int(11) NOT NULL,
   PRIMARY KEY (`user_id`),
   KEY `admin_level_kode` (`admin_level_kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 
--- Dumping data for table login_db.users: ~4 rows (approximately)
-DELETE FROM `users`;
+-- Dumping data for table login_db.users: ~5 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`user_id`, `user_name`, `user_profile`, `user_email`, `user_password`, `user_created_at`, `admin_level_kode`) VALUES
 	(24, 'Anggito Achmad', 'profile.jpg', 'anggitoachmad21@gmail.com', '$2y$10$G7xWkB1khwFwkUj7GnZSkuYnAcqgHvYKEJPdyFLToE4SnI7Ufj0OW', '2021-07-26 07:27:14', 1),
 	(32, 'Dimas', 'WIN_20181019_11_07_33_Pro.jpg', 'Dimas21@gmail.com', '$2y$10$k3.0DcQ9ZDGCMetHyXpsLuBermv.d/.m67bMbS77OxhNT.a1AlYli', '2021-07-30 03:33:00', 3),
 	(36, 'Ucut12', '', NULL, '$2y$10$vDdWlzu0b9BLpAajO2smnOXzu8XVv0QY.qJb3XPP4S8SkfxwGb75e', '2021-08-08 07:16:33', 2),
-	(39, 'Triana', '', NULL, '$2y$10$2cFFIZ1w.crIZgBd1AlxAenLZ29Ll4IvM5Dk8WvqV7p0Q1jdVmMvS', '2021-08-09 19:09:13', 3);
+	(39, 'Triana', '', NULL, '$2y$10$2cFFIZ1w.crIZgBd1AlxAenLZ29Ll4IvM5Dk8WvqV7p0Q1jdVmMvS', '2021-08-09 19:09:13', 3),
+	(41, 'rendi', '', NULL, '$2y$10$dWff1HwCGCiwFMyKaOfvnuG.rMGaYvwY4VSxH0p/zJk2PxuErZsOW', '2021-08-25 11:49:26', 1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
