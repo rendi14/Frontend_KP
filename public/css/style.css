@@ -170,7 +170,7 @@
   .form-data {
     width: 100%;
     font-size: 15px;
-    margin-left: 35px;
+    margin-left: 5px;
   }
 
   .button-login {
@@ -178,7 +178,7 @@
   }
 
   .background {
-    margin-left: 1;
+    margin-left: 0;
   }
 
   .form-data {
@@ -187,7 +187,7 @@
 
   .form-data-editDosen {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 0px;
   }
 
   .btn-close-alerts {
@@ -200,13 +200,25 @@
   }
 
   .image-prodi {
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 130px;
   }
 
   .image-prodi-response {
     width: 200px;
     height: 100px;
+  }
+  .button-login-admin {
+    /* width: 500px !important;
+  height: 50px !important; */
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fd7e14 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: none !important;
   }
 }
 

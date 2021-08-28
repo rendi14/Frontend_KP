@@ -7,7 +7,7 @@
     </div>
     <div class="container mt-2">
         <div class="row justify-content-md-center">
-            <div class="col-10 col-lg-5 p-5 form-data border border-2">
+            <div class="col-12 col-lg-5 p-5 form-data border border-2">
                 <h3 class="mb-5">Login</h3>
                 <?php if (session()->getFlashdata('msg')): ?>
                     <div class="alert alert-danger">
