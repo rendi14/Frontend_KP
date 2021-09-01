@@ -14,14 +14,14 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-        <form action="/dashboard/tambahAktiProdi" method="post" enctype="multipart/form-data" class="row g-3">
+        <form action="/berita/tambahBerita" method="post" enctype="multipart/form-data" class="row g-3">
           <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Berita</label>
-            <input type="text" id="defaultForm-Name" class="form-control validate" name="nama_prodi">
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
           </div>
           <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Berita</label>
-            <textarea type="text" id="editor" class="form-control validate" name="misi"></textarea>
+            <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
           </div>
           <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Gambar Berita</label>
@@ -29,13 +29,18 @@
           </div>
           <div class="md-form mb-2">
             <label for="InputForlevel" class="form-label">Kategori Berita</label>
-            <select class="form-select" name="menu-access" required aria-label="Default select example">
+            <select class="form-select" name="kategori" required aria-label="Default select example">
             <option selected>Pilih</option>
             <option value="1">Pengumuman</option>
             <option value="2">Berita</option>
             <option value="3">Karir</option>
             </select>
           </div>
+          <div class="md-form mb-2">
+          <label for="InputForlevel" class="form-label">Waktu Berita</label>
+          <input type="datetime-local" class="form-control" name="waktu">
+          </div>
+          <input type="text" hidden readonly class="form-control" name="admin" value="<?=session()->get('user_name');?>">
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn btn-primary" type="submit">Simpan</button>
@@ -100,12 +105,11 @@
             <dt class="col-sm-2">Berita Waktu</dt>
             <dd class="col-sm-10 text-align-justify"><?= $p['berita_waktu']; ?></dd>
             <dt class="col-sm-2">Foto</dt>
-            <dd class="col-sm-10"><img src="/gambar/prodi/<?= $p['berita_gambar']; ?>" alt="<?= $p['berita_judul']; ?>" width="500" height="300" class="image-prodi"></dd>
+            <dd class="col-sm-10"><img src="/gambar/berita/<?= $p['berita_gambar']; ?>" alt="<?= $p['berita_judul']; ?>" width="500" height="300" class="image-prodi"></dd>
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
-              <a href="/dashboard/tampilEditProdi/<?= $p['berita_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
-              <a href="/dashboard/hapusProdi/<?= $p['berita_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></span> Hapus</a>
-              
+              <a href="/berita/tampilEditBerita/<?= $p['berita_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
+              <a href="/berita/hapusBerita/<?= $p['berita_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></span> Hapus</a>
             </dd>
           </dl>
         </div>
