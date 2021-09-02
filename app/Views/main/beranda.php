@@ -223,7 +223,6 @@
 
 
 <!-- halaman 7 beranda -->
-
 <div class="halaman7home">
 
     <section class="portfolio-area pt-100 pb-70">
@@ -234,53 +233,19 @@
         </div>
 
         <div class="container-fluid">
-            <div class="portfolio-slides owl-carousel owl-theme">
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img1.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Customer Satisfaction for a Digital Marketing Agency</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
+            <?php foreach ($berita as $p) : ?>
+                <div class="portfolio-slides owl-carousel owl-theme">
+                    <div class="single-portfolio-item">
+                        <a href="#" class="image d-block">
+                            <img src="/gambar/berita/<?= $p['berita_gambar']; ?>" alt="<?= $p['berita_judul']; ?>" width="500" height="300" class="image-prodi">
+                        </a>
+                        <div class="content">
+                            <h3><a><?= $p['berita_judul']; ?></a></h3>
+                        </div>
                     </div>
+
                 </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img2.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Return on Investment for Various Digital Marketing Strategies</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img3.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Google Search Engine Marketing Case Study Analysis</a></h3>
-                        <a href="single-portfolio.html" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img4.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Analysis of New Product Launch Using Google Double Click</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img5.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
 

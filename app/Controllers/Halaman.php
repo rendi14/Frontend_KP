@@ -6,6 +6,7 @@ use App\Models\prodiModel;
 use App\Models\akademikModel;
 use App\Models\dosenModel;
 use App\Models\agendaModel;
+use App\Models\beritaModel;
 
 class Halaman extends BaseController
 {
@@ -171,4 +172,17 @@ class Halaman extends BaseController
         echo view('main/Tenagakerja', $data);
         echo view('layout/footer');
     }
+    // -------------------------------------------------
+    // public function berita()
+    // {
+    //     $beritamodel = new beritaModel;
+    //     $berita = $beritamodel->findAll();
+    //     $data = [
+    //         'tittle' => 'Berita || PT.CROP',
+    //         'berita' => $berita,
+    //     ];
+    //     echo view('layout/header');
+    //     echo view('main/beranda', $data);
+    //     echo view('layout/footer');
+    // }
 }

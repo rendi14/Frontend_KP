@@ -8,13 +8,15 @@ use App\Models\menuAdmin;
 use App\Models\admin_level;
 use CodeIgniter\Controller;
 
-class Berita extends Controller {
-	public function index() {
-        $sidebar = new sidebarModel;
+class Berita extends Controller
+{
+	public function index()
+	{
+		$sidebar = new sidebarModel;
 		$berita = new beritaModel;
 		$side = $sidebar->where('menu_site', 'A')->findAll();
-        $user_model = $sidebar->findAll();
-        $agenda_user = $berita->findAll();
+		$user_model = $sidebar->findAll();
+		$agenda_user = $berita->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
 
@@ -25,18 +27,19 @@ class Berita extends Controller {
 			$orang = $berita;
 		}
 		$data = [
-            'tittle' => 'Berita || PT.CROP',
-            'side' => $side,
-            'berita' => $berita->paginate(2, 'berita'),
+			'tittle' => 'Berita || PT.CROP',
+			'side' => $side,
+			'berita' => $berita->paginate(2, 'berita'),
 			'user_model' => $user_model,
 			'sidebar' => $sidebar_side,
 			'currentPage' => $currentPage,
-            'pager' => $berita->pager,
+			'pager' => $berita->pager,
 		];
 		return view('dashboard/berita_data', $data);
-    }
-    
-    public function tambahBerita() {
+	}
+
+	public function tambahBerita()
+	{
 		$model = new sidebarModel;
 		$model_ = new beritaModel;
 		$sidebar_side = $model->getSide();
@@ -50,14 +53,14 @@ class Berita extends Controller {
 			'berita_waktu' => $this->request->getVar('waktu'),
 			'berita_gambar' => $namaGambar,
 			'kategori_id' => $this->request->getVar('kategori'),
-            'admin_nama' => $this->request->getVar('admin')
+			'admin_nama' => $this->request->getVar('admin')
 		];
 		$model_->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
 		return redirect()->to('/berita');
-	 }
+	}
 
-    public function tampilEditBerita($id)
+	public function tampilEditBerita($id)
 	{
 		$user = new beritaModel;
 		$sidebar = new sidebarModel;
@@ -72,7 +75,8 @@ class Berita extends Controller {
 		return view('dashboard/pages/editFormBerita', $data);
 	}
 
-	public function editDataBerita(){
+	public function editDataBerita()
+	{
 		$model = new sidebarModel;
 		$model_ = new beritaModel;
 		$sidebar_side = $model->getSide();
@@ -84,14 +88,15 @@ class Berita extends Controller {
 			'berita_waktu' => $this->request->getVar('waktu'),
 			'berita_gambar' => $this->request->getVar('gambar'),
 			'kategori_id' => $this->request->getVar('kategori'),
-            'admin_nama' => $this->request->getVar('admin')
+			'admin_nama' => $this->request->getVar('admin')
 		];
 		$model_->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil diubah');
-		return redirect()->to('/berita');		
+		return redirect()->to('/berita');
 	}
 
-	public function ubahGambar(){
+	public function ubahGambar()
+	{
 		$model = new sidebarModel;
 		$model_ = new beritaModel;
 		$sidebar_side = $model->getSide();
@@ -106,14 +111,15 @@ class Berita extends Controller {
 			'berita_waktu' => $this->request->getVar('waktu'),
 			'berita_gambar' => $namaGambar,
 			'kategori_id' => $this->request->getVar('kategori'),
-            'admin_nama' => $this->request->getVar('admin')
+			'admin_nama' => $this->request->getVar('admin')
 		];
 		$model_->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil diubah');
-		return redirect()->to('/berita');		
+		return redirect()->to('/berita');
 	}
 
-	public function hapusBerita($id){
+	public function hapusBerita($id)
+	{
 		$model = new beritaModel;
 		$session = session();
 		$model->delete($id);
