@@ -12,8 +12,13 @@ class Halaman extends BaseController
 {
     public function index()
     {
+        $beritamodel = new beritaModel;
+        $berita = $beritamodel->findAll();
+        $data = [
+            'berita' => $berita,
+        ];
         echo view('layout/header');
-        echo view('main/beranda');
+        echo view('main/beranda', $data);
         echo view('layout/footer');
     }
 
