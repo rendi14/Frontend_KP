@@ -177,17 +177,4 @@ class Halaman extends BaseController
         echo view('main/Tenagakerja', $data);
         echo view('layout/footer');
     }
-    // -------------------------------------------------
-    // public function berita()
-    // {
-    //     $beritamodel = new beritaModel;
-    //     $berita = $beritamodel->findAll();
-    //     $data = [
-    //         'tittle' => 'Berita || PT.CROP',
-    //         'berita' => $berita,
-    //     ];
-    //     echo view('layout/header');
-    //     echo view('main/beranda', $data);
-    //     echo view('layout/footer');
-    // }
 }

@@ -22,8 +22,6 @@
             <?php foreach ($user as $u) : ?>
                 <div class="col-md-6">
                     <div class="icon-box mb-3">
-                        <!-- <i class="bx bx-briefcase"></i> -->
-                        <!-- <img src="/assets/img/akademik/1611204006-Presentation3.jpg" alt=""> -->
                         <img src="" alt="">
                         <td class="text-center"><img src="/gambar/akademik/<?= $u['akademik_gambar']; ?>" alt="<?= $u['akademik_title']; ?>" width="60px;" height="60px;"></td>
                         <h4>

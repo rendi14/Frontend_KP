@@ -61,7 +61,7 @@
                             </li>
                             <li class="nav-item"><a href="/Halaman/agenda" class="nav-link">Agenda</a></li>
                             <li class="nav-item"><a href="/Beranda/berita" class="nav-link">Blog</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Bantuan</a></li>
+                            <li class="nav-item"><a href="/Berita" class="nav-link">Bantuan</a></li>
                         </ul>
 
                         <div class="others-option d-flex align-items-center">
