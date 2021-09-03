@@ -41,6 +41,14 @@ class Halaman extends BaseController
 
 
     // -------------------------------------------------
+    public function Kontak()
+    {
+        echo view('layout/header');
+        echo view('main/Kontak');
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
     public function TPMO()
     {
         $model = new dosenModel;

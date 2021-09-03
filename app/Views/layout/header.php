@@ -56,12 +56,16 @@
                             <li class="nav-item"><a href="#" class="nav-link">Akti<i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="/Halaman/tentang" class="nav-link">Tentang</a></li>
-                                    <li class="nav-item"><a href="/Halaman/galeri" class="nav-link">Galeri</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Galeri <i class='bx bx-chevron-right'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="/Halaman/galeri" class="nav-link">Album Galeri</a></li>
+                                            <li class="nav-item"><a href="team-2.html" class="nav-link">Video Galeri</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
                             <li class="nav-item"><a href="/Halaman/agenda" class="nav-link">Agenda</a></li>
                             <li class="nav-item"><a href="/Beranda/berita" class="nav-link">Blog</a></li>
-                            <li class="nav-item"><a href="/Berita" class="nav-link">Bantuan</a></li>
+                            <li class="nav-item"><a href="/Halaman/Kontak" class="nav-link">Kontak</a></li>
                         </ul>
 
                         <div class="others-option d-flex align-items-center">
