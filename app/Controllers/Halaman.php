@@ -91,7 +91,7 @@ class Halaman extends BaseController
 
         $data = [
             'tittle' => 'Akademik || PT.CROP',
-            'user' => $model->paginate(10, 'user'),
+            'user' => $model->paginate(50, 'user'),
             'pager' => $model->pager,
 
         ];
@@ -175,6 +175,19 @@ class Halaman extends BaseController
         ];
         echo view('layout/header');
         echo view('main/Tenagakerja', $data);
+        echo view('layout/footer');
+    }
+    // -------------------------------------------------
+    public function detailBerita($id)
+    {
+        $beritamodel = new beritaModel;
+        $berita = $beritamodel->findAll();
+        $data = [
+            'tittle' => 'Detail Berita || PT.CROP',
+            'berita' => $beritamodel->getBerita($id),
+        ];
+        echo view('layout/header');
+        echo view('main/detailBerita', $data);
         echo view('layout/footer');
     }
 }

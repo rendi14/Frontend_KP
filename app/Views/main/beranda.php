@@ -236,7 +236,7 @@
             <div class="portfolio-slides owl-carousel owl-theme">
                 <?php foreach ($berita as $p) : ?>
                     <div class="single-portfolio-item">
-                        <a href="#" class="image d-block">
+                        <a href="/Halaman/detailBerita<?= $p['berita_id']; ?>" class="image d-block">
                             <img src="/gambar/berita/<?= $p['berita_gambar']; ?>" alt="<?= $p['berita_judul']; ?>" width="500" height="300" class="image-prodi">
                         </a>
                         <div class="content">
