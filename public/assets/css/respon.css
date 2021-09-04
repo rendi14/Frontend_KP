@@ -20,6 +20,16 @@
     line-height: 38px;
   }
 
+  .banner h1 {
+    margin: 0px 0 0 8px;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--whiteColor);
+    font-family: var(--fontFamily);
+  }
+
   .banner video {
     position: absolute;
     object-fit: cover;
@@ -28,7 +38,7 @@
   }
 
   .banner .play-btn {
-    margin: 150px 0px 0 70px;
+    margin: 150px 0px 0 50px;
     width: 94px;
     height: 94px;
     background: radial-gradient(
