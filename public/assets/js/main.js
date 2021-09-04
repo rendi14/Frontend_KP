@@ -245,6 +245,20 @@
     }
   });
   
+
+// galeri album JS
+  /**
+   * Porfolio isotope and filter
+   */
+
+  /**
+   * Initiate portfolio lightbox 
+   */
+  const portfolioLightbox = GLightbox({
+    selector: '.portfokio-lightbox'
+  });
+//   endd
+
 	// Accordion JS
 	$(function() {
 		$('.accordion').find('.accordion-title').on('click', function(){
@@ -441,7 +455,7 @@
 
 	// ===========================================
 
-	// galeri
+	// tenaga kerja
 	   const select = (el, all = false) => {
 		el = el.trim()
 		if (all) {
@@ -495,7 +509,7 @@
 	
 	  });
 
-	//   end galeri
+	//   end tenaga kerja
 
 
 }(jQuery));

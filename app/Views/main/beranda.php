@@ -1,10 +1,10 @@
 <section class="banner">
     <video autoplay loop muted>
-        <source src="/assets/img/video/toyota.mp4">
+        <source src="/assets/img/video/toyota2.mp4">
     </video>
     <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
     <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://www.youtube.com/watch?v=74B90k9u4wQ" class="play-btn"></a>
+        <a href="https://www.youtube.com/embed/3LkA9dBLAlo" class="play-btn"></a>
     </div>
 </section>
 

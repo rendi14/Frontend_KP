@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/assets/css/fancybox.min.css">
     <link rel="stylesheet" href="/assets/css/odometer.min.css">
     <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/assets/css/glightbox.min.css">
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/stylee.css">
     <link rel="stylesheet" href="/assets/css/respon.css">
@@ -59,7 +60,7 @@
                                     <li class="nav-item"><a href="#" class="nav-link">Galeri <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item"><a href="/Halaman/galeri" class="nav-link">Album Galeri</a></li>
-                                            <li class="nav-item"><a href="team-2.html" class="nav-link">Video Galeri</a></li>
+                                            <li class="nav-item"><a href="/Halaman/galerivideo" class="nav-link">Video Galeri</a></li>
                                         </ul>
                                     </li>
                                 </ul>
