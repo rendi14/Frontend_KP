@@ -744,14 +744,14 @@
   }
   /* end tentang */
 
-  /* galeri */
+  /* tenaga kerja */
   .portfoio {
     padding-top: 28%;
-    padding-left: 15%;
-    padding-right: 15%;
+    /* padding-left: 15%;
+    padding-right: 15%; */
   }
 
-  /* galeri */
+  /* tenagakerja */
 
   /* containerTPMO2 */
   .containerTPMO2 {
@@ -918,4 +918,8 @@
   }
 
   /* end agenda */
+
+  /* tenaga kerja */
+
+  /* end tenaga kerja */
 }
