@@ -241,7 +241,9 @@
                         </a>
                         <div class="content">
                             <h3><a><?= $p['berita_judul']; ?></a></h3>
+                            <a href="/Halaman/detailBerita/<?= $p['berita_judul']; ?>" class="link-btn"><i class="flaticon-next-button"></i></a>
                         </div>
+
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -408,7 +410,7 @@
             <h2>Mitra kerja</h2>
         </header>
 
-        <div class="clients-slider swiper-container pb-100">
+        <div class="clients-slider swiper-container">
             <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide"><img src="/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
                 <div class="swiper-slide"><img src="/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
@@ -419,7 +421,7 @@
                 <div class="swiper-slide"><img src="/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
                 <div class="swiper-slide"><img src="/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
             </div>
-            <!-- <div class="swiper-pagination">1</div> -->
+            <!-- <div class="swiper-pagination"></div> -->
         </div>
     </div>
 </section><!-- End Clients Section -->

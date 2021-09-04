@@ -26,18 +26,19 @@
                     <h4>Tautan</h4>
                     <ul>
                         <li><i class=""> </i> <a href="/">Beranda</a></li>
-                        <li><i class=""></i> <a href="#">Akademi</a></li>
-                        <li><i class=""></i> <a href="#">Prodi</a></li>
-                        <li><i class=""></i> <a href="#">Akti</a></li>
-                        <li><i class=""></i> <a href="#">Bantuan</a></li>
+                        <li><i class=""></i> <a href="/Halaman/akademik">Akademik</a></li>
+
+                        <li><i class=""></i> <a href="/Halaman/tentang">Akti</a></li>
+                        <li><i class=""></i> <a href="/Halaman/agenda">Agenda</a></li>
+                        <li><i class=""></i> <a href="/Halaman/Kontak">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Keahlian</h4>
                     <ul>
-                        <li><i class=""></i> <a href="#">Teknik Pemeliharaan Mesin Otomasi</a></li>
-                        <li><i class=""></i> <a href="#">Tata Operasi Perakitan Kendaraan Roda 4</a></li>
+                        <li><i class=""></i> <a href="/Halaman/TPMO">Teknik Pemeliharaan Mesin Otomasi</a></li>
+                        <li><i class=""></i> <a href="/Halaman/iTOPKR4">Tata Operasi Perakitan Kendaraan Roda 4</a></li>
 
                     </ul>
                 </div>
