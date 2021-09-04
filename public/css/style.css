@@ -117,7 +117,8 @@
 .background {
   background-image: url("/gambar/background.jpg");
   padding: 50px;
-  margin-left: 44px;
+  margin-left: 100px;
+  background-repeat: no-repeat;
 }
 .background-register {
   margin-left: 30px;

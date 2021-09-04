@@ -178,13 +178,13 @@ class Halaman extends BaseController
         echo view('layout/footer');
     }
     // -------------------------------------------------
-    public function detailBerita($id)
+    public function detailBerita($slug)
     {
         $beritamodel = new beritaModel;
         $berita = $beritamodel->findAll();
         $data = [
             'tittle' => 'Detail Berita || PT.CROP',
-            'berita' => $beritamodel->getBerita($id),
+            'berita' => $beritamodel->getSlug($slug),
         ];
         echo view('layout/header');
         echo view('main/detailBerita', $data);

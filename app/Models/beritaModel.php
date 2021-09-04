@@ -22,4 +22,8 @@ class beritaModel extends Model
   {
     return $this->where(['berita_id' => $id])->first();
   }
+  public function getSlug($slug)
+  {
+   return $this->where(['berita_judul' => $slug])->first(); 
+  }
 }
