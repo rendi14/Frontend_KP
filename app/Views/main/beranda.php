@@ -1,10 +1,10 @@
 <section class="banner">
     <video autoplay loop muted>
-        <source src="/assets/img/video/toyota.mp4">
+        <source src="/assets/img/video/toyota2.mp4">
     </video>
     <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
     <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://www.youtube.com/watch?v=74B90k9u4wQ" class="play-btn"></a>
+        <a href="https://www.youtube.com/embed/3LkA9dBLAlo" class="play-btn"></a>
     </div>
 </section>
 
@@ -398,3 +398,28 @@
 
 </div>
 <!-- end halaman 9 home -->
+
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-title pt-70">
+            <h2>Mitra kerja</h2>
+        </header>
+
+        <div class="clients-slider swiper-container pb-100">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            </div>
+            <!-- <div class="swiper-pagination">1</div> -->
+        </div>
+    </div>
+</section><!-- End Clients Section -->

@@ -39,6 +39,21 @@ class Halaman extends BaseController
         echo view('layout/footer');
     }
 
+    // -------------------------------------------------
+    public function galerivideo()
+    {
+        echo view('layout/header');
+        echo view('main/galerivideo');
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function Kontak()
+    {
+        echo view('layout/header');
+        echo view('main/Kontak');
+        echo view('layout/footer');
+    }
 
     // -------------------------------------------------
     public function TPMO()
