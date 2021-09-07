@@ -7,6 +7,7 @@ use App\Models\akademikModel;
 use App\Models\dosenModel;
 use App\Models\agendaModel;
 use App\Models\beritaModel;
+use App\Models\kontakModel;
 
 class Halaman extends BaseController
 {
@@ -50,10 +51,42 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function Kontak()
     {
+
+        $model = new kontakModel;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $model->search($cari);
+        } else {
+            $orang = $model;
+        }
+        /*$user_model = $user->findAll();*/
+        $data = [
+            'tittle' => 'Data Kontak || PT.CROP',
+            'user' => $model->paginate(6, 'user'),
+            'pager' => $model->pager,
+
+        ];
         echo view('layout/header');
-        echo view('main/Kontak');
+        echo view('main/Kontak', $data);
         echo view('layout/footer');
     }
+    public function tambahAktikontak()
+    {
+        $model = new kontakModel();
+        $session = session();
+        $data = [
+            'contact_pengirim' => $this->request->getPost('pengirim'),
+            'contact_email' => $this->request->getVar('email'),
+            'contact_telp' => $this->request->getVar('telephone'),
+            'contact_deskripsi' => $this->request->getVar('deskripsi'),
+            'contact_waktu' => $this->request->getVar('waktu'),
+        ];
+        $model->save($data);
+        //$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        return redirect()->to('/Halaman/Kontak');
+    }
+
 
     // -------------------------------------------------
     public function TPMO()
