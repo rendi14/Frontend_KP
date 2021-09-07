@@ -44,7 +44,7 @@
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                     <div class="section-title">
-                        <h4>Prestasi</h4>
+                        <h4>Kurikulum</h4>
                         <p>sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         <div class="btn22">
                             <a href="" class="default-btn">Gabung</a>

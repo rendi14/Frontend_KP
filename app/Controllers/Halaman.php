@@ -77,7 +77,7 @@ class Halaman extends BaseController
             'contact_email' => $this->request->getVar('email'),
             'contact_telp' => $this->request->getVar('telephone'),
             'contact_deskripsi' => $this->request->getVar('deskripsi'),
-            //'contact_waktu' => $this->request->getVar('waktu'),
+            'contact_waktu' => $this->request->getVar('waktu'),
         ];
         $model->save($data);
         $session->setFlashdata('pesan', 'Data berhasil ditambahkan');
@@ -233,6 +233,14 @@ class Halaman extends BaseController
         ];
         echo view('layout/header');
         echo view('main/detailBerita', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function statis()
+    {
+        echo view('layout/header');
+        echo view('main/statis');
         echo view('layout/footer');
     }
 }
