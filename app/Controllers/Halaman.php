@@ -53,18 +53,15 @@ class Halaman extends BaseController
     {
 
         $model = new kontakModel;
+        $kontak_model = $model->findAll();
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
 
-        $cari = $this->request->getVar('cari');
-        if ($cari) {
-            $model->search($cari);
-        } else {
-            $orang = $model;
-        }
         /*$user_model = $user->findAll();*/
         $data = [
             'tittle' => 'Data Kontak || PT.CROP',
             'user' => $model->paginate(6, 'user'),
             'pager' => $model->pager,
+            'currentPage' => $currentPage,
 
         ];
         echo view('layout/header');
@@ -83,7 +80,7 @@ class Halaman extends BaseController
             //'contact_waktu' => $this->request->getVar('waktu'),
         ];
         $model->save($data);
-        //$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        $session->setFlashdata('pesan', 'Data berhasil ditambahkan');
         return redirect()->to('/Halaman/Kontak');
     }
 
