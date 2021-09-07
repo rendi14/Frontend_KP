@@ -8,6 +8,7 @@ use App\Models\akademikModel;
 use App\Models\UserModel;
 use App\Models\admin_level;
 use App\Models\sidebarModel;
+use App\Models\albumModel;
 use CodeIgniter\Controller;
 
 class Dashboard extends Controller
@@ -18,6 +19,7 @@ class Dashboard extends Controller
 		$dosen = new dosenModel;
 		$prodi = new prodiModel;
 		$sidebar = new sidebarModel;
+		$album = new albumModel;
 		$user_count = $user->countAll();
 		$dosen_count = $dosen->countAll();
 		$prodi_count = $prodi->countAll();
@@ -29,6 +31,7 @@ class Dashboard extends Controller
 			'dosen_count' => $dosen_count,
 			'prodi_count' => $prodi_count,
 			'side' => $side,
+			'album' => $album->paginate(3),
 			'sidebar' => $sidebar_side
 		];
 		return view('dashboard/dashboard', $data);
@@ -404,6 +407,9 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
 		return redirect()->to('/dashboard/dataAkademik');
 	}
+
+	// Album gallery
+
 
 	/* Akhir Method Akademik*/
 }
