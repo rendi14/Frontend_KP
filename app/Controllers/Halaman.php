@@ -6,13 +6,19 @@ use App\Models\prodiModel;
 use App\Models\akademikModel;
 use App\Models\dosenModel;
 use App\Models\agendaModel;
+use App\Models\beritaModel;
 
 class Halaman extends BaseController
 {
     public function index()
     {
+        $beritamodel = new beritaModel;
+        $berita = $beritamodel->findAll();
+        $data = [
+            'berita' => $berita,
+        ];
         echo view('layout/header');
-        echo view('main/beranda');
+        echo view('main/beranda', $data);
         echo view('layout/footer');
     }
 
@@ -33,6 +39,21 @@ class Halaman extends BaseController
         echo view('layout/footer');
     }
 
+    // -------------------------------------------------
+    public function galerivideo()
+    {
+        echo view('layout/header');
+        echo view('main/galerivideo');
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function Kontak()
+    {
+        echo view('layout/header');
+        echo view('main/Kontak');
+        echo view('layout/footer');
+    }
 
     // -------------------------------------------------
     public function TPMO()
@@ -85,7 +106,7 @@ class Halaman extends BaseController
 
         $data = [
             'tittle' => 'Akademik || PT.CROP',
-            'user' => $model->paginate(10, 'user'),
+            'user' => $model->paginate(50, 'user'),
             'pager' => $model->pager,
 
         ];
@@ -169,6 +190,19 @@ class Halaman extends BaseController
         ];
         echo view('layout/header');
         echo view('main/Tenagakerja', $data);
+        echo view('layout/footer');
+    }
+    // -------------------------------------------------
+    public function detailBerita($slug)
+    {
+        $beritamodel = new beritaModel;
+        $berita = $beritamodel->findAll();
+        $data = [
+            'tittle' => 'Detail Berita || PT.CROP',
+            'berita' => $beritamodel->getSlug($slug),
+        ];
+        echo view('layout/header');
+        echo view('main/detailBerita', $data);
         echo view('layout/footer');
     }
 }

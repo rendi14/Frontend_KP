@@ -1,10 +1,10 @@
 <section class="banner">
     <video autoplay loop muted>
-        <source src="/assets/img/video/toyota.mp4">
+        <source src="/assets/img/video/toyota2.mp4">
     </video>
     <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
     <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://www.youtube.com/watch?v=74B90k9u4wQ" class="play-btn"></a>
+        <a href="https://www.youtube.com/embed/3LkA9dBLAlo" class="play-btn"></a>
     </div>
 </section>
 
@@ -223,7 +223,6 @@
 
 
 <!-- halaman 7 beranda -->
-
 <div class="halaman7home">
 
     <section class="portfolio-area pt-100 pb-70">
@@ -235,51 +234,18 @@
 
         <div class="container-fluid">
             <div class="portfolio-slides owl-carousel owl-theme">
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img1.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Customer Satisfaction for a Digital Marketing Agency</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
+                <?php foreach ($berita as $p) : ?>
+                    <div class="single-portfolio-item">
+                        <a href="/Halaman/detailBerita/<?= $p['berita_judul']; ?>" class="image d-block">
+                            <img src="/gambar/berita/<?= $p['berita_gambar']; ?>" alt="<?= $p['berita_judul']; ?>" width="500" height="300" class="image-prodi">
+                        </a>
+                        <div class="content">
+                            <h3><a><?= $p['berita_judul']; ?></a></h3>
+                            <a href="/Halaman/detailBerita/<?= $p['berita_judul']; ?>" class="link-btn"><i class="flaticon-next-button"></i></a>
+                        </div>
+
                     </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img2.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Return on Investment for Various Digital Marketing Strategies</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img3.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Google Search Engine Marketing Case Study Analysis</a></h3>
-                        <a href="single-portfolio.html" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img4.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Analysis of New Product Launch Using Google Double Click</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
-                <div class="single-portfolio-item">
-                    <a href="#" class="image d-block">
-                        <img src="assets/img/portfolio/portfolio-img5.jpg" alt="image">
-                    </a>
-                    <div class="content">
-                        <h3><a href="single-portfolio.html">Social Media Strategies for Online Shopping Cart</a></h3>
-                        <a href="#" class="link-btn"><i class="flaticon-next-button"></i></a>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -434,3 +400,28 @@
 
 </div>
 <!-- end halaman 9 home -->
+
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-title pt-70">
+            <h2>Mitra kerja</h2>
+        </header>
+
+        <div class="clients-slider swiper-container">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+</section><!-- End Clients Section -->

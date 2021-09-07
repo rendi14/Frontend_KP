@@ -39,6 +39,22 @@
   user-select: none;
 }
 
+.font-size-link {
+  font-size: 22px !important;
+  text-decoration: none !important;
+}
+
+.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-text {
+  text-align: center;
+  padding: 10px 20px;
+}
+
 .button-search {
   border-radius: 8px !important;
 }
@@ -117,7 +133,8 @@
 .background {
   background-image: url("/gambar/background.jpg");
   padding: 50px;
-  margin-left: 44px;
+  margin-left: 100px;
+  background-repeat: no-repeat;
 }
 .background-register {
   margin-left: 30px;

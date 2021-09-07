@@ -36,8 +36,11 @@ $routes->get('/TPMO', 'Halaman::TPMO');
 $routes->get('/TOPKR4', 'Halaman::TOPKR4');
 $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
+$routes->get('/galerivideo', 'Halaman::galerivideo');
 $routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/agenda', 'Halaman::agenda');
+$routes->get('/Kontak', 'Halaman::Kontak');
+$routes->get('/detailBerita', 'Halaman::detailBerita');
 $routes->get('/Tenagakerja', 'Halaman::Tenagakerja');
 $routes->get('/visimisiTPMO', 'Halaman::visimisiTPMO');
 $routes->get('/tentangTOPKR4', 'Halaman::tentangTOPKR4');
@@ -49,6 +52,7 @@ $routes->get('/dashboard/dataProdi', 'Dashboard::dataProdi', ['filter' => 'auth'
 $routes->get('/dashboard/dataAkademik', 'Dashboard::dataAkademik', ['filter' => 'auth']);
 $routes->get('/MenuDashboard/', 'MenuDashboard::index', ['filter' => 'auth']);
 $routes->get('/MenuDashboard/tabelMenu', 'MenuDashboard::tabelMenu', ['filter' => 'auth']);
+$routes->get('/berita', 'Berita::index', ['filter' => 'auth']);
 
 /*
  * --------------------------------------------------------------------
