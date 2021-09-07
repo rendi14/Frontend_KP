@@ -65,7 +65,8 @@
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div>
                         <div class="section-title-bgorange pb-10">
-                            <a href="/" class="default-btn">Send Message</a>
+                            <!-- <a href="/" class="default-btn">Send Message</a> -->
+                            <button type="submit" class="default-btn">Kirim Pesan</button>
                         </div>
                     </form>
                 </div>
