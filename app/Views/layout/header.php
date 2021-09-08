@@ -60,7 +60,7 @@
                                     <li class="nav-item"><a href="/Halaman/statis" class="nav-link">Statis</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Galeri <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="/Halaman/album" class="nav-link">Album Galeri</a></li>
+                                            <li class="nav-item"><a href="/Halaman/album" class="nav-link">Album</a></li>
                                             <li class="nav-item"><a href="/Halaman/galerivideo" class="nav-link">Video Galeri</a></li>
                                         </ul>
                                     </li>

@@ -36,14 +36,14 @@ class Halaman extends BaseController
     }
 
     // -------------------------------------------------
-    public function galeri($idgaler)
+    public function galeri($Sleg)
     {
         $user = new galeriModel;
         $album = new gambarModel;
-        $album_model = $album->where('album_id', $idgaler)->findAll();
+        $album_model = $album->where('album_id', $Sleg)->findAll();
         $data = [
             'tittle' => 'Galeri || PT.CROP',
-            'album' => $user->getgaleri($idgaler),
+            'album' => $user->getSleg($Sleg),
             'galeri' => $album_model,
         ];
         echo view('layout/header');
