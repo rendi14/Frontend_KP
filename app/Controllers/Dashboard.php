@@ -9,6 +9,8 @@ use App\Models\UserModel;
 use App\Models\admin_level;
 use App\Models\sidebarModel;
 use App\Models\albumModel;
+use App\Models\galeriModel;
+use App\Models\gambarModel;
 use CodeIgniter\Controller;
 
 class Dashboard extends Controller
@@ -20,9 +22,11 @@ class Dashboard extends Controller
 		$prodi = new prodiModel;
 		$sidebar = new sidebarModel;
 		$album = new albumModel;
+		$galeri = new galeriModel;
 		$user_count = $user->countAll();
 		$dosen_count = $dosen->countAll();
 		$prodi_count = $prodi->countAll();
+		$album_count = $album->countAll();
 		$side = $sidebar->where('menu_site', 'A')->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$data = [
@@ -30,8 +34,10 @@ class Dashboard extends Controller
 			'user_count' => $user_count,
 			'dosen_count' => $dosen_count,
 			'prodi_count' => $prodi_count,
+			'album_count' => $album_count,
 			'side' => $side,
 			'album' => $album->paginate(3),
+			'album_galeri' => $album->findAll(),
 			'sidebar' => $sidebar_side
 		];
 		return view('dashboard/dashboard', $data);
@@ -409,7 +415,39 @@ class Dashboard extends Controller
 	}
 
 	// Album gallery
-
-
+	public function albumGaleri($id)
+	{
+		$user = new galeriModel;
+		$album = new gambarModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$album_model = $album->where('album_id', $id)->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$data = [
+			'tittle' => 'Galeri || PT.CROP',
+			'album' => $user->getAlbum($id),
+			'galeri' => $album_model,
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/pages/albumGaleri', $data);
+	}
 	/* Akhir Method Akademik*/
+		public function tambahAlbum()
+	{
+		$model = new galeriModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/album');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'album_judul' => $this->request->getVar('judul'),
+			'album_deskripsi' => $this->request->getVar('deskripsi'),
+			'album_gambar' => $namaGambar,
+			'album_kategori' => $this->request->getVar('kategori'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Album telah ditambahkan');
+		return redirect()->to('/dashboard');
+	}
 }
