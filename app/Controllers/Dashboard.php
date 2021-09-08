@@ -450,4 +450,56 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Album telah ditambahkan');
 		return redirect()->to('/dashboard');
 	}
+		public function editAlbum()
+	{
+		$model = new galeriModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/album');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'album_id' => $this->request->getVar('id'),
+			'album_judul' => $this->request->getVar('judul'),
+			'album_deskripsi' => $this->request->getVar('deskripsi'),
+			'album_gambar' => $namaGambar,
+			'album_kategori' => $this->request->getVar('kategori'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Album telah diperbarui');
+		return redirect()->to('/dashboard/');
+	}
+
+	public function deleteAlbum($id)
+	{
+		$model = new galeriModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Album telah dihapus');
+		return redirect()->to('/dashboard');
+	}
+		public function tambahGaleri()
+	{
+		$model = new gambarModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/album');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'galeri_judul' => $this->request->getVar('judul'),
+			'galeri_deskripsi' => $this->request->getVar('deskripsi'),
+			'galeri_gambar' => $namaGambar,
+			'album_id' => $this->request->getVar('album'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Album telah ditambahkan');
+		return redirect()->to('/dashboard');
+	}
+	public function deleteFoto($id)
+	{
+		$model = new gambarModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Foto telah dihapus');
+		return redirect()->to('/dashboard');
+	}
 }

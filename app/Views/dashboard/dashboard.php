@@ -156,7 +156,7 @@
     <div class="col-12 col-lg-4">
     <div class="container">
     <div class="polaroid">
-    <a href="/dashboard/albumGaleri/<?= $p['album_id']?>"><img src="/gambar/prodi/1610957984-tata-operasi-perakitan-kendaraan-roda-4-topkr4.png" alt="5 Terre" style="width:100%"></a>
+    <a href="/dashboard/albumGaleri/<?= $p['album_id']?>"><img src="/gambar/album/<?= $p['album_gambar']?>" alt="5 Terre" style="width:100%"></a>
     <div class="container-text">
     <p><?= $p['album_judul'] ?></p>
     <p><?= $p['album_deskripsi'] ?></p>
@@ -220,12 +220,12 @@ aria-hidden="true">
     <div class="col-12 col-lg-6 mb-3">
     <div class="container">
     <div class="polaroid">
-    <a href="/dashboard/albumGaleri/<?= $p['album_id']?>"><img src="/gambar/prodi/1610957984-tata-operasi-perakitan-kendaraan-roda-4-topkr4.png" alt="5 Terre" style="width:100%"></a>
+    <a href="/dashboard/albumGaleri/<?= $p['album_id']?>"><img src="/gambar/album/<?= $p['album_gambar']?>" alt="5 Terre" style="width:100%"></a>
     <div class="container-text">
     <p><?= $p['album_judul'] ?></p>
     <p><?= $p['album_deskripsi'] ?></p>
     <a href="/dashboard/albumGaleri/<?= $p['album_id']?>" class="btn btn-primary">Lihat</a>
-    <a href="" class="btn btn-danger">Buang</a>
+    <a href="/dashboard/deleteAlbum/<?= $p['album_id']?>" class="btn btn-danger">Buang</a>
     </div>
     </div>
     </div>
@@ -241,5 +241,45 @@ aria-hidden="true">
   </div>
 </div>
 
+<div class="modal fade" id="modalFotoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Foto</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/dashboard/tambahGaleri" method="post" enctype="multipart/form-data" class="row g-3">
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Nama Foto</label>
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
+          </div>
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Foto</label>
+            <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
+          </div>          
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Pilih Foto</label>
+            <input type="file" class="form-control" id="poto" name="poto">
+          </div>
+          <div class="md-form mb-2">
+            <label for="InputForlevel" class="form-label">Pilih Album</label>
+            <select class="form-select" name="album" required aria-label="Default select example">
+            <option selected>Pilih</option>
+            <?php foreach ($album_galeri as $p) : ?>
+            <option value="<?= $p['album_id']?>"><?= $p['album_judul']?></option>
+            <?php endforeach; ?>
+            </select>
+          </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 <?=$this->include('partial/profile')?>
 <?=$this->endSection()?>

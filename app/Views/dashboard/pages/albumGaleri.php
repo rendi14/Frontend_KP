@@ -32,10 +32,13 @@
     <div class="row mt-3">
     <div class="col-12 col-lg-8 mb-5">
     <div class="container">
-    <a href=""><img src="/gambar/prodi/1610957984-tata-operasi-perakitan-kendaraan-roda-4-topkr4.png" alt="5 Terre" style="width:100%"></a>
+    <a href=""><img src="/gambar/album/<?= $album['album_gambar']?>" alt="5 Terre" style="width:100%"></a>
     <div class="container-text">
     <p><?= $album['album_judul'] ?></p>
     <p><?= $album['album_deskripsi'] ?></p>
+    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalAlbumForm">
+      <i class="fas fa-fw fa-pen"></i> Edit Album
+    </button>    
     </div>
     </div>
     </div>
@@ -45,10 +48,11 @@
     <div class="col-12 col-lg-4 mb-5">
     <div class="container">
     <div class="polaroid">
-    <a href=""><img src="/gambar/prodi/1610957984-tata-operasi-perakitan-kendaraan-roda-4-topkr4.png" alt="5 Terre" style="width:100%"></a>
+    <a href=""><img src="/gambar/album/<?= $p['galeri_gambar']?>" alt="5 Terre" style="width:100%"></a>
     <div class="container-text">
     <p><?= $p['galeri_judul'] ?></p>
     <p><?= $p['galeri_deskripsi'] ?></p>
+    <a href="/dashboard/deleteFoto/<?= $p['galeri_id']?>" class="btn btn-danger">Buang</a>
     </div>
     </div>
     </div>
@@ -94,24 +98,26 @@ aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-scrollable" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header text-center">
-		        <h4 class="modal-title w-100 font-weight-bold">Tambah Data Album</h4>
+		        <h4 class="modal-title w-100 font-weight-bold">Edit Album</h4>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<form action="/dashboard/tambahAlbum" method="post" enctype="multipart/form-data">
+		      	<form action="/dashboard/editAlbum" method="post" enctype="multipart/form-data">
+		          <input type="text" hidden required id="defaultForm-NIP" class="form-control validate" name="id" value="<?= $album['album_id']?>">
 		        <div class="md-form mb-3">
 		          <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Judul Album</label>
-		          <input type="text" required id="defaultForm-NIP" class="form-control validate" name="judul">
+		          <input type="text" required id="defaultForm-NIP" class="form-control validate" name="judul" value="<?= $album['album_judul']?>">
 		        </div>
 		        <div class="md-form mb-3">
 		          <label data-error="wrong" data-success="right" for="defaultForm-nama" class="mb-2">Deskripsi Album</label>
-		          <input type="text" id="editor" required id="defaultForm-nama" class="form-control validate" name="Album">
+		          <textarea type="text" id="editor" required id="defaultForm-nama" class="form-control validate" name="deskripsi">
+               <?= $album['album_deskripsi']?></textarea>
 		        </div>
 		        <div class="md-form mb-3">
 		          <label data-error="wrong" data-success="right" for="defaultForm-kategori" class="mb-2">Album Kategori</label>
-		          <input type="text" required id="defaultForm-Kategori" class="form-control validate" name="Kategori">
+		          <input type="text" id="defaultForm-Kategori" class="form-control validate" name="kategori" value="<?= $album['album_kategori']?>">
 		        </div>            
 		        <div class="md-form mb-3">
 		          <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Gambar Album</label>
@@ -126,6 +132,37 @@ aria-hidden="true">
 		  </div>
 		</div>
 <!-- Akhir Modal Tambah Album -->
-
+<div class="modal fade" id="modalFotoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Foto</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/dashboard/tambahGaleri" method="post" enctype="multipart/form-data" class="row g-3">
+          <div class="md-form mb-2">
+          <input type="text" hidden id="defaultForm-Name" class="form-control validate" name="album" value="<?= $album['album_id']?>">
+            <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Nama Foto</label>
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
+          </div>
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Foto</label>
+            <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
+          </div>          
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Pilih Foto</label>
+            <input type="file" class="form-control" id="poto" name="poto">
+          </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 <?=$this->include('partial/profile')?>
 <?=$this->endSection()?>

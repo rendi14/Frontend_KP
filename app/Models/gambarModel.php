@@ -8,7 +8,7 @@ class gambarModel extends Model
 {
   protected $table      = 'album_galeri';
   protected $primaryKey = 'galeri_id';
-  protected $allowedFields = ['galeri_judul', 'galeri_deskripsi', 'galeri_gambar', 'galeri_waktu', 'album_id'
+  protected $allowedFields = ['galeri_judul', 'galeri_deskripsi', 'galeri_gambar', 'album_id'
   ];
 
   // public function search($cari)
