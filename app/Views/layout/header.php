@@ -60,13 +60,13 @@
                                     <li class="nav-item"><a href="/Halaman/statis" class="nav-link">Statis</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Galeri <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="/Halaman/galeri" class="nav-link">Album Galeri</a></li>
+                                            <li class="nav-item"><a href="/Halaman/album" class="nav-link">Album Galeri</a></li>
                                             <li class="nav-item"><a href="/Halaman/galerivideo" class="nav-link">Video Galeri</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             <li class="nav-item"><a href="/Halaman/agenda" class="nav-link">Agenda</a></li>
-                            <li class="nav-item"><a href="/Halaman/albumGaleri" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="/Halaman/album" class="nav-link">Blog</a></li>
                             <li class="nav-item"><a href="/Halaman/Kontak" class="nav-link">Kontak</a></li>
                         </ul>
 

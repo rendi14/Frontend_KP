@@ -36,6 +36,7 @@ $routes->get('/TPMO', 'Halaman::TPMO');
 $routes->get('/TOPKR4', 'Halaman::TOPKR4');
 $routes->get('/tentang', 'Halaman::tentang');
 $routes->get('/galeri', 'Halaman::galeri');
+$routes->get('/album', 'Halaman::album');
 $routes->get('/galerivideo', 'Halaman::galerivideo');
 $routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/agenda', 'Halaman::agenda');

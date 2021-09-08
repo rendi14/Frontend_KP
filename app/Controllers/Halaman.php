@@ -10,6 +10,7 @@ use App\Models\beritaModel;
 use App\Models\kontakModel;
 use App\Models\gambarModel;
 use App\Models\galeriModel;
+use App\Models\albumModel;
 
 class Halaman extends BaseController
 {
@@ -35,27 +36,43 @@ class Halaman extends BaseController
     }
 
     // -------------------------------------------------
-    public function galeri($galeri)
+    public function galeri()
     {
-
         $user = new galeriModel;
         $album = new gambarModel;
+        $sidebar = new sidebarModel;
         /*$user_model = $user->findAll();*/
-        // $side = $sidebar->where('menu_site', 'A')->findAll();
-        $album_model = $album->where('album_id', $galeri)->findAll();
-        // $sidebar_side = $sidebar->getSide();
+        $side = $sidebar->where('menu_site', 'A')->findAll();
+        $album_model = $album->where('album_id', $id)->findAll();
+        $sidebar_side = $sidebar->getSide();
         $data = [
             'tittle' => 'Galeri || PT.CROP',
-            'album' => $user->getgaleri($galeri),
+            'album' => $user->getAlbum($id),
             'galeri' => $album_model,
-            // 'sidebar' => $sidebar_side
-
+            'sidebar' => $sidebar_side
         ];
-
         echo view('layout/header');
         echo view('main/galeri', $data);
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function album()
+    {
+        $album = new albumModel;
+        $galeri = new galeriModel;
+        $album_count = $album->countAll();
+        $data = [
+            'tittle' => 'Dashboard || PT.CROP',
+            'album_count' => $album_count,
+            'album' => $album->paginate(3),
+            'album_galeri' => $album->findAll(),
+        ];
+        echo view('layout/header');
+        echo view('main/album', $data);
+        echo view('layout/footer');
+    }
+
 
 
 
