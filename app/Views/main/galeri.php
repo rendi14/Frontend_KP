@@ -9,7 +9,7 @@
             <?php foreach ($galeri as $p) : ?>
                 <div class="col-lg-4 col-md-6 portfolio-item">
                     <div class="portfolio-wrap">
-                        <a href=""><img src="/gambar/album/<?= $p['galeri_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+                        <img src="/gambar/album/<?= $p['galeri_gambar'] ?>" alt="5 Terre" style="width:100%">
                         <div class="portfolio-info">
                             <p><?= $p['galeri_judul'] ?></p>
                             <p><?= $p['galeri_deskripsi'] ?></p>
@@ -24,3 +24,21 @@
         </div>
     </div>
 </section>
+
+
+
+
+<!-- 
+<section class="gallery-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-gallery-item">
+                    <a data-fancybox="gallery" href="assets/img/blog/blog-img1.jpg">
+                        <img src="assets/img/blog/blog-img1.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

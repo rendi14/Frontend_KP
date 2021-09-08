@@ -5947,6 +5947,36 @@ Search Overlay CSS
 
 /* end statis */
 
+/*================================================
+Gallery Area CSS
+=================================================*/
+.single-gallery-item {
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.single-gallery-item a {
+  display: block;
+  border-radius: 5px;
+}
+
+.single-gallery-item a img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-gallery-item:hover a img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
 /* footer */
 
 /*--------------------------------------------------------------

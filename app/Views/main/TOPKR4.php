@@ -14,7 +14,7 @@
         <h2>Kenali Lebih Jauh</h2>
     </div> -->
 <div class="containerTPMO2">
-    <div class="judul2TPMO">
+    <div class="section-title pt-70">
         <h2>Kenali Lebih Jauh</h2>
     </div>
 
