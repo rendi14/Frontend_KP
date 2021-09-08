@@ -22,9 +22,9 @@ class galeriModel extends Model
     return $this->where(['album_id' => $id])->first();
   }
 
-  public function getgaleri($galeri)
+  public function getgaleri($idgaler)
   {
-    return $this->where(['album_id' => $galeri])->first();
+    return $this->where(['album_id' => $idgaler])->first();
   }
   // public function getSlug($slug)
   // {

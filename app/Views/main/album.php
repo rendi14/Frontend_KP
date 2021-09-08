@@ -9,12 +9,12 @@
                 <div class="col-lg-4 col-md-6 portfolio-item">
                     <div class="portfolio-wrap">
                         <!-- <img src="/assets/img/galeri/galeri3.jpg" class="img-fluid" alt=""> -->
-                        <a href="/dashboard/albumGaleri/<?= $p['album_id'] ?>"><img src="/gambar/album/<?= $p['album_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+                        <a href="/Halaman/galeri<?= $p['album_id'] ?>"><img src="/gambar/album/<?= $p['album_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
                         <div class="portfolio-info">
                             <h4><?= $p['album_judul'] ?></h4>
                             <p><?= $p['album_deskripsi'] ?></p>
                             <div class="portfolio-links">
-                                <a href="/dashboard/albumGaleri/<?= $p['album_id'] ?>"><i class="bx bx-link"></i></a>
+                                <a href="/Halaman/galeri<?= $p['album_id'] ?>"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>
