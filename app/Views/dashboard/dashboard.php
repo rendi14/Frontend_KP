@@ -152,6 +152,11 @@
     </div>
     
     <div class="row mt-3">
+    <?php if ($album_count === 0) :?>
+    <div class="container text-center">
+    <h1>Album Kosong...</h1>
+    </div>
+    <?php else : ?>
     <?php foreach ($album as $p) : ?>
     <div class="col-12 col-lg-4">
     <div class="container">
@@ -166,6 +171,7 @@
     </div>
     <?php endforeach; ?>
     </div>    
+    <?php endif ?>
     <?php if ($album_count <= 3) :?>
     <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
     <?php else : ?>
