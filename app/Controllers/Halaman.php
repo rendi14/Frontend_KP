@@ -8,6 +8,8 @@ use App\Models\dosenModel;
 use App\Models\agendaModel;
 use App\Models\beritaModel;
 use App\Models\kontakModel;
+use App\Models\gambarModel;
+use App\Models\galeriModel;
 
 class Halaman extends BaseController
 {
@@ -33,12 +35,29 @@ class Halaman extends BaseController
     }
 
     // -------------------------------------------------
-    public function galeri()
+    public function galeri($galeri)
     {
+
+        $user = new galeriModel;
+        $album = new gambarModel;
+        /*$user_model = $user->findAll();*/
+        // $side = $sidebar->where('menu_site', 'A')->findAll();
+        $album_model = $album->where('album_id', $galeri)->findAll();
+        // $sidebar_side = $sidebar->getSide();
+        $data = [
+            'tittle' => 'Galeri || PT.CROP',
+            'album' => $user->getgaleri($galeri),
+            'galeri' => $album_model,
+            // 'sidebar' => $sidebar_side
+
+        ];
+
         echo view('layout/header');
-        echo view('main/galeri');
+        echo view('main/galeri', $data);
         echo view('layout/footer');
     }
+
+
 
     // -------------------------------------------------
     public function galerivideo()

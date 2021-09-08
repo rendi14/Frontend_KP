@@ -66,7 +66,7 @@
                                     </li>
                                 </ul>
                             <li class="nav-item"><a href="/Halaman/agenda" class="nav-link">Agenda</a></li>
-                            <li class="nav-item"><a href="/Beranda/berita" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="/Halaman/albumGaleri" class="nav-link">Blog</a></li>
                             <li class="nav-item"><a href="/Halaman/Kontak" class="nav-link">Kontak</a></li>
                         </ul>
 

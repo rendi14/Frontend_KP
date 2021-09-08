@@ -433,7 +433,7 @@ class Dashboard extends Controller
 		return view('dashboard/pages/albumGaleri', $data);
 	}
 	/* Akhir Method Akademik*/
-		public function tambahAlbum()
+	public function tambahAlbum()
 	{
 		$model = new galeriModel();
 		$session = session();
@@ -450,7 +450,7 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Album telah ditambahkan');
 		return redirect()->to('/dashboard');
 	}
-		public function editAlbum()
+	public function editAlbum()
 	{
 		$model = new galeriModel();
 		$session = session();
@@ -477,7 +477,7 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Album telah dihapus');
 		return redirect()->to('/dashboard');
 	}
-		public function tambahGaleri()
+	public function tambahGaleri()
 	{
 		$model = new gambarModel();
 		$session = session();

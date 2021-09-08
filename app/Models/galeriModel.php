@@ -8,7 +8,8 @@ class galeriModel extends Model
 {
   protected $table      = 'album';
   protected $primaryKey = 'album_id';
-  protected $allowedFields = ['album_judul', 'album_deskripsi', 'album_gambar', 'album_kategori', 'urutan'
+  protected $allowedFields = [
+    'album_judul', 'album_deskripsi', 'album_gambar', 'album_kategori', 'urutan'
   ];
 
   // public function search($cari)
@@ -19,6 +20,11 @@ class galeriModel extends Model
   public function getAlbum($id)
   {
     return $this->where(['album_id' => $id])->first();
+  }
+
+  public function getgaleri($galeri)
+  {
+    return $this->where(['album_id' => $galeri])->first();
   }
   // public function getSlug($slug)
   // {
