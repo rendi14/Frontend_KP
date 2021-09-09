@@ -55,6 +55,7 @@ $routes->get('/dashboard/dataAkademik', 'Dashboard::dataAkademik', ['filter' => 
 $routes->get('/MenuDashboard/', 'MenuDashboard::index', ['filter' => 'auth']);
 $routes->get('/MenuDashboard/tabelMenu', 'MenuDashboard::tabelMenu', ['filter' => 'auth']);
 $routes->get('/berita', 'Berita::index', ['filter' => 'auth']);
+$routes->get('/dashboard/dataStatis', 'Dashboard::dataStatis', ['filter' => 'auth']);
 
 /*
  * --------------------------------------------------------------------

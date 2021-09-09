@@ -19,7 +19,7 @@ class gambarModel extends Model
     return $this->db->table('album')->join('album_galeri','album_galeri.album_id=album.album_id')
         ->get()->getResultArray();  
   }
-  public function getBerita($id)
+  public function getGambar($id)
   {
     return $this->where(['album_id' => $id])->first();
   }

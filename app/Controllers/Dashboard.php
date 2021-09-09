@@ -11,6 +11,7 @@ use App\Models\sidebarModel;
 use App\Models\albumModel;
 use App\Models\galeriModel;
 use App\Models\gambarModel;
+use App\Models\statisModel;
 use CodeIgniter\Controller;
 
 class Dashboard extends Controller
@@ -472,6 +473,7 @@ class Dashboard extends Controller
 	public function deleteAlbum($id)
 	{
 		$model = new galeriModel();
+		$model_galeri = new gambarModel();
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Album telah dihapus');
@@ -501,5 +503,90 @@ class Dashboard extends Controller
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Foto telah dihapus');
 		return redirect()->to('/dashboard');
+	}
+
+	public function dataStatis()
+	{
+		$model = new statisModel;
+		$sidebar = new sidebarModel;
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+		$cari = $this->request->getVar('cari');
+		if ($cari) {
+			$model->search($cari);
+		} else {
+			$orang = $model;
+		}
+		/*$user_model = $user->findAll();*/
+		$data = [
+			'tittle' => 'Data Statis || PT.CROP',
+			'user' => $model->paginate(2, 'user'),
+			'pager' => $model->pager,
+			'currentPage' => $currentPage,
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/statis-data', $data);
+	}
+
+		public function tambahStatis()
+	{
+		$model = new statisModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/statis');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'statis_judul' => $this->request->getVar('judul'),
+			'statis_deskripsi' => $this->request->getVar('deskripsi'),
+			'statis_gambar' => $namaGambar,
+			'statis_status' => $this->request->getVar('status'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Statis telah ditambahkan');
+		return redirect()->to('/dashboard/dataStatis');
+	}
+
+	public function hapusStatis($id)
+	{
+		$model = new statisModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Statis telah dihapus');
+		return redirect()->to('/dashboard/dataStatis');
+	}
+	public function tampilEditStatis($id)
+	{
+		$user = new statisModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$data = [
+			'tittle' => 'Galeri || PT.CROP',
+			'user' => $user->getStatis($id),
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/pages/editStatis', $data);
+	}
+
+		public function editStatis()
+	{
+		$model = new statisModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/statis');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'statis_id' => $this->request->getVar('id'),
+			'statis_judul' => $this->request->getVar('judul'),
+			'statis_deskripsi' => $this->request->getVar('deskripsi'),
+			'statis_gambar' => $namaGambar,
+			'statis_status' => $this->request->getVar('status'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Statis data telah diperbarui');
+		return redirect()->to('/dashboard/dataStatis');
 	}
 }

@@ -18,7 +18,7 @@
                     <div class="card shadow mb-4 mt-2">
                         <div class="card-body">
                             <div class="row justify-content-md-center">
-                               <div class="col-12 form-data-editDosen form-data border border-2">
+                               <div class="col-10 p-5 form-data-editDosen form-data border border-2">
                             <h3 class="mb-3">Edit Data Prodi</h3>
                             <form action="/dashboard/editAktiProdi" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
                                 <div>
