@@ -11,6 +11,7 @@ use App\Models\sidebarModel;
 use App\Models\albumModel;
 use App\Models\galeriModel;
 use App\Models\gambarModel;
+use App\Models\kontakModel;
 use App\Models\statisModel;
 use CodeIgniter\Controller;
 
@@ -590,5 +591,39 @@ class Dashboard extends Controller
 		$model->save($data);
 		$session->setFlashdata('pesan', 'Statis data telah diperbarui');
 		return redirect()->to('/dashboard/dataStatis');
+	}
+
+	public function dataKontak()
+	{
+		$model = new kontakModel;
+		$sidebar = new sidebarModel;
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+		$cari = $this->request->getVar('cari');
+		if ($cari) {
+			$model->search($cari);
+		} else {
+			$orang = $model;
+		}
+		/*$user_model = $user->findAll();*/
+		$data = [
+			'tittle' => 'Tabel Kontak || PT.CROP',
+			'user' => $model->paginate(6, 'user'),
+			'pager' => $model->pager,
+			'currentPage' => $currentPage,
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/kontak-data', $data);
+	}
+
+		public function hapusDataKontak($id)
+	{
+		$model = new kontakModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Statis telah dihapus');
+		return redirect()->to('/dashboard/dataKontak');
 	}
 }

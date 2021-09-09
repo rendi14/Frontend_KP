@@ -114,8 +114,17 @@
                     <i class="fas fa-fw fa-user"></i>
                     <span>Data Admin</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/dataKontak">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Tabel Kontak</span></a>
+            </li>
         <?php else : ?>
-
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/dataKontak">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Tabel Kontak</span></a>
+            </li>
         <?php endif ?>
 
         <!-- Divider -->
