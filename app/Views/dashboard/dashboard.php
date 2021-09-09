@@ -13,7 +13,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body mx-2">
         <form action="/dashboard/tambahAlbum" method="post" enctype="multipart/form-data" class="row g-3">
           <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Album</label>
