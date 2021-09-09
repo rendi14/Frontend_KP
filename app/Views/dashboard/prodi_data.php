@@ -24,6 +24,10 @@
             <input type="text" id="defaultForm-Dosen" class="form-control validate" name="dosen">
           </div>
           <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Prodi Kurukulum</label>
+            <textarea type="text" id="defaultForm-tentang" class="form-control validate" name="kurikulum"></textarea>
+          </div>
+          <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Tentang</label>
             <textarea type="text" id="defaultForm-tentang" class="form-control validate" name="tentang"></textarea>
           </div>
@@ -99,7 +103,8 @@
               <p class="text-align-justify"><?= $p['prodi_tentang']; ?></p>
               <!-- <a href="">Lihat selengkapnya</a> -->
             </dd>
-
+            <dt class="col-sm-2">Prodi Kurikulum</dt>
+            <dd class="col-sm-10 text-align-justify"><?= $p['prodi_kurikulum']; ?></dd>
             <dt class="col-sm-2">Visi Prodi</dt>
             <dd class="col-sm-10 text-align-justify"><?= $p['prodi_visi']; ?></dd>
             <?php if ($p['prodi_misi'] != '') : ?>

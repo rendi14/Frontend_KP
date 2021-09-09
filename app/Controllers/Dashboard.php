@@ -267,6 +267,7 @@ class Dashboard extends Controller
 		$data = [
 			'prodi_nama' => $this->request->getVar('nama_prodi'),
 			'prodi_tentang' => $this->request->getVar('tentang'),
+			'prodi_kurikulum' => $this->request->getVar('kurikulum'),
 			'prodi_foto' => $namaGambar,
 			'prodi_visi' => $this->request->getVar('visi'),
 			'prodi_misi' => $this->request->getVar('misi'),
@@ -303,6 +304,7 @@ class Dashboard extends Controller
 			'prodi_id' => $this->request->getVar('id'),
 			'prodi_nama' => $this->request->getVar('nama'),
 			'prodi_tentang' => $this->request->getVar('tentang'),
+			'prodi_kurikulum' => $this->request->getVar('kurikulum'),
 			'prodi_visi' => $this->request->getVar('visi'),
 			'prodi_misi' => $this->request->getVar('misi'),
 			'prodi_foto' => $namaGambar,

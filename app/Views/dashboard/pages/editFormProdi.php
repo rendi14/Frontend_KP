@@ -33,6 +33,10 @@
                                   <textarea type="text" required id="defaultForm-tentang" class="form-control validate" value="<?=$user['prodi_tentang']?>"  style="height: 200px" name="tentang"><?=$user['prodi_tentang']?></textarea>
                                 </div>
                                 <div class="col-md-12 mb-3">
+                                  <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Prodi Kurikulum</label>
+                                  <textarea type="text" required id="defaultForm-tentang" class="form-control validate" value="<?=$user['prodi_kurikulum']?>"  style="height: 200px" name="kurikulum"><?=$user['prodi_kurikulum']?></textarea>
+                                </div>                               
+                                <div class="col-md-12 mb-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-visi" class="mb-2">Visi</label>
                                   <textarea type="text" required id="defaultForm-visi" class="form-control validate" name="visi"  style="height: 150px" value="<?=$user['prodi_visi']?>"><?=$user['prodi_visi']?></textarea>
                                 </div>
