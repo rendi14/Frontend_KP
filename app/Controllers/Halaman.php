@@ -11,6 +11,7 @@ use App\Models\kontakModel;
 use App\Models\gambarModel;
 use App\Models\galeriModel;
 use App\Models\albumModel;
+use App\Models\statisModel;
 
 class Halaman extends BaseController
 {
@@ -28,10 +29,10 @@ class Halaman extends BaseController
 
 
     // -------------------------------------------------
-    public function tentang()
+    public function visimisiakti()
     {
         echo view('layout/header');
-        echo view('main/tentang');
+        echo view('main/visimisiakti');
         echo view('layout/footer');
     }
 
@@ -270,8 +271,19 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function statis()
     {
+        $model = new statisModel;
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+
+        $data = [
+            'tittle' => ' Statis || PT.CROP',
+            'user' => $model->paginate(100, 'user'),
+            'pager' => $model->pager,
+            'currentPage' => $currentPage,
+        ];
+
         echo view('layout/header');
-        echo view('main/statis');
+        echo view('main/statis', $data);
         echo view('layout/footer');
     }
 }

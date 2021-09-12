@@ -15,7 +15,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h4>Toyota</h4>
-                        <p>Web</p>
+                        <p>Car</p>
                         <div class="portfolio-links">
                             <a href="https://www.youtube.com/watch?v=asTFtXaX1BQ" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
                         </div>

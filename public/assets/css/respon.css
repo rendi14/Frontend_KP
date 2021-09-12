@@ -932,4 +932,13 @@
   /* tenaga kerja */
 
   /* end tenaga kerja */
+
+  /* footerr */
+
+  #footer .footer-top {
+    background: #f8f9fa;
+    border-top: 1px solid #37332a;
+    border-bottom: 1px solid #28251f;
+    padding: 60px 0 30px 10px;
+  }
 }

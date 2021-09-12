@@ -2942,7 +2942,10 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   background: rgb(102, 214, 80);
-  box-shadow: 5px 10px 20px 0 #64f074;
+  /* box-shadow: 5px 10px 20px 0 #64f074;
+  box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8; */
+  -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
 }
@@ -2952,7 +2955,9 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   background: rgb(218, 70, 195);
-  box-shadow: 5px 10px 29px 0 #ce83d8;
+  /* box-shadow: 5px 10px 29px 0 #ce83d8; */
+  -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
 }
@@ -2962,7 +2967,9 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   background: rgb(179, 65, 255);
-  box-shadow: 5px 10px 29px 0 #b371e9;
+  /* box-shadow: 5px 10px 29px 0 #b371e9; */
+  -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
 }
@@ -2972,7 +2979,9 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   background: rgba(74, 201, 227);
-  box-shadow: 5px 10px 29px 0 #b2e6f2;
+  /* box-shadow: 5px 10px 29px 0 #b2e6f2; */
+  -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
 }
@@ -3504,7 +3513,7 @@ Search Overlay CSS
 .card-item1 {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 45px;
   height: 49%;
   background-color: rgba(223, 25, 149);
 }
@@ -3601,7 +3610,7 @@ Search Overlay CSS
 .card-item2 {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 45px;
   height: 49%;
   background-color: rgba(74, 201, 227);
 }
@@ -3698,7 +3707,7 @@ Search Overlay CSS
 .card-item3 {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 45px;
   height: 49%;
   background-color: rgba(238, 39, 55);
 }
@@ -3794,7 +3803,7 @@ Search Overlay CSS
 .card-item4 {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 45px;
   height: 49%;
   background-color: rgba(0, 170, 19);
 }
@@ -3890,7 +3899,7 @@ Search Overlay CSS
 .card-item5 {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 45px;
   height: 49%;
   background-color: rgb(230, 155, 44);
 }
@@ -4079,8 +4088,8 @@ Search Overlay CSS
   height: 80vh;
   overflow: hidden;
   position: relative;
-  background: url("../img/background/bg3.jpg") top center;
-  background-size: cover;
+  background: url("../img/background/visimisiakti.jpg") top center;
+  background-size: 78%;
   position: relative;
   margin-bottom: 0px;
   z-index: 99;
@@ -4089,7 +4098,7 @@ Search Overlay CSS
 
 #tentangbg:before {
   content: "";
-  background: rgba(247, 115, 8, 0.8);
+  background: rgba(196, 103, 27, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -4698,7 +4707,7 @@ Search Overlay CSS
   overflow: hidden;
   position: relative;
   background: url("../img/background/agenda2.jpg") top center;
-  background-size: cover;
+  background-size: 78%;
   position: relative;
   margin-bottom: 0px;
   z-index: 99;
@@ -4820,13 +4829,14 @@ Search Overlay CSS
   position: relative;
   margin: 0 0 0 20%;
   z-index: 100;
+  padding-bottom: 3%;
 }
 .icon-boxes22 .icon-box {
   padding: 50px 5px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 .icon-boxes22 .btn22 {
@@ -4863,6 +4873,9 @@ Search Overlay CSS
   margin: 0 5% 0 8%;
 }
 
+.icon-boxes22 .icon-box:hover {
+  background-color: var(--whiteColor);
+}
 /* ======================================================= */
 
 .TPMO2 {
@@ -5190,9 +5203,10 @@ Search Overlay CSS
 
 .akademik .icon-box {
   padding: 30px;
-  border-radius: 6px;
+  border-radius: 20px;
   background: #fff;
   transition: ease-in-out 0.7s;
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
 }
 
 .akademik .icon-box img {
@@ -5221,7 +5235,7 @@ Search Overlay CSS
 }
 
 .akademik .icon-box:hover {
-  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.2);
   transform: scale(1.04);
 }
 
@@ -5983,7 +5997,7 @@ Gallery Area CSS
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f3f6ff;
+  background: var(--background);
   padding: 0 0 30px 0;
   height: auto;
   color: #fff;
@@ -6053,7 +6067,7 @@ Gallery Area CSS
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #ff7810;
+  background: var(--mainColor);
   color: #fff;
   text-decoration: none;
 }
@@ -6102,7 +6116,7 @@ Gallery Area CSS
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #ff7810;
+  color: var(--mainColor);
 }
 
 #footer .copyright {
@@ -6119,7 +6133,7 @@ Gallery Area CSS
 }
 
 #footer .credits a {
-  color: #ff7810;
+  color: var(--mainColor);
   text-decoration: none;
   font-weight: 100px;
   font-family: var(--fontFamily);

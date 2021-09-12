@@ -92,7 +92,7 @@
                                 <img src="/assets/img/iconcard/mahasiswa.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
-                                <h4 class=""><a href=""> Mahasiswa Aktif 6.553</a></h4>
+                                <h4 class=""><a href=""> Mahasiswa Aktif 96</a></h4>
                                 <p class=""> Membentuk Karakter yang cepat, tanggap dan kompeten</p>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                                 <img src="/assets/img/iconcard/lulus.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
-                                <h4 class=""><a href="">Lulusan 22.392</a></h4>
+                                <h4 class=""><a href="">Lulusan 160 </a></h4>
                                 <p class=""> Meluluskan mahasiswa-mahasiswa yang berkualitas dan bertanggung jawab</p>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                                 <img src="/assets/img/iconcard/gedung.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
-                                <h4 class=""><a href="">Gedung 26</a></h4>
-                                <p class=""> Terdapat Gedung dengan kenyamanan dan fasilitas yang memadai</p>
+                                <h4 class=""><a href="">Luas Asrama 3.000 m</a></h4>
+                                <p class=""> Terdapat Asrama dengan kenyamanan dan fasilitas yang memadai</p>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                                 <img src="/assets/img/iconcard/luas.png" alt="">
                             </div>
                             <div class="section-title-bgorange">
-                                <h4 class=""><a href="">Luas 5.5</a></h4>
+                                <h4 class=""><a href="">Luas 10.000 m</a></h4>
                                 <p class=""> Dengan keluasan seluruh sekte bisa membantu praktik dilapangan lebih mudah</p>
                             </div>
                         </div>

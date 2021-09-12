@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Halaman::index');
 $routes->get('/TPMO', 'Halaman::TPMO');
 $routes->get('/TOPKR4', 'Halaman::TOPKR4');
-$routes->get('/tentang', 'Halaman::tentang');
+$routes->get('/visimisiakti', 'Halaman::visimisiakti');
 $routes->get('/galeri', 'Halaman::galeri');
 $routes->get('/album', 'Halaman::album');
 $routes->get('/galerivideo', 'Halaman::galerivideo');

@@ -17,13 +17,15 @@
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="300">
-            <div class="col-lg-3 col-md-4">
-                <div class="icon-box">
-                    <i class="bx bx-store" style="color: #ffbb2c;"></i>
-                    <h3><a href="">Sejarah</a></h3>
+            <?php foreach ($user as $p) : ?>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="icon-box">
+                        <i class="bx bx-store" style="color: #ffbb2c;"></i>
+                        <h3><a href=""><?= $p['statis_judul']; ?></a></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <?php endforeach; ?>
+            <!-- <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="bx bx-chart" style="color: #5578ff;"></i>
                     <h3><a href="">Profil AKTI</a></h3>
@@ -89,8 +91,8 @@
                     <i class="bx bx-fingerprint" style="color: #29cc61;"></i>
                     <h3><a href="">Kurikulum TOPKR4</a></h3>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
-</section><!-- End Features Section -->
+</section>
