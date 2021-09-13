@@ -40,6 +40,7 @@ $routes->get('/album', 'Halaman::album');
 $routes->get('/galerivideo', 'Halaman::galerivideo');
 $routes->get('/akademik', 'Halaman::akademik');
 $routes->get('/agenda', 'Halaman::agenda');
+$routes->get('/fakta', 'Halaman::fakta');
 $routes->get('/Kontak', 'Halaman::Kontak');
 $routes->get('/statis', 'Halaman::statis');
 $routes->get('/detailBerita', 'Halaman::detailBerita');

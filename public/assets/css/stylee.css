@@ -4219,10 +4219,12 @@ Search Overlay CSS
 .contact .info-box {
   color: #444444;
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  /* box-shadow: 0 0 30px rgba(214, 215, 216, 0.6); */
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
   padding: 20px 0 30px 0;
   background: #fff;
   border-radius: 10px;
+  transition: 1s;
 }
 
 .contact .info-box i {
@@ -4245,6 +4247,10 @@ Search Overlay CSS
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.contact .info-box:hover {
+  transform: scale(1.03);
 }
 
 .contact .php-email-form {
@@ -5334,16 +5340,18 @@ Search Overlay CSS
 
 .history-timeline .timeline-block .timeline-content {
   background-color: var(--whiteColor);
+  border-radius: 15px;
   padding: 30px;
-  box-shadow: 0px 2px 22px rgba(8, 6, 6, 0.1);
+  /* box-shadow: 0px 2px 22px rgba(8, 6, 6, 0.1); */
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
   transition: 1s;
 }
 
 .history-timeline .timeline-block .timeline-content:hover {
   background-color: var(--whiteColor);
   padding: 30px;
-  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.1);
-  transform: scale(1.04);
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
 }
 
 .history-timeline .timeline-block .timeline-content .content {
@@ -5504,6 +5512,7 @@ Search Overlay CSS
   height: auto;
   padding-top: 5%;
   padding-bottom: 5%;
+  background-color: var(--background);
 }
 
 .portfolioalbum .portfolio-wrap {
@@ -5511,12 +5520,13 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.89);
 }
 
 .portfolioalbum .portfolio-wrap::before {
   content: "";
-  background: rgba(255, 255, 255, 0.75);
+  /* background: rgba(255, 255, 255, 0.75); */
+  background: rgba(255, 255, 255, 0.89);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -5661,6 +5671,7 @@ Search Overlay CSS
   height: auto;
   padding-top: 5%;
   padding-bottom: 5%;
+  background-color: var(--background);
 }
 
 .portfoliovideo .portfolio-wrap {
@@ -5668,12 +5679,14 @@ Search Overlay CSS
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.75);
+  /* background: rgba(255, 255, 255, 0.75); */
+  background: rgba(255, 255, 255, 0.89);
 }
 
 .portfoliovideo .portfolio-wrap::before {
   content: "";
-  background: rgba(255, 255, 255, 0.75);
+  /* background: rgba(255, 255, 255, 0.75); */
+  background: rgba(255, 255, 255, 0.89);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -5960,6 +5973,92 @@ Search Overlay CSS
 }
 
 /* end statis */
+
+/* fakta */
+#fakta {
+  padding-top: 8%;
+  padding-bottom: 2%;
+}
+
+.fakta .icon-box {
+  text-align: center;
+  border: 1px solid #f8ceb2;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.fakta .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--mainColor);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.fakta .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.fakta .icon-box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #ffa366;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.fakta .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.fakta .icon-box h4 a {
+  color: #2c4964;
+}
+
+.fakta .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.fakta .icon-box:hover {
+  background: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.fakta .icon-box:hover .icon {
+  background: #fff;
+}
+
+.fakta .icon-box:hover .icon i {
+  color: var(--mainColor);
+}
+
+.fakta .icon-box:hover .icon::before {
+  /* background: #3291e6; */
+  background-color: #ff8b3d;
+}
+
+.fakta .icon-box:hover h4 a,
+.fakta .icon-box:hover p {
+  color: #fff;
+}
+
+/* end fakta */
 
 /*================================================
 Gallery Area CSS

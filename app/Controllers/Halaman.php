@@ -286,4 +286,12 @@ class Halaman extends BaseController
         echo view('main/statis', $data);
         echo view('layout/footer');
     }
+
+    // -------------------------------------------------
+    public function fakta()
+    {
+        echo view('layout/header');
+        echo view('main/fakta');
+        echo view('layout/footer');
+    }
 }

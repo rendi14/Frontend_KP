@@ -80,7 +80,7 @@
         <div class="section-title-bgorange ptb-70">
             <h1>Fakta Tentang Akti</h1>
             <br>
-            <a href="/Halaman/akademik" class="default-btn-bgorange">Gabung</a>
+            <a href="/Halaman/fakta" class="default-btn-bgorange">Gabung</a>
         </div>
 
         <section id="icon-boxes" class="icon-boxes">
