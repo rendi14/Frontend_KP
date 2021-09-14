@@ -16,6 +16,7 @@
       </div>
       <div class="modal-body mx-3">
         <form action="/dashboard/tambahDosen" method="post" enctype="multipart/form-data">
+          <?= csrf_field(); ?>
           <div class="md-form mb-3">
             <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">NIP</label>
             <input type="text" required id="defaultForm-NIP" class="form-control validate" name="nip">
@@ -108,7 +109,11 @@
                 <td class="text-center align-middle">
                   <?= $u['dosen_kategori']; ?></td>
                 <td class="text-center align-middle"><a href="/dashboard/TampilEditData/<?= $u['dosen_id'] ?>" class="btn btn-primary"><span><i class="fas fa-pen"></i></span> Edit</a>
-                  <a href="/dashboard/HapusDataDosen/<?= $u['dosen_id'] ?>" class="btn btn-danger"><span><i class="fas fa-trash"></i></span> Hapus</a>
+                    <form action="/dashboard/deleteDosen/<?= $u['dosen_id']; ?>" method="post" class="d-inline">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                    </form>
               </tr>
             <?php endforeach; ?>
             </tbody>

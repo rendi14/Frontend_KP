@@ -103,8 +103,11 @@
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
               <a href="/dashboard/tampilEditStatis/<?= $p['statis_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
-              <a href="/dashboard/hapusStatis/<?= $p['statis_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></span> Hapus</a>
-              
+            <form action="/dashboard/deleteStatis/<?= $p['statis_id']; ?>" method="post" class="d-inline">
+            <?= csrf_field(); ?>
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+            </form>
             </dd>
           </dl>
         </div>

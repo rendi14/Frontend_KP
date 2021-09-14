@@ -48,16 +48,20 @@ $routes->get('/Tenagakerja', 'Halaman::Tenagakerja');
 $routes->get('/visimisiTPMO', 'Halaman::visimisiTPMO');
 $routes->get('/tentangTOPKR4', 'Halaman::tentangTOPKR4');
 $routes->get('/visimisiTOPKR4', 'Halaman::visimisiTOPKR4');
-$routes->get('/dashboard/', 'Dashboard::index', ['filter' => 'auth']);
+$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/dashboard/dataAdmin', 'Dashboard::dataAdmin', ['filter' => 'auth']);
 $routes->get('/dashboard/dataDosen', 'Dashboard::dataDosen', ['filter' => 'auth']);
 $routes->get('/dashboard/dataProdi', 'Dashboard::dataProdi', ['filter' => 'auth']);
 $routes->get('/dashboard/dataAkademik', 'Dashboard::dataAkademik', ['filter' => 'auth']);
-$routes->get('/MenuDashboard/', 'MenuDashboard::index', ['filter' => 'auth']);
+$routes->get('/MenuDashboard', 'MenuDashboard::index', ['filter' => 'auth']);
 $routes->get('/MenuDashboard/tabelMenu', 'MenuDashboard::tabelMenu', ['filter' => 'auth']);
 $routes->get('/berita', 'Berita::index', ['filter' => 'auth']);
 $routes->get('/dashboard/dataStatis', 'Dashboard::dataStatis', ['filter' => 'auth']);
-
+$routes->delete('/dashboard/deleteStatis/(:num)', 'Dashboard::hapusStatis/$1');
+$routes->delete('/dashboard/deleteDosen/(:num)', 'Dashboard::hapusDataDosen/$1');
+$routes->delete('/dashboard/deleteAkademik/(:num)', 'Dashboard::hapusAkademik/$1');
+$routes->delete('/dashboard/deleteBerita/(:num)', 'Berita::hapusBerita/$1');
+$routes->delete('/dashboard/deleteProdi/(:num)', 'Dashboard::hapusProdi/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

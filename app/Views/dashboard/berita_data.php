@@ -109,7 +109,11 @@
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
               <a href="/berita/tampilEditBerita/<?= $p['berita_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
-              <a href="/berita/hapusBerita/<?= $p['berita_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></span> Hapus</a>
+              <form action="/dashboard/deleteBerita/<?= $p['berita_id']; ?>" method="post" class="d-inline">
+              <?= csrf_field(); ?>
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+              </form>
             </dd>
           </dl>
         </div>
