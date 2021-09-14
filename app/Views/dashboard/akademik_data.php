@@ -106,7 +106,11 @@
                                           <td><?=$u['akademik_keterangan'];?></td>
                                           <td class="text-center"><?=$u['admin_nama'];?></td>
                                           <td><a href="/dashboard/TampilEditAkademik/<?=$u['akademik_id']?>" class="btn btn-primary">Edit</a>
-                                            <a href="/dashboard/HapusAkademik/<?=$u['akademik_id']?>" class="btn btn-danger">Hapus</a></td>
+                                          <form action="/dashboard/deleteAkademik/<?= $u['akademik_id']; ?>" method="post" class="d-inline">
+                                          <?= csrf_field(); ?>
+                                          <input type="hidden" name="_method" value="DELETE">
+                                          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                          </form></td>
                                         </tr>
                                         <?php endforeach;?>
                                     </tbody>

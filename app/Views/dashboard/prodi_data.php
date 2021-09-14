@@ -119,7 +119,11 @@
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
               <a href="/dashboard/tampilEditProdi/<?= $p['prodi_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
-              <a href="/dashboard/hapusProdi/<?= $p['prodi_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></span> Hapus</a>
+              <form action="/dashboard/deleteProdi/<?= $p['prodi_id']; ?>" method="post" class="d-inline">
+              <?= csrf_field(); ?>
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+              </form>
               <p class="card-text"><small class="text-muted">Last updated <?= $p['updated_at'] ?></small></p>
             </dd>
           </dl>
