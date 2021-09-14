@@ -5986,12 +5986,9 @@ Search Overlay CSS
   text-align: center;
   border: 1px solid #f8ceb2;
   padding: 80px 20px;
-<<<<<<< Updated upstream
   transition: all ease-in-out 0.3s;
   width: 100%;
-=======
   transition: all ease-in-out 0.9s;
->>>>>>> Stashed changes
 }
 
 .fakta .icon-box .icon {

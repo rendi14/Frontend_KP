@@ -8,7 +8,7 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Tambah Data Berita</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Album</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -20,7 +20,7 @@
             <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
           </div>
           <div class="md-form mb-2">
-            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Berita</label>
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Album</label>
             <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
           </div>
           <div class="md-form mb-2">
@@ -39,10 +39,105 @@
     </div>
   </div>
 </div>
-
 <!-- Akhir Modal Tambah Album -->
+<!-- Upload Video -->
+<div class="modal fade" id="modalUploadVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Video</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-2">
+        <form action="/dashboard/uploadVideo" method="post" enctype="multipart/form-data" class="row g-3">
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Video</label>
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
+            <input type="text" hidden id="defaultForm-type" class="form-control validate" name="type" value="Upload">
+          </div>
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Video</label>
+            <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
+          </div>
+          <div class="md-form">
+            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Upload Video</label>
+            <input type="file" class="form-control" id="poto" name="poto">
+          </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Akhir Upload Video -->
 <!-- End of Topbar -->
+<!-- Modal Tambah video link -->
+<div class="modal fade" id="modalVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Video</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-2">
+        <form action="/dashboard/tambahVideoLink" method="post" enctype="multipart/form-data" class="row g-3">
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Video</label>
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
+          </div>
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Deskripsi Video</label>
+            <textarea type="text" id="editor" class="form-control validate" name="deskripsi"></textarea>
+          </div>
+            <input hidden type="text" id="defaultForm-Name" class="form-control validate" name="type" value="Link">
+          <div class="md-form">
+            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Video Link</label>
+            <input type="text" class="form-control" name="link">
+          </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 
+<!-- Tambah Mitra Kerja -->
+<div class="modal fade" id="modalMitraForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Mitra</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-2">
+        <form action="/dashboard/tambahMitra" method="post" enctype="multipart/form-data" class="row g-3">
+          <div class="md-form mb-2">
+            <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Link Mitra</label>
+            <input type="text" id="defaultForm-Name" class="form-control validate" name="link">
+          </div>
+          <div class="md-form">
+            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Gambar Mitra</label>
+            <input type="file" class="form-control" id="poto" name="poto">
+          </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Akhir Modal Tambah Album -->
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -92,15 +187,15 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Album Galeri
               </div>
               <div class="row no-gutters align-items-center">
                 <div class="col-auto">
-                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $album_count ?></div>
                 </div>
                 <div class="col">
                   <div class="progress progress-sm mr-2">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: <?= $album_count ?>%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20"><?= $album_count ?></div>
                   </div>
                 </div>
               </div>
@@ -131,6 +226,7 @@
       </div>
     </div>
     
+    <!-- Album -->
     <div class="col-12">
       <div class="card shadow mb-4 mt-2 pb-5">
         <div class="card-header py-3">
@@ -183,13 +279,152 @@
       <?php if ($album_count <= 3) : ?>
         <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
       <?php else : ?>
-        <a href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+        <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
       <?php endif ?>
       </div>
     </div>
-    <!-- End of Content Wrapper -->
-
   </div>
+
+<!-- Video gallery -->
+<div class="col-12">
+  <div class="card shadow mb-4 mt-2 pb-5">
+    <div class="card-header py-3">
+      <div class="row">
+        <div class="col-12 col-xl-7">
+          <?php if ($video_count === 0) : ?>
+            <a class="m-0 font-weight-bold text-primary font-size-link">Video Gallery</a>
+          <?php else : ?>
+            <a href="" data-toggle="modal" data-target="#modalVideoData" class="m-0 font-weight-bold text-primary font-size-link">Video Gallery</a>
+          <?php endif ?>
+        </div>
+        <div class="col-xl-5">
+          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalVideoForm">Tambah Video Melalui Link
+            <i class="fas fa-fw fa-plus"></i>
+          </button>
+          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalUploadVideo">Upload Video 
+            <i class="fas fa-fw fa-upload"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+    <?php if ($video_count === 0) : ?>
+      <div class="container text-center mt-2">
+        <h1>Video Kosong...</h1>
+      </div>
+    <?php else : ?>
+    <?php foreach ($video as $p) : ?>
+      <div class="col-12 col-lg-4">
+        <div class="container">
+          <div class="polaroid">
+          <?php if ($p['video_type'] === 'Link') : ?>
+          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+          <iframe class="embed-responsive-item" src="<?= $p['video_link'] ?>"
+            allowfullscreen></iframe>
+          </div>  
+            <div class="container-text mt-2">
+              <p><?= $p['video_judul'] ?></p>
+              <p><?= $p['video_deskripsi'] ?></p>
+              <div class="d-flex justify-content-end">
+              <div class="dropdown">
+              <span title="Setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-fw fa-pen"></i></span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
+                  <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
+                  <li><a href="/dashboard/hapusVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <?php else : ?>
+            <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="/assets/img/video/<?= $p['video_link'] ?>" allowfullscreen></iframe>
+          </div>  
+            <div class="container-text mt-2">
+              <p><?= $p['video_judul'] ?></p>
+              <p><?= $p['video_deskripsi'] ?></p>
+              <div class="d-flex justify-content-end">
+              <div class="dropdown">
+              <span title="Setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-fw fa-pen"></i></span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
+                  <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
+                  <li><a href="/dashboard/hapusVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
+                </ul>
+              </div>
+              </div>
+            </div>  
+              <?php endif ?>          
+          </div>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+    <?php endif ?>
+  <?php if ($album_count <= 3) : ?>
+    <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+  <?php else : ?>
+    <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+  <?php endif ?>
+  </div>
+</div>
+</div>
+    <!-- Akhir video galeri -->
+    <!-- End of Content Wrapper -->
+    <!-- Mitra Kerja -->
+<div class="col-12">
+<div class="card shadow mb-4 mt-2 pb-5">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-12 col-xl-9">
+        <?php if ($mitra_count === 0) : ?>
+          <a class="m-0 font-weight-bold text-primary font-size-link">Mitra Kerja</a>
+        <?php else : ?>
+          <a href="" data-toggle="modal" data-target="#modalMitraData" class="m-0 font-weight-bold text-primary font-size-link">Mitra Kerja</a>
+        <?php endif ?>
+      </div>
+      <div class="col-xl-3">
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalMitraForm">Tambah Mitra Kerja
+          <i class="fas fa-fw fa-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <?php if ($mitra_count === 0) : ?>
+      <div class="container text-center mt-2">
+        <h1>Tidak Terdapat Mitra...</h1>
+      </div>
+    <?php else : ?>
+      <?php foreach ($mitra as $p) : ?>
+        <div class="col-12 col-lg-4">
+          <div class="container">
+            <div class="polaroid">
+              <a href="/dashboard/editMitra/<?= $p['mitra_id'] ?>"><img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+              <div class="container-text">
+                <p><?= $p['mitra_link'] ?></p>
+                <p><?= $p['mitra_waktu'] ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+  </div>
+<?php endif ?>
+<?php if ($mitra_count <= 3) : ?>
+  <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+<?php else : ?>
+  <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+<?php endif ?>
+</div>
+</div>
+</div>
+</div>
+  <!-- Akhir Mitra Kerja -->
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
@@ -253,6 +488,49 @@
       </div>
     </div>
   </div>
+
+<!-- Modal Mitra  -->
+  <!-- Modal tambah album -->
+  <!-- Modal -->
+  <div class="modal fade" id="modalMitraData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Mitra</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row mt-3">
+            <?php foreach ($mitra_full as $p) : ?>
+              <div class="col-12 col-lg-6 mb-3">
+                <div class="container">
+                  <div class="polaroid">
+                    <a href="/dashboard/albumGaleri/<?= $p['mitra_id'] ?>"><img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+                    <div class="container-text">
+                      <p><?= $p['mitra_link'] ?></p>
+                      <p><?= $p['mitra_waktu'] ?></p>
+                      <a href="/dashboard/albumGaleri/<?= $p['mitra_id'] ?>" class="btn btn-primary">Lihat</a>
+                      <a href="/dashboard/hapusMitra/<?= $p['mitra_id'] ?>" class="btn btn-danger">Buang</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Akhir -->
+
 
   <div class="modal fade" id="modalFotoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
