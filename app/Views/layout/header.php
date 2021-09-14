@@ -56,7 +56,7 @@
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Akti<i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="/Halaman/visimisiakti" class="nav-link">Tentang</a></li>
+                                    <!-- <li class="nav-item"><a href="/Halaman/visimisiakti" class="nav-link">Tentang</a></li> -->
                                     <li class="nav-item"><a href="/Halaman/statis" class="nav-link">Statis</a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Galeri <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
@@ -69,6 +69,7 @@
                             <!-- <li class="nav-item"><a href="/Halaman/album" class="nav-link">Blog</a></li> -->
                             <li class="nav-item"><a href="/Halaman/Kontak" class="nav-link">Kontak</a></li>
                         </ul>
+
 
                         <div class="others-option d-flex align-items-center">
                             <div class="option-item">
@@ -130,7 +131,7 @@
                 </div>
                 <div class="search-overlay-form">
                     <form>
-                        <input type="text" class="input-search" placeholder="Search here...">
+                        <input type="text" class="input-search" placeholder="Search here..." name="cari">
                         <button type="submit"><i class="flaticon-search"></i></button>
                     </form>
                 </div>

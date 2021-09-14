@@ -16,16 +16,31 @@
             <p>Akademi Komunitas Toyota Indonesia Memiliki statis</p>
         </div>
 
+
         <div class="row" data-aos="fade-up" data-aos-delay="300">
             <?php foreach ($user as $p) : ?>
                 <div class="col-lg-3 col-md-4 mb-3">
                     <div class="icon-box">
                         <i class="bx bx-store" style="color: #ffbb2c;"></i>
-                        <h3><a href=""><?= $p['statis_judul']; ?></a></h3>
+                        <h3><a href="/Halaman/detailstatis/<?= $p['statis_judul']; ?>"><?= $p['statis_judul']; ?></a></h3>
+                        <a href="/Halaman/detailstatis/<?= $p['statis_judul']; ?>" class="link-btn"><i class="flaticon-next-button"></i></a>
                     </div>
                 </div>
             <?php endforeach; ?>
-            <!-- <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        </div>
+        <?= $pager->links('user', 'dosen_data') ?>
+
+        <!-- <div class="pagination-area text-center">
+            <a href="#" class="prev page-numbers"><i class='bx bx-chevrons-left'></i></a>
+            <span class="page-numbers current" aria-current="page">1</span>
+            <a href="#" class="page-numbers">2</a>
+            <a href="#" class="page-numbers">3</a>
+            <a href="#" class="page-numbers">4</a>
+            <a href="#" class="next page-numbers"><i class='bx bx-chevrons-right'></i></a>
+        </div> -->
+
+
+        <!-- <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="bx bx-chart" style="color: #5578ff;"></i>
                     <h3><a href="">Profil AKTI</a></h3>
@@ -92,7 +107,7 @@
                     <h3><a href="">Kurikulum TOPKR4</a></h3>
                 </div>
             </div> -->
-        </div>
+    </div>
 
     </div>
 </section>

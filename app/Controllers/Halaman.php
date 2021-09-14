@@ -20,6 +20,12 @@ class Halaman extends BaseController
     {
         $beritamodel = new beritaModel;
         $berita = $beritamodel->findAll();
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $beritamodel->search($cari);
+        } else {
+            $orang = $beritamodel;
+        }
         $data = [
             'berita' => $berita,
         ];
@@ -166,11 +172,19 @@ class Halaman extends BaseController
     public function akademik()
     {
         $model = new akademikModel;
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
 
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $model->search($cari);
+        } else {
+            $orang = $model;
+        }
         $data = [
             'tittle' => 'Akademik || PT.CROP',
             'user' => $model->paginate(50, 'user'),
             'pager' => $model->pager,
+            'currentPage' => $currentPage,
 
         ];
 
@@ -184,10 +198,19 @@ class Halaman extends BaseController
     {
         $agenda = new agendaModel;
         $agenda_user = $agenda->findAll();
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $agenda->search($cari);
+        } else {
+            $orang = $agenda;
+        }
         $data = [
             'tittle' => 'Agenda || PT.CROP',
             'agenda_user' => $agenda->paginate(4, 'agenda'),
             'pager' => $agenda->pager,
+            'currentPage' => $currentPage,
         ];
         echo view('layout/header');
         echo view('main/agenda', $data);
@@ -275,10 +298,16 @@ class Halaman extends BaseController
         $model = new statisModel;
         $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
 
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $model->search($cari);
+        } else {
+            $orang = $model;
+        }
 
         $data = [
             'tittle' => ' Statis || PT.CROP',
-            'user' => $model->paginate(100, 'user'),
+            'user' => $model->paginate(12, 'user'),
             'pager' => $model->pager,
             'currentPage' => $currentPage,
         ];
@@ -304,6 +333,48 @@ class Halaman extends BaseController
 
         echo view('layout/header');
         echo view('main/fakta', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function kurikulumTPMO()
+    {
+        $model = new prodiModel;
+        $tpmo = $model->where('prodi_dosen', '7')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'tpmo'  => $tpmo
+        ];
+        echo view('layout/header');
+        echo view('main/kurikulumTPMO', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function kurikulumTOPKR4()
+    {
+        $model = new prodiModel;
+        $TOPKR4 = $model->where('prodi_dosen', '8')->findAll();
+        $data = [
+            'tittle' => 'Prodi || PT.CROP',
+            'TOPKR4'  => $TOPKR4
+        ];
+        echo view('layout/header');
+        echo view('main/kurikulumTOPKR4', $data);
+        echo view('layout/footer');
+    }
+
+    // -------------------------------------------------
+    public function detailstatis($slug)
+    {
+        $statismodel = new statisModel;
+        $berita = $statismodel->findAll();
+        $data = [
+            'tittle' => 'Detail statis || PT.CROP',
+            'statis' => $statismodel->getSlug($slug),
+        ];
+        echo view('layout/header');
+        echo view('main/detailstatis', $data);
         echo view('layout/footer');
     }
 }

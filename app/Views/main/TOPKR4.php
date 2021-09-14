@@ -51,7 +51,7 @@
                         <h4>Kurikulum</h4>
                         <p>Tata Operasi Perakitan Kendaraan Roda 4 (empat)</p>
                         <div class="btn22">
-                            <a href="" class="default-btn">Gabung</a>
+                            <a href="/Halaman/kurikulumTOPKR4" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>

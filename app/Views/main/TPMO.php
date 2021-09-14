@@ -47,7 +47,7 @@
                         <h4>Kurikulum</h4>
                         <p>Teknik Pemeliharaan Mesin Otomasi </p>
                         <div class="btn22">
-                            <a href="" class="default-btn">Gabung</a>
+                            <a href="/Halaman/kurikulumTPMO" class="default-btn">Gabung</a>
                         </div>
                     </div>
                 </div>

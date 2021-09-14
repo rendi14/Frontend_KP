@@ -15,6 +15,8 @@ use App\Models\kontakModel;
 use App\Models\statisModel;
 use App\Models\videoModel;
 use App\Models\mitraModel;
+use App\Models\faktaModel;
+use App\Models\testimonialModel;
 use CodeIgniter\Controller;
 
 class Dashboard extends Controller
@@ -544,7 +546,7 @@ class Dashboard extends Controller
 		return view('dashboard/statis-data', $data);
 	}
 
-		public function tambahStatis()
+	public function tambahStatis()
 	{
 		$model = new statisModel();
 		$session = session();
@@ -585,7 +587,7 @@ class Dashboard extends Controller
 		return view('dashboard/pages/editStatis', $data);
 	}
 
-		public function editStatis()
+	public function editStatis()
 	{
 		$model = new statisModel();
 		$session = session();
@@ -629,7 +631,7 @@ class Dashboard extends Controller
 		return view('dashboard/kontak-data', $data);
 	}
 
-		public function hapusDataKontak($id)
+	public function hapusDataKontak($id)
 	{
 		$model = new kontakModel();
 		$session = session();
@@ -639,7 +641,7 @@ class Dashboard extends Controller
 	}
 
 	// Tambah data dengan link 
-		public function tambahVideoLink()
+	public function tambahVideoLink()
 	{
 		$model = new videoModel();
 		$session = session();
@@ -706,4 +708,55 @@ class Dashboard extends Controller
 		return redirect()->to('/dashboard');
 	}
 
+	// -------------------------------------------------
+	public function datafakta()
+	{
+		$model = new faktaModel;
+		$sidebar = new sidebarModel;
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+		$cari = $this->request->getVar('cari');
+		if ($cari) {
+			$model->search($cari);
+		} else {
+			$orang = $model;
+		}
+		/*$user_model = $user->findAll();*/
+		$data = [
+			'tittle' => 'Data Fakta || PT.CROP',
+			'user' => $model->paginate(5, 'user'),
+			'pager' => $model->pager,
+			'currentPage' => $currentPage,
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/fakta_data', $data);
+	}
+
+	// -------------------------------------------------
+	public function datatestimonial()
+	{
+		$model = new testimonialModel;
+		$sidebar = new sidebarModel;
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+		$cari = $this->request->getVar('cari');
+		if ($cari) {
+			$model->search($cari);
+		} else {
+			$orang = $model;
+		}
+		/*$user_model = $user->findAll();*/
+		$data = [
+			'tittle' => 'Data testimonial || PT.CROP',
+			'user' => $model->paginate(3, 'user'),
+			'pager' => $model->pager,
+			'currentPage' => $currentPage,
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/testimonial_data', $data);
+	}
 }
