@@ -12,6 +12,7 @@ use App\Models\gambarModel;
 use App\Models\galeriModel;
 use App\Models\albumModel;
 use App\Models\statisModel;
+use App\Models\faktaModel;
 
 class Halaman extends BaseController
 {
@@ -290,8 +291,19 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function fakta()
     {
+        $model = new faktaModel;
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+
+        $data = [
+            'tittle' => ' Fakta || PT.CROP',
+            'user' => $model->paginate(100, 'user'),
+            'pager' => $model->pager,
+            'currentPage' => $currentPage,
+        ];
+
         echo view('layout/header');
-        echo view('main/fakta');
+        echo view('main/fakta', $data);
         echo view('layout/footer');
     }
 }

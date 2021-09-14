@@ -27,8 +27,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `admin_online` int(11) NOT NULL,
   `admin_level_kode` int(11) NOT NULL,
   `admin_status` char(1) NOT NULL,
-  PRIMARY KEY (`admin_user`) USING BTREE,
-  KEY `admin_level_kode` (`admin_level_kode`) USING BTREE
+  PRIMARY KEY (`admin_user`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.admin: ~5 rows (approximately)
@@ -46,7 +45,9 @@ CREATE TABLE IF NOT EXISTS `admin_level` (
   `admin_level_kode` int(11) NOT NULL AUTO_INCREMENT,
   `admin_level_nama` varchar(30) NOT NULL,
   `admin_level_status` char(1) NOT NULL,
-  PRIMARY KEY (`admin_level_kode`) USING BTREE
+  PRIMARY KEY (`admin_level_kode`) USING BTREE,
+  KEY `admin_level_nama` (`admin_level_nama`),
+  KEY `admin_level_status` (`admin_level_status`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.admin_level: ~3 rows (approximately)
@@ -107,8 +108,7 @@ INSERT INTO `akti_akademik` (`akademik_id`, `akademik_title`, `akademik_deskrips
 	(7, 'Kolaborasi', 'Akademi Komunitas Toyota Indonesia memiliki banyak kerjasama yang baik dengan banyak perusahaan di Indonesia.                                                                                        ', '1618540039-Kolaborasi.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
 	(8, 'Fasilitas', 'Akademi Komunitas Toyota Indonesia menyediakan fasilitas yang baik bagi mahasiswa untuk mendukung proses belajar mengajar.                                                                                        ', '1618539927-Fasilitas.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
 	(9, 'Keunggulan', 'Akademi Komunitas Toyota Indonesia memiliki staf pengajar yang berpengalaman di bidangnya dan sejumlah penelitian yang berkualitas.                                                                                                                                    ', '1618540012-Keunggulan.png', 'Halaman Akademik', '<p>\r\n	Konten Halaman Akademik</p>\r\n', 'Administrator'),
-	(19, 'Algoritma', 'Matakuliah alur program  adalah sesuatu yang sangat simpel benernya tapi sangat berarti maka dari itu kita harus belajar', '2mgf_p4dt_210609.jpg', 'Halaman Akademik', '<ul><li>Hahaha</li><li>HEhehe</li><li>HAhaha</li></ul>', 'Superadmin'),
-	(21, 'ewr32142', 'wqeqe', '2_3.jpg', 'Halaman Akademik', 'dsad', '1');
+	(19, 'Algoritma', 'Matakuliah alur program  adalah sesuatu yang sangat simpel benernya tapi sangat berarti maka dari itu kita harus belajar', '2mgf_p4dt_210609.jpg', 'Halaman Akademik', '<ul><li>Hahaha</li><li>HEhehe</li><li>HAhaha</li></ul>', 'Superadmin');
 /*!40000 ALTER TABLE `akti_akademik` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.akti_assesor
@@ -146,14 +146,15 @@ CREATE TABLE IF NOT EXISTS `akti_contact` (
   `contact_deskripsi` text DEFAULT NULL,
   `contact_waktu` date NOT NULL,
   PRIMARY KEY (`contact_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.akti_contact: ~3 rows (approximately)
 /*!40000 ALTER TABLE `akti_contact` DISABLE KEYS */;
 INSERT INTO `akti_contact` (`contact_id`, `contact_pengirim`, `contact_email`, `contact_telp`, `contact_deskripsi`, `contact_waktu`) VALUES
 	(5, 'NAVA GIA GINASTA', 'navagiaginasta@gmail.com', '087820033395', '-', '2021-01-08'),
 	(6, 'Farhan Fauzan', 'fauzanfarhan11@gmail.com', '081312007117', 'Kampus AKTI memberikan kualitas pembelajaran terbaik', '2021-01-13'),
-	(7, 'ANwar', 'aktidata@gmail.com', '98984985', 'KOmentar', '2021-01-20');
+	(7, 'ANwar', 'aktidata@gmail.com', '98984985', 'KOmentar', '2021-01-20'),
+	(17, '4', '32@g', '21', '21AD', '2021-09-12');
 /*!40000 ALTER TABLE `akti_contact` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.akti_dosen
@@ -537,9 +538,9 @@ CREATE TABLE IF NOT EXISTS `album` (
 -- Dumping data for table login_db.album: ~5 rows (approximately)
 /*!40000 ALTER TABLE `album` DISABLE KEYS */;
 INSERT INTO `album` (`album_id`, `album_judul`, `album_deskripsi`, `album_gambar`, `album_kategori`, `album_urutan`) VALUES
-	(35, 'Album Assesor Akti', '<p>\r\n	-</p>\r\n', '1608274210-training-assesor.jpg', '', 0),
-	(36, 'Album Teaching Factory', '<p>\r\n	Album Galeri Teaching Factory</p>\r\n', '1610612695-header_tefa.png', '', 0),
-	(44, 'Fasilitas Kampus', '<p>\n	Gedung Kampus Akademi Komunitas Toyota Indonesia</p>\n', '1612515596-01. 2nd Step TIA Building.JPG', 'fasilitas', 0),
+	(35, 'Album Assesor Akti', '<p>-</p>', 'galeri1.jpg', '', 0),
+	(36, 'Album Teaching Factory', '<p>Album Galeri Teaching Factory</p>', 'galeri3.jpg', '', 0),
+	(44, 'Fasilitas Kampus', '<p>Gedung Kampus Akademi Komunitas Toyota Indonesia</p>', 'galericode4.jpg', 'fasilitas', 0),
 	(45, 'Fasilitas Laboratorium', '<p>\r\n	Fasilitas Laboratorium yang digunakan untuk pembelajaran praktikum mahasiswa Akademi Komunitas Toyota Indonesia</p>\r\n', '1612515771-IMG_4696.JPG', 'fasilitas', 0),
 	(46, 'Fasilitas Asrama', '<p>\n	Fasilitas Asrama yang disediakan untuk mahasiswa Akademi Komunitas Toyota Indonesia</p>\n', '1612515864-IMG20210205155359.jpg', 'fasilitas', 0);
 /*!40000 ALTER TABLE `album` ENABLE KEYS */;
@@ -554,13 +555,11 @@ CREATE TABLE IF NOT EXISTS `album_galeri` (
   `album_id` int(11) NOT NULL,
   PRIMARY KEY (`galeri_id`) USING BTREE,
   KEY `album_id` (`album_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.album_galeri: ~27 rows (approximately)
 /*!40000 ALTER TABLE `album_galeri` DISABLE KEYS */;
 INSERT INTO `album_galeri` (`galeri_id`, `galeri_judul`, `galeri_deskripsi`, `galeri_gambar`, `galeri_waktu`, `album_id`) VALUES
-	(68, 'Training Asesor Kompetensi', '<p>\r\n	-</p>\r\n', '1608274235-training-assesor.jpg', '2020-12-18 13:50:35', 35),
-	(69, 'Penyerahan sertifikat kompetensi kepada peserta Magang PT.TMMIN di kadisnaker Kab. Karawang', '<p>\r\n	-</p>\r\n', '1608274263-penyerahan-sertifikat.jpg', '2020-12-18 13:51:03', 35),
 	(70, 'Foto penyerahan Sertifikat Lisensi LSP oleh BNSP & Pemerintah', '<p>\r\n	-</p>\r\n', '1608274292-Foto penyerahan Sertifikat Lisensi LSP oleh BNSP & Pemerintah.jpg', '2020-12-18 13:51:32', 35),
 	(71, 'Foto Bersama Ibu Menteri Ida Fauziah - Kemnaker', '<p>\r\n	-</p>\r\n', '1608274313-foto bersama ibu menteri kemnaker.jpg', '2020-12-18 13:51:53', 35),
 	(72, 'Penyerahan Sertifikat Lisensi LSP – Ketua BNSP Sumarna F. Abumanan', '<p>\r\n	-</p>\r\n', '1608274334-Penyerahan Sertifikat Lisensi LSP – Ketua BNSP.jpg', '2020-12-18 13:52:14', 35),
@@ -585,7 +584,10 @@ INSERT INTO `album_galeri` (`galeri_id`, `galeri_judul`, `galeri_deskripsi`, `ga
 	(91, 'Engine Separate', '', '1612421009-engine_learning.jpg', '2021-02-04 13:43:04', 40),
 	(92, 'Mesin Hidrolik', '', '1612421053-hydrolic_machine.jpg', '2021-02-04 13:44:13', 40),
 	(93, 'Kerja Bangku Monozukuri', '', '1612421108-monozukuri_machine.jpg', '2021-02-04 13:45:08', 40),
-	(94, 'Mesin Praktek Elemen Mesin', '', '1612421146-element_machine.jpg', '2021-02-04 13:45:46', 40);
+	(94, 'Mesin Praktek Elemen Mesin', '', '1612421146-element_machine.jpg', '2021-02-04 13:45:46', 40),
+	(96, 'rendi nih', 'rendi adalah seorang yang selalu tersakiti', 'galeri2_1.jpg', '0000-00-00 00:00:00', 35),
+	(97, 'rendi lagi', 'haii', '5191411.jpg', '0000-00-00 00:00:00', 35),
+	(98, '', 'Penyerahan sertifikat kompetensi kepada peserta Magang PT.TMMIN di kadisnaker Kab. Karawang', 'sport5.jpg', '0000-00-00 00:00:00', 35);
 /*!40000 ALTER TABLE `album_galeri` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.berita
@@ -749,7 +751,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `menu_urutan` int(11) NOT NULL,
   `menu_status` char(1) NOT NULL,
   PRIMARY KEY (`menu_kode`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table login_db.menu: ~10 rows (approximately)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
@@ -763,7 +765,10 @@ INSERT INTO `menu` (`menu_kode`, `menu_nama`, `menu_deskripsi`, `menu_url`, `men
 	(202, 'Login', '', 'crop/login', 'H', '', 0, 10, ''),
 	(207, 'Agenda', 'fa-clipboard-list', 'Agenda', 'A', '2', 0, 2, ''),
 	(208, 'Sidebar', 'fa-arrow-left', 'dashboard/Agenda', 'H', '3', 0, 12, ''),
-	(211, 'Coba', 'fa-trash', 'www.facebook.coim', 'A', '1', 0, 6, '');
+	(211, 'Coba', 'fa-trash', 'www.facebook.coim', 'A', '1', 0, 6, ''),
+	(212, 'statis  ', 'fa-home', 'dashboard/dataStatis', 'A', '1', 0, 2, ''),
+	(213, 'statis', 'fa-home', 'dashboard/dataStatis', 'A', '1', 0, 3, ''),
+	(214, 'statis', 'fa-statis', 'statis', 'A', '1', 0, 2, '');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.menu_admin
@@ -774,9 +779,9 @@ CREATE TABLE IF NOT EXISTS `menu_admin` (
   PRIMARY KEY (`menu_admin_kode`) USING BTREE,
   KEY `menu_kode` (`menu_kode`) USING BTREE,
   KEY `admin_level_kode` (`admin_level_kode`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=315 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=318 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table login_db.menu_admin: ~10 rows (approximately)
+-- Dumping data for table login_db.menu_admin: ~11 rows (approximately)
 /*!40000 ALTER TABLE `menu_admin` DISABLE KEYS */;
 INSERT INTO `menu_admin` (`menu_admin_kode`, `menu_kode`, `admin_level_kode`) VALUES
 	(288, 196, 1),
@@ -788,7 +793,8 @@ INSERT INTO `menu_admin` (`menu_admin_kode`, `menu_kode`, `admin_level_kode`) VA
 	(294, 196, 2),
 	(295, 198, 2),
 	(305, 207, 1),
-	(312, 201, 1);
+	(312, 201, 1),
+	(317, 212, 1);
 /*!40000 ALTER TABLE `menu_admin` ENABLE KEYS */;
 
 -- Dumping structure for table login_db.menu_sidebar
