@@ -13,6 +13,8 @@ use App\Models\galeriModel;
 use App\Models\gambarModel;
 use App\Models\kontakModel;
 use App\Models\statisModel;
+use App\Models\videoModel;
+use App\Models\mitraModel;
 use CodeIgniter\Controller;
 
 class Dashboard extends Controller
@@ -25,10 +27,14 @@ class Dashboard extends Controller
 		$sidebar = new sidebarModel;
 		$album = new albumModel;
 		$galeri = new galeriModel;
+		$video = new videoModel;
+		$mitra = new mitraModel;
 		$user_count = $user->countAll();
 		$dosen_count = $dosen->countAll();
 		$prodi_count = $prodi->countAll();
 		$album_count = $album->countAll();
+		$video_count = $video->countAll();
+		$mitra_count = $mitra->countAll();
 		$side = $sidebar->where('menu_site', 'A')->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$data = [
@@ -37,9 +43,14 @@ class Dashboard extends Controller
 			'dosen_count' => $dosen_count,
 			'prodi_count' => $prodi_count,
 			'album_count' => $album_count,
+			'video_count' => $video_count,
+			'mitra_count' => $mitra_count,
 			'side' => $side,
+			'mitra' => $mitra->paginate(3),
+			'video' => $video->paginate(3),
 			'album' => $album->paginate(3),
 			'album_galeri' => $album->findAll(),
+			'mitra_full' => $mitra->findAll(),
 			'sidebar' => $sidebar_side
 		];
 		return view('dashboard/dashboard', $data);
@@ -623,7 +634,76 @@ class Dashboard extends Controller
 		$model = new kontakModel();
 		$session = session();
 		$model->delete($id);
-		$session->setFlashdata('pesan', 'Statis telah dihapus');
+		$session->setFlashdata('pesan', 'Pesan telah dihapus');
 		return redirect()->to('/dashboard/dataKontak');
 	}
+
+	// Tambah data dengan link 
+		public function tambahVideoLink()
+	{
+		$model = new videoModel();
+		$session = session();
+		$data = [
+			'video_judul' => $this->request->getVar('judul'),
+			'video_deskripsi' => $this->request->getVar('deskripsi'),
+			'video_link' => $this->request->getVar('link'),
+			'video_type' => $this->request->getVar('type'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'video telah ditambahkan');
+		return redirect()->to('/dashboard');
+	}
+
+	public function uploadVideo()
+	{
+		$model = new videoModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('assets/img/video');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'video_judul' => $this->request->getVar('judul'),
+			'video_deskripsi' => $this->request->getVar('deskripsi'),
+			'video_link' => $namaGambar,
+			'video_type' => $this->request->getVar('type'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Video telah ditambahkan');
+		return redirect()->to('/dashboard');
+	}
+
+	public function hapusVideo($id)
+	{
+		$model = new videoModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Video telah dihapus');
+		return redirect()->to('/dashboard');
+	}
+
+	public function tambahMitra()
+	{
+		$model = new mitraModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('assets/img/clients');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'mitra_gambar' => $namaGambar,
+			'mitra_link' => $this->request->getVar('link'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Mitra telah ditambahkan');
+		return redirect()->to('/dashboard');
+	}
+
+	public function hapusMitra($id)
+	{
+		$model = new mitraModel();
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Mitra telah dihapus');
+		return redirect()->to('/dashboard');
+	}
+
 }
