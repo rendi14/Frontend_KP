@@ -13,7 +13,6 @@
 <section class="halaman2beranda">
     <div class="container">
         <div class="section-title">
-            <!-- <h2>Kenali ,Crop</h2> -->
             <h2>Akti Membangun Kecerdasan Bangsa</h2>
             <br>
             <a href="/" class="default-btn">Gabung</a>
@@ -52,9 +51,6 @@
                 <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon-box">
                         <div class="icon">
-                            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_9azkhcpb.json" background="transparent" speed="1" style="width: 300px; height: 239px;" loop autoplay></lottie-player>
-                         -->
                             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                             <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_pixockac.json" background="transparent" speed="1" style="width: 300px; height: 239px;" loop autoplay></lottie-player>
                         </div>
@@ -62,18 +58,6 @@
                         <p class="description"> Akademi Komunitas Toyota Indonesia menjalin kerja sama dengan beberapa Kampus baik dari dalam maupun luar negeri.</p>
                     </div>
                 </div>
-
-                <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-box">
-                        <div class="icon">
-                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_kpoaosqz.json" background="transparent" speed="1" style="width: 300px; height: 239px;" loop autoplay></lottie-player>
-                        </div>
-                        <h4 class="title"><a href="">Data Base</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                    </div>
-                </div> -->
-
             </div>
         </section>
 
@@ -191,9 +175,6 @@
                         <div class="icon">
                             <!-- <i class="bx bx-car"></i> -->
                             <img src="/assets/img/stiker/dr5.png" alt="">
-                            <!-- <div class="circles-box">
-                                <div class="circle-one"></div>
-                            </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TPMO</a></h3>
                         <p>Teknik Pemeliharaan Mesin Otomasi merupakan perpaduan/kombinasi bidang ilmu antara Teknik Pemeliharaan Mesin Industri dan Teknik Otomasi.</p>
@@ -205,9 +186,6 @@
                         <div class="icon">
                             <!-- <i class=""></i> -->
                             <img src="/assets/img/stiker/dr2.png" alt="">
-                            <!-- <div class="circles-box">
-                                <div class="circle-one"></div>
-                            </div> -->
                         </div>
                         <h3><a href="single-services.html">Prodi TOPKR4</a></h3>
                         <p>Program Studi yang diusulkan adalah Tata Operasi Perakitan Kendaraan Roda 4 (empat) untuk Jenjang Pendidikan Diploma 2 dengan gelar lulusan Ahli Muda</p>
@@ -283,12 +261,7 @@
                         </div> -->
 
                         <div class="member-img">
-                            <!-- <div class="social">
-                                <a href="">disini</a>
-                                <a href=""><i class="bx bxl-facebook"></i></a>
-                                <a href=""><i class="bx bxl-instagram"></i></a>
-                                <a href=""><i class="bx bxl-linkedin"></i></a>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>

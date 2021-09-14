@@ -7,15 +7,11 @@
     </div>
 </section>
 
-
-
-<!-- ======= Services Section ======= -->
 <section id="akademik" class="akademik">
     <div class="container">
 
         <div class="section-title">
             <h2>akademik</h2>
-            <!-- <p>akademik yang dimiliki AKTI</p> -->
         </div>
 
         <div class="row">
