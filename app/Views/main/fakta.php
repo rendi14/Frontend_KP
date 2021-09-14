@@ -1,7 +1,12 @@
 <section id="fakta" class="fakta">
     <div class="container">
         <div class="section-title">
+<<<<<<< Updated upstream
             <h2>Fakta</h2>
+=======
+            <h2>Fakta akti</h2>
+
+>>>>>>> Stashed changes
         </div>
         <div class="row">
             <?php foreach ($user as $u) : ?>

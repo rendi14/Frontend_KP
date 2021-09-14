@@ -62,7 +62,7 @@
         </section>
 
         <div class="section-title-bgorange ptb-70">
-            <h1>Fakta Tentang Akti</h1>
+            <h2>Fakta Tentang Akti</h2>
             <br>
             <a href="/Halaman/fakta" class="default-btn-bgorange">Gabung</a>
         </div>
