@@ -70,6 +70,7 @@ $routes->delete('/dashboard/deleteBerita/(:num)', 'Berita::hapusBerita/$1');
 $routes->delete('/dashboard/deleteProdi/(:num)', 'Dashboard::hapusProdi/$1');
 $routes->delete('/dashboard/deleteVideo/(:num)', 'Dashboard::hapusVideo/$1');
 $routes->delete('/dashboard/deleteVideoUpload/(:num)', 'Dashboard::hapusVideoUpload/$1');
+$routes->delete('/dashboard/deleteGaleri/(:num)', 'Dashboard::deleteAlbum/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

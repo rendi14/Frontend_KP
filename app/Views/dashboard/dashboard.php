@@ -485,7 +485,11 @@
                       <p><?= $p['album_judul'] ?></p>
                       <p><?= $p['album_deskripsi'] ?></p>
                       <a href="/dashboard/albumGaleri/<?= $p['album_id'] ?>" class="btn btn-primary">Lihat</a>
-                      <a href="/dashboard/deleteAlbum/<?= $p['album_id'] ?>" class="btn btn-danger">Buang</a>
+                        <form action="/dashboard/deleteAlbum/<?= $p['album_id']; ?>" method="post" class="d-inline">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Buang</button>
+                        </form>
                     </div>
                   </div>
                 </div>
