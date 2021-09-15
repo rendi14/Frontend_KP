@@ -759,6 +759,36 @@ class Dashboard extends Controller
 		return view('dashboard/fakta_data', $data);
 	}
 
+	public function tambahFakta()
+	{
+		$model = new faktaModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/fakta/');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'title' => $this->request->getVar('title'),
+			'gambar' => $namaGambar,
+			'keterangan' => $this->request->getVar('keterangan'),
+			'admin_nama' => $this->request->getVar('admin_nama'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Data telah ditambahkan');
+		return redirect()->to('/dashboard/datafakta');
+	}
+
+	public function hapusFakta($id)
+	{
+		$model = new faktaModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/fakta/' . $model_gambar['gambar']);
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Data telah dihapus');
+		return redirect()->to('/dashboard/datafakta');
+	}
+
+
 	// -------------------------------------------------
 	public function datatestimonial()
 	{

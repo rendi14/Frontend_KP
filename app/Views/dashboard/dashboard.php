@@ -332,12 +332,11 @@
               <i class="fas fa-fw fa-pen"></i></span>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
-                  <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
                   <li>
-                    <form action="/dashboard/deleteVideo/<?= $p['video_id']; ?>" method="post" class="d-inline">
+                    <form action="/dashboard/deleteVideo/<?= $p['video_id']; ?>" method="post">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    <button type="submit" class="border-0 dropdown-item"><i class="fas fa-trash"></i> Hapus</button>
                     </form>
                   </li>
                 </ul>
@@ -357,12 +356,11 @@
               <i class="fas fa-fw fa-pen"></i></span>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
-                  <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
                   <li>
                     <form action="/dashboard/deleteVideoUpload/<?= $p['video_id']; ?>" method="post" class="d-inline">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    <button type="submit" class="border-0 dropdown-item"><i class="fas fa-trash"></i> Hapus</button>
                     </form>
                   </li>
                 </ul>
