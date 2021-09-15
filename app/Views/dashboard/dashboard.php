@@ -352,7 +352,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
                   <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
-                  <li><a href="/dashboard/hapusVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
+                  <li><a href="/dashboard/hapusVideoUpload/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
                 </ul>
               </div>
               </div>
