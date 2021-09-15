@@ -9,8 +9,9 @@ class agendaModel extends Model
 	protected $table = 'agenda';
 	protected $primaryKey = 'agenda_id';
 	protected $allowedFields = [
-		'agenda_tema', 'agenda_deskripsi', 'agenda_mulai', 'agenda_selesai', 'agenda_tempat', 'agenda_jam', 'agenda_gambar', 'agenda_posting', 'admin_nama'
+		'agenda_tema', 'agenda_deskripsi', 'agenda_mulai', 'agenda_selesai', 'agenda_tempat', 'agenda_jam', 'agenda_gambar', 'admin_nama'
 	];
+	protected $createdField = 'agenda_posting';
 
 	public function getAgenda($id)
 	{

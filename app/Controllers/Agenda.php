@@ -27,22 +27,26 @@ class Agenda extends Controller {
 		return view('dashboard/agenda_data', $data);
     }
     
-    // public function tambahWeb() {
-	// 	$model = new sidebarModel;
-	// 	$sidebar_side = $model->getSide();
-	// 	$session = session();
-	// 	$data = [
-	// 		'menu_nama' => $this->request->getVar('nama'),
-	// 		'menu_deskripsi' => $this->request->getVar('deskripsi'),
-	// 		'menu_url' => $this->request->getVar('menu-url'),
-	// 		'menu_site' => $this->request->getVar('menu-site'),
-	// 		'menu_level' => $this->request->getVar('menu-access'),
-    //         'menu_urutan' => $this->request->getVar('urutan')
-	// 	];
-	// 	$model->save($data);
-	// 	$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
-	// 	return redirect()->to('/MenuDashboard');
-	// }
+    public function tambahAgenda() {
+		$model = new agendaModel;
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/agenda/');
+		$namaGambar = $fileGambar->getName();
+		$session = session();
+		$data = [
+			'agenda_tema' => $this->request->getVar('tema'),
+			'agenda_deskripsi' => $this->request->getVar('deskripsi'),
+			'agenda_mulai' => $this->request->getVar('agenda_mulai'),
+			'agenda_selesai' => $this->request->getVar('agenda_selesai'),
+			'agenda_tempat' => $this->request->getVar('tempat'),
+			'agenda_gambar' => $namaGambar,
+			'agenda_jam' => $this->request->getVar('jam'),
+			'admin_nama' => $this->request->getVar('admin'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
+		return redirect()->to('/Agenda');
+	}
 	
 	// public function tambahMenu(){
 	// 	$model = new menuAdmin;
@@ -69,11 +73,13 @@ class Agenda extends Controller {
 	// 	return view('Menu/tabelMenu', $data);
 	// }
 
-	// public function hapusMenu($id){
-	// 	$admin = new menuAdmin;
-	// 	$session = session();
-	// 	$admin->delete($id);
-	// 	$session->setFlashdata('msg', 'Menu telah dihapus');
-	// 	return redirect()->to('/MenuDashboard/tabelMenu/');
-	// }
+	public function hapusAgenda($id){
+		$model = new agendaModel;
+		$model_gambar = $model->find($id);
+		unlink('gambar/agenda/' . $model_gambar['agenda_gambar']);
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Data telah dihapus');
+		return redirect()->to('/Agenda');
+	}
 }
