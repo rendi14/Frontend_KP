@@ -21,10 +21,10 @@
             <?php foreach ($user as $p) : ?>
                 <div class="col-lg-3 col-md-4 mb-3">
                     <div class="icon-box">
-                        <i class=""> <img src="/gambar/berita/<?= $p['statis_gambar']; ?>" alt="<?= $p['statis_judul']; ?>" width="50" height="50" class="image-prodi"></i>
+                        <i class=""> <img src="/gambar/statis/<?= $p['statis_gambar']; ?>" alt="<?= $p['statis_judul']; ?>" width="50" height="50" class="image-prodi"></i>
 
                         <h3><a href="/Halaman/detailstatis/<?= $p['statis_judul']; ?>"><?= $p['statis_judul']; ?></a></h3>
-                        <a href="/Halaman/detailstatis/<?= $p['statis_judul']; ?>" class="link-btn"><i class="flaticon-next-button"></i></a>
+
                     </div>
                 </div>
             <?php endforeach; ?>

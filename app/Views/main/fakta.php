@@ -28,8 +28,9 @@
             <?php foreach ($user as $u) : ?>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <div class="icon-box">
-                        <div class="icon"><i class="<?= $u['gambar']; ?>"></i></div>
-                        <h4 class="title"><a href=""><?= $u['keterangan']; ?></a></h4>
+                        <div class="icon"><i class=""> <img src="/gambar/fakta/<?= $u['gambar']; ?> "></i></div>
+                        <!-- <img src="/gambar/fakta/<?= $u['gambar']; ?> "> -->
+                        <h4 class=" title"><a href=""><?= $u['keterangan']; ?></a></h4>
                         <p><?= $u['title']; ?></p>
                     </div>
                 </div>

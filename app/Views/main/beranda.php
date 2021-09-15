@@ -15,7 +15,7 @@
         <div class="section-title">
             <h2>Akti Membangun Kecerdasan Bangsa</h2>
             <br>
-            <a href="/" class="default-btn">Gabung</a>
+            <a href="/Halaman/akademik" class="default-btn">Gabung</a>
         </div>
     </div>
 </section>
@@ -169,7 +169,7 @@
                             <h2>Udah siap gabung
                                 Bersama AKTI?</h2>
                         </div>
-                        <a href="/" class="default-btn mg-kanan-32">Selengkapnya</a>
+                        <a href="/Halaman/statis" class="default-btn mg-kanan-32">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -418,7 +418,8 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="/assets/img/dosen/3.jpg" class="testimonial-img" alt="">
+                                    <img src="/gambar/testimonial/<?= $p['testimonial_gambar']; ?> " class="testimonial-img" alt="">
+
                                     <h3><?= $p['testimonial_nama']; ?></h3>
                                     <h4><?= $p['testimonial_kerja']; ?></h4>
                                     <p>
@@ -426,6 +427,7 @@
                                     </p>
                                 </div>
                             </div><!-- End testimonial item -->
+
 
                         <?php endforeach; ?>
                     </div>
