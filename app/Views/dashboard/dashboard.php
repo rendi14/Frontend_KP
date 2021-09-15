@@ -333,7 +333,13 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
                   <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
-                  <li><a href="/dashboard/hapusVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
+                  <li>
+                    <form action="/dashboard/deleteVideo/<?= $p['video_id']; ?>" method="post" class="d-inline">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    </form>
+                  </li>
                 </ul>
               </div>
               </div>
@@ -352,7 +358,13 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="<?= $p['video_link']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
                   <li><a href="/dashboard/editVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-pen"></i> Edit</a></li>
-                  <li><a href="/dashboard/hapusVideo/<?= $p['video_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-trash"></i> Hapus</a></li>
+                  <li>
+                    <form action="/dashboard/deleteVideoUpload/<?= $p['video_id']; ?>" method="post" class="d-inline">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    </form>
+                  </li>
                 </ul>
               </div>
               </div>
@@ -473,7 +485,11 @@
                       <p><?= $p['album_judul'] ?></p>
                       <p><?= $p['album_deskripsi'] ?></p>
                       <a href="/dashboard/albumGaleri/<?= $p['album_id'] ?>" class="btn btn-primary">Lihat</a>
-                      <a href="/dashboard/deleteAlbum/<?= $p['album_id'] ?>" class="btn btn-danger">Buang</a>
+                        <form action="/dashboard/deleteAlbum/<?= $p['album_id']; ?>" method="post" class="d-inline">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Buang</button>
+                        </form>
                     </div>
                   </div>
                 </div>

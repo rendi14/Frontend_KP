@@ -185,6 +185,8 @@ class Dashboard extends Controller
 	public function HapusDataDosen($id)
 	{
 		$model = new dosenModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/dosen/' . $model_gambar['dosen_foto']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
@@ -331,6 +333,8 @@ class Dashboard extends Controller
 	public function hapusProdi($id)
 	{
 		$model = new prodiModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/prodi/' . $model_gambar['prodi_foto']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
@@ -425,6 +429,8 @@ class Dashboard extends Controller
 	public function hapusAkademik($id)
 	{
 		$model = new akademikModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/akademik/' . $model_gambar['akademik_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
@@ -490,6 +496,8 @@ class Dashboard extends Controller
 	{
 		$model = new galeriModel();
 		$model_galeri = new gambarModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/album/' . $model_gambar['album_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Album telah dihapus');
@@ -515,6 +523,8 @@ class Dashboard extends Controller
 	public function deleteFoto($id)
 	{
 		$model = new gambarModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/album/' . $model_gambar['galeri_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Foto telah dihapus');
@@ -567,6 +577,8 @@ class Dashboard extends Controller
 	public function hapusStatis($id)
 	{
 		$model = new statisModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/statis/' . $model_gambar['statis_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Statis telah dihapus');
@@ -580,7 +592,7 @@ class Dashboard extends Controller
 		$side = $sidebar->where('menu_site', 'A')->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$data = [
-			'tittle' => 'Galeri || PT.CROP',
+			'tittle' => 'Edit Statis || PT.CROP',
 			'user' => $user->getStatis($id),
 			'sidebar' => $sidebar_side
 		];
@@ -683,6 +695,17 @@ class Dashboard extends Controller
 		return redirect()->to('/dashboard');
 	}
 
+	public function hapusVideoUpload($id)
+	{
+		$model = new videoModel();
+		$model_gambar = $model->find($id);
+		unlink('assets/img/video/' . $model_gambar['video_link']);		
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Video telah dihapus');
+		return redirect()->to('/dashboard');
+	}	
+
 	public function tambahMitra()
 	{
 		$model = new mitraModel();
@@ -702,6 +725,8 @@ class Dashboard extends Controller
 	public function hapusMitra($id)
 	{
 		$model = new mitraModel();
+		$model_gambar = $model->find($id);
+		unlink('assets/img/clients/' . $model_gambar['mitra_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Mitra telah dihapus');

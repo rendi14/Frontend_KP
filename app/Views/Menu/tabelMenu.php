@@ -98,8 +98,16 @@
                                           <td class="align-middle"><?=$u['menu_site'];?></td>
                                          
                                         <td class="align-middle">
-                                        <a href="/MenuDashboard/tampilDataMenu/<?= $u['menu_kode']?>" class="btn btn-primary"><span><i class="fas fa-pen"></i></span> Edit</a>
-                                            <a href="/MenuDashboard/hapusMenu/<?= $u['menu_admin_kode']?>" class="btn btn-danger"><span><i class="fas fa-trash"></i></span> Hapus</a>		
+                                            <form action="/dashboard/updateMenu/<?= $u['menu_admin_kode']; ?>" method="post" class="d-inline">
+                                            <?= csrf_field(); ?>
+                                            <input type="hidden" name="_method" value="POST">
+                                            <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
+                                            </form>   
+                                            <form action="/dashboard/deleteMenu/<?= $u['menu_admin_kode']; ?>" method="post" class="d-inline">
+                                            <?= csrf_field(); ?>
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                            </form>
                                         </tr>
                                         <?php endforeach;?>
                                     </tbody>

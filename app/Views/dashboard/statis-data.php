@@ -102,7 +102,11 @@
             <dd class="col-sm-10"><img src="/gambar/statis/<?= $p['statis_gambar']; ?>" alt="<?= $p['statis_judul']; ?>" width="500" height="300" class="image-prodi"></dd>
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
-              <a href="/dashboard/tampilEditStatis/<?= $p['statis_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
+            <form action="/dashboard/updateStatis/<?= $p['statis_id']; ?>" method="post" class="d-inline">
+            <?= csrf_field(); ?>
+            <input type="hidden" name="_method" value="POST">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
+            </form>            
             <form action="/dashboard/deleteStatis/<?= $p['statis_id']; ?>" method="post" class="d-inline">
             <?= csrf_field(); ?>
             <input type="hidden" name="_method" value="DELETE">

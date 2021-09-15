@@ -121,6 +121,8 @@ class Berita extends Controller
 	public function hapusBerita($id)
 	{
 		$model = new beritaModel;
+		$model_gambar = $model->find($id);
+		unlink('gambar/berita/' . $model_gambar['berita_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data telah dihapus');
