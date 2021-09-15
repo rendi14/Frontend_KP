@@ -68,6 +68,8 @@ $routes->delete('/dashboard/deleteDosen/(:num)', 'Dashboard::hapusDataDosen/$1')
 $routes->delete('/dashboard/deleteAkademik/(:num)', 'Dashboard::hapusAkademik/$1');
 $routes->delete('/dashboard/deleteBerita/(:num)', 'Berita::hapusBerita/$1');
 $routes->delete('/dashboard/deleteProdi/(:num)', 'Dashboard::hapusProdi/$1');
+$routes->delete('/dashboard/deleteVideo/(:num)', 'Dashboard::hapusVideo/$1');
+$routes->delete('/dashboard/deleteVideoUpload/(:num)', 'Dashboard::hapusVideoUpload/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
