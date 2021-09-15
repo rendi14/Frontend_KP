@@ -13,6 +13,7 @@ use App\Models\galeriModel;
 use App\Models\albumModel;
 use App\Models\statisModel;
 use App\Models\faktaModel;
+use App\Models\testimonialModel;
 
 class Halaman extends BaseController
 {
@@ -20,6 +21,9 @@ class Halaman extends BaseController
     {
         $beritamodel = new beritaModel;
         $berita = $beritamodel->findAll();
+
+        $testimonialmodel = new testimonialModel;
+        $testimonial = $testimonialmodel->findAll();
         $cari = $this->request->getVar('cari');
         if ($cari) {
             $beritamodel->search($cari);
@@ -28,6 +32,7 @@ class Halaman extends BaseController
         }
         $data = [
             'berita' => $berita,
+            'testimonial' => $testimonial,
         ];
         echo view('layout/header');
         echo view('main/beranda', $data);
