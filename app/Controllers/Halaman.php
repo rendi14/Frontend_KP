@@ -14,6 +14,7 @@ use App\Models\albumModel;
 use App\Models\statisModel;
 use App\Models\faktaModel;
 use App\Models\testimonialModel;
+use App\Models\mitraModel;
 
 class Halaman extends BaseController
 {
@@ -24,6 +25,9 @@ class Halaman extends BaseController
 
         $testimonialmodel = new testimonialModel;
         $testimonial = $testimonialmodel->findAll();
+
+        $mitramodel = new mitraModel;
+        $mitra = $mitramodel->findAll();
         $cari = $this->request->getVar('cari');
         if ($cari) {
             $beritamodel->search($cari);
@@ -33,6 +37,7 @@ class Halaman extends BaseController
         $data = [
             'berita' => $berita,
             'testimonial' => $testimonial,
+            'mitra' => $mitra,
         ];
         echo view('layout/header');
         echo view('main/beranda', $data);
