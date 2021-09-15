@@ -105,7 +105,12 @@
                                           <td><?=$u['akademik_kategori'];?></td>
                                           <td><?=$u['akademik_keterangan'];?></td>
                                           <td class="text-center"><?=$u['admin_nama'];?></td>
-                                          <td><a href="/dashboard/TampilEditAkademik/<?=$u['akademik_id']?>" class="btn btn-primary">Edit</a>
+                                          <td>
+                                          <form action="/dashboard/updateAkademik/<?= $u['akademik_id']; ?>" method="post" class="d-inline">
+                                          <?= csrf_field(); ?>
+                                          <input type="hidden" name="_method" value="POST">
+                                          <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
+                                          </form>   
                                           <form action="/dashboard/deleteAkademik/<?= $u['akademik_id']; ?>" method="post" class="d-inline">
                                           <?= csrf_field(); ?>
                                           <input type="hidden" name="_method" value="DELETE">

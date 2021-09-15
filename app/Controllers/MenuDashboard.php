@@ -94,7 +94,7 @@ class MenuDashboard extends Controller
 		$side = $sidebar->where('menu_site', 'A')->findAll();
 		$sidebar_side = $sidebar->getSide();
 		$data = [
-			'tittle' => 'Edit Data Dosen || PT.CROP',
+			'tittle' => 'Edit Data Menu || PT.CROP',
 			'tampil' => $sidebar->getUpdate($id),
 			'sidebar' => $sidebar_side
 		];

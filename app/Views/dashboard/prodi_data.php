@@ -118,7 +118,11 @@
             <dd class="col-sm-10"><img src="/gambar/prodi/<?= $p['prodi_foto']; ?>" alt="<?= $p['prodi_nama']; ?>" width="500" height="300" class="image-prodi"></dd>
             <dt class="col-sm-2">Action</dt>
             <dd class="col-sm-10">
-              <a href="/dashboard/tampilEditProdi/<?= $p['prodi_id']; ?>" class="btn btn-primary"><i class="fas fa-upload"></i></span> Update</a>
+              <form action="/dashboard/updateProdi/<?= $p['prodi_id']; ?>" method="post" class="d-inline">
+              <?= csrf_field(); ?>
+              <input type="hidden" name="_method" value="POST">
+              <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
+              </form>   
               <form action="/dashboard/deleteProdi/<?= $p['prodi_id']; ?>" method="post" class="d-inline">
               <?= csrf_field(); ?>
               <input type="hidden" name="_method" value="DELETE">

@@ -108,7 +108,12 @@
                 <td class="text-center align-middle"><?= $u['dosen_jabatan']; ?></td>
                 <td class="text-center align-middle">
                   <?= $u['dosen_kategori']; ?></td>
-                <td class="text-center align-middle"><a href="/dashboard/TampilEditData/<?= $u['dosen_id'] ?>" class="btn btn-primary"><span><i class="fas fa-pen"></i></span> Edit</a>
+                <td class="text-center align-middle">
+                    <form action="/dashboard/updateDosen/<?= $u['dosen_id']; ?>" method="post" class="d-inline">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="POST">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
+                    </form>   
                     <form action="/dashboard/deleteDosen/<?= $u['dosen_id']; ?>" method="post" class="d-inline">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="_method" value="DELETE">

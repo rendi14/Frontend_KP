@@ -71,7 +71,13 @@ $routes->delete('/dashboard/deleteProdi/(:num)', 'Dashboard::hapusProdi/$1');
 $routes->delete('/dashboard/deleteVideo/(:num)', 'Dashboard::hapusVideo/$1');
 $routes->delete('/dashboard/deleteVideoUpload/(:num)', 'Dashboard::hapusVideoUpload/$1');
 $routes->delete('/dashboard/deleteGaleri/(:num)', 'Dashboard::deleteAlbum/$1');
+$routes->delete('/dashboard/deleteMenu/(:num)', 'MenuDashboard::hapusMenu/$1');
 $routes->post('/dashboard/updateStatis/(:num)', 'Dashboard::tampilEditStatis/$1');
+$routes->post('/dashboard/updateDosen/(:num)', 'Dashboard::tampilEditData/$1');
+$routes->post('/dashboard/updateAkademik/(:num)', 'Dashboard::tampilEditAkademik/$1');
+$routes->post('/dashboard/updateProdi/(:num)', 'Dashboard::tampilEditProdi/$1');
+$routes->post('/dashboard/updateBerita/(:num)', 'Dashboard::tampilEditBerita/$1');
+$routes->post('/dashboard/updateMenu/(:num)', 'MenuDashboard::tampilDataMenu/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
