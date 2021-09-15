@@ -90,7 +90,7 @@
                         <?php foreach ($user as $u) : ?>
                             <tr>
                                 <td class="text-center align-middle"><?= $u['title']; ?></td>
-                                <td class="text-center"><img src="/gambar/dosen/<?= $u['gambar']; ?>" alt="<?= $u['keterangan']; ?>" width="100px;" height="100px;"></td>
+                                <td class="text-center"><img src="/gambar/fakta/<?= $u['gambar']; ?>" alt="<?= $u['keterangan']; ?>" width="100px;" height="100px;"></td>
                                 <td class="text-center align-middle"><?= $u['keterangan']; ?></td>
                                 <td class="text-center align-middle"><a href="" class="btn btn-primary"><span><i class="fas fa-pen"></i></span> Edit</a>
                                 <form action="/dashboard/deleteFakta/<?= $u['id']; ?>" method="post" class="d-inline">

@@ -764,7 +764,7 @@ class Dashboard extends Controller
 		$model = new faktaModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
-		$fileGambar->move('gambar/dosen/');
+		$fileGambar->move('gambar/fakta/');
 		$namaGambar = $fileGambar->getName();
 		$data = [
 			'title' => $this->request->getVar('title'),
@@ -781,7 +781,7 @@ class Dashboard extends Controller
 	{
 		$model = new faktaModel();
 		$model_gambar = $model->find($id);
-		unlink('gambar/dosen/' . $model_gambar['gambar']);
+		unlink('gambar/fakta/' . $model_gambar['gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data telah dihapus');
