@@ -8,16 +8,18 @@ class gambarModel extends Model
 {
   protected $table      = 'album_galeri';
   protected $primaryKey = 'galeri_id';
-  protected $allowedFields = ['galeri_judul', 'galeri_deskripsi', 'galeri_gambar', 'album_id'
+  protected $allowedFields = [
+    'galeri_judul', 'galeri_deskripsi', 'galeri_gambar', 'album_id'
   ];
 
   // public function search($cari)
   // {
   //   return $this->table('berita')->like('berita_judul', $cari);
   // }
-  public function getAlbum(){
-    return $this->db->table('album')->join('album_galeri','album_galeri.album_id=album.album_id')
-        ->get()->getResultArray();  
+  public function getAlbum()
+  {
+    return $this->db->table('album')->join('album_galeri', 'album_galeri.album_id=album.album_id')
+      ->get()->getResultArray();
   }
   public function getGambar($id)
   {
@@ -27,4 +29,9 @@ class gambarModel extends Model
   // {
   //  return $this->where(['berita_judul' => $slug])->first(); 
   // }
+
+  public function search($cari)
+  {
+    return $this->table('album_galeri')->like('galeri_judul', $cari);
+  }
 }

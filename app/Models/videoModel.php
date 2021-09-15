@@ -15,4 +15,9 @@ class videoModel extends Model
     {
         return $this->where(['video_id' => $id])->first();
     }
+
+    public function search($cari)
+    {
+        return $this->table('galeri_video')->like('video_judul', $cari);
+    }
 }

@@ -814,4 +814,6 @@ class Dashboard extends Controller
 		];
 		return view('dashboard/testimonial_data', $data);
 	}
+
+
 }

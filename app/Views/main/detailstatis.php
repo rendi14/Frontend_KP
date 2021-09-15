@@ -8,9 +8,11 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-8">
-                    <a href="<?= $statis['statis_gambar']; ?>">
-                        <img src="/gambar/berita/<?= $statis['statis_gambar']; ?>" alt="<?= $statis['statis_judul']; ?>" width="500" height="300" class="image-prodi">
-                    </a>
+                    <div class="gambarjudul">
+                        <a href="<?= $statis['statis_gambar']; ?>">
+                            <img src="/gambar/berita/<?= $statis['statis_gambar']; ?>" alt="<?= $statis['statis_judul']; ?>" class="image-prodi">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="portfolio-info">

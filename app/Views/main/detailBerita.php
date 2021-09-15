@@ -8,9 +8,11 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-8">
-                    <a href="<?= $berita['berita_gambar']; ?>">
-                        <img src="/gambar/berita/<?= $berita['berita_gambar']; ?>" alt="<?= $berita['berita_judul']; ?>" width="500" height="300" class="image-prodi">
-                    </a>
+                    <div class="gambarjudul">
+                        <a href="">
+                            <img src="/gambar/berita/<?= $berita['berita_gambar']; ?>" alt="<?= $berita['berita_judul']; ?>" width="500" height="300" class="image-prodi">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="portfolio-info">

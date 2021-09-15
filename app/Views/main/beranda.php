@@ -141,7 +141,7 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="/assets/img/clients/ <? $p['mitra_gambar']; ?>" alt="gambar" width="500" height="300" class="image-prodi">
+                            <img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="gambar" class="image-prodi">
 
                         </div>
                     </div>

@@ -6,24 +6,27 @@
         </header>
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
+            <?php foreach ($video as $p) : ?>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-wrap">
 
-            <div class="col-lg-4 col-md-6 portfolio-item">
-                <div class="portfolio-wrap">
-                    <div class="article-video">
+                        <div class="article-video">
 
-                        <iframe src="https://www.youtube.com/embed/asTFtXaX1BQ"></iframe>
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Toyota</h4>
-                        <p>Car</p>
-                        <div class="portfolio-links">
-                            <a href="https://www.youtube.com/watch?v=asTFtXaX1BQ" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                            <iframe src="<?= $p['video_link'] ?>"></iframe>
                         </div>
+                        <div class="portfolio-info">
+                            <h4><?= $p['video_judul'] ?></h4>
+                            <p><?= $p['video_deskripsi'] ?></p>
+                            <div class="portfolio-links">
+                                <a href="<?= $p['video_link'] ?>" data-gallery="portfolioGallery" class="portfokio-lightbox" title="<?= $p['video_judul'] ?>"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
 
-            <div class="col-lg-4 col-md-6 portfolio-item">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item">
                 <div class="portfolio-wrap">
                     <div class="article-video">
                         <iframe src="https://www.youtube.com/embed/u6WRy6d_WSQ"></iframe>
@@ -100,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>

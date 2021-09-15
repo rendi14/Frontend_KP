@@ -15,6 +15,7 @@ use App\Models\statisModel;
 use App\Models\faktaModel;
 use App\Models\testimonialModel;
 use App\Models\mitraModel;
+use App\Models\videoModel;
 
 class Halaman extends BaseController
 {
@@ -46,23 +47,24 @@ class Halaman extends BaseController
 
 
     // -------------------------------------------------
-    public function visimisiakti()
-    {
-        echo view('layout/header');
-        echo view('main/visimisiakti');
-        echo view('layout/footer');
-    }
-
-    // -------------------------------------------------
     public function galeri($Sleg)
     {
         $user = new galeriModel;
         $album = new gambarModel;
         $album_model = $album->where('album_id', $Sleg)->findAll();
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $album->search($cari);
+        } else {
+            $orang = $album;
+        }
         $data = [
             'tittle' => 'Galeri || PT.CROP',
             'album' => $user->getSleg($Sleg),
             'galeri' => $album_model,
+            'currentPage' => $currentPage,
         ];
         echo view('layout/header');
         echo view('main/galeri', $data);
@@ -75,11 +77,20 @@ class Halaman extends BaseController
         $album = new albumModel;
         $galeri = new galeriModel;
         $album_count = $album->countAll();
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $album->search($cari);
+        } else {
+            $orang = $album;
+        }
         $data = [
             'tittle' => 'Dashboard || PT.CROP',
             'album_count' => $album_count,
             'album' => $album->paginate(3),
             'album_galeri' => $album->findAll(),
+            'currentPage' => $currentPage,
         ];
         echo view('layout/header');
         echo view('main/album', $data);
@@ -92,8 +103,23 @@ class Halaman extends BaseController
     // -------------------------------------------------
     public function galerivideo()
     {
+
+        $video = new videoModel;
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $video->search($cari);
+        } else {
+            $orang = $video;
+        }
+        $data = [
+            'tittle' => 'video  || PT.CROP',
+            'currentPage' => $currentPage,
+            'video' => $video->paginate(3),
+        ];
         echo view('layout/header');
-        echo view('main/galerivideo');
+        echo view('main/galerivideo', $data);
         echo view('layout/footer');
     }
 
@@ -139,9 +165,19 @@ class Halaman extends BaseController
     {
         $model = new dosenModel;
         $tpmo = $model->where('dosen_kategori', '7')->findAll();
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getvar('page_user') : 1;
+
+        $cari = $this->request->getVar('cari');
+        if ($cari) {
+            $model->search($cari);
+        } else {
+            $orang = $model;
+        }
         $data = [
             'tittle' => 'Prodi || PT.CROP',
+            'currentPage' => $currentPage,
             'tpmo'  => $tpmo
+
         ];
         echo view('layout/header');
         echo view('main/TPMO', $data);

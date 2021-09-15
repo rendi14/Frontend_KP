@@ -30,4 +30,9 @@ class galeriModel extends Model
   // {
   //  return $this->where(['berita_judul' => $slug])->first(); 
   // }
+
+  public function search($cari)
+  {
+    return $this->table('album')->like('album_judul', $cari);
+  }
 }
