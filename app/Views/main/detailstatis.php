@@ -16,7 +16,7 @@
                     <div class="portfolio-info">
                         <h3 class="text-center"><?= $statis['statis_judul']; ?></h3>
                         <ul>
-                            <li><strong>Waktu Berita</strong>: <?= $statis['statis_waktu']; ?></li>
+                            <li><strong>Waktu Statis</strong>: <?= $statis['statis_waktu']; ?></li>
                         </ul>
                     </div>
                 </div>
