@@ -815,8 +815,6 @@ class Dashboard extends Controller
 		return view('dashboard/testimonial_data', $data);
 	}
 
-<<<<<<< Updated upstream
-=======
 	public function tambahTesti()
 	{
 		$model = new testimonialModel();
@@ -847,6 +845,5 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
 		return redirect()->to('/dashboard/datatestimonial');
 	}	
->>>>>>> Stashed changes
 
 }
