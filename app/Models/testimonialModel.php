@@ -8,8 +8,8 @@ class testimonialModel extends Model
 {
     protected $table = 'testimonial';
     protected $primaryKey = 'testimonial_id';
-    protected $allowedFields = ['testimonial_nama', 'testimonial_sumber', 'testimonial_kerja', 'testimonial_jabatan', 'testimonial_deskripsi', 'testimonial_gambar', 'testimonial_waktu'];
-    // protected $createdField = 'created_at';
+    protected $allowedFields = ['testimonial_nama', 'testimonial_sumber', 'testimonial_kerja', 'testimonial_jabatan', 'testimonial_deskripsi', 'testimonial_gambar'];
+    protected $createdField = 'testimonial_waktu';
 
     public function gettestimonial($id)
     {

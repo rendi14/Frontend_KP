@@ -807,7 +807,7 @@ class Dashboard extends Controller
 		/*$user_model = $user->findAll();*/
 		$data = [
 			'tittle' => 'Data testimonial || PT.CROP',
-			'user' => $model->paginate(3, 'user'),
+			'user' => $model->paginate(4, 'user'),
 			'pager' => $model->pager,
 			'currentPage' => $currentPage,
 			'sidebar' => $sidebar_side
@@ -815,5 +815,38 @@ class Dashboard extends Controller
 		return view('dashboard/testimonial_data', $data);
 	}
 
+<<<<<<< Updated upstream
+=======
+	public function tambahTesti()
+	{
+		$model = new testimonialModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/testi/');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'testimonial_nama' => $this->request->getVar('nama'),
+			'testimonial_sumber' => $this->request->getVar('sumber'),
+			'testimonial_kerja' => $this->request->getVar('kerja'),
+			'testimonial_jabatan' => $this->request->getVar('jabatan'),
+			'testimonial_deskripsi' => $this->request->getVar('deskripsi'),
+			'testimonial_gambar' => $namaGambar
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
+		return redirect()->to('/dashboard/datatestimonial');
+	}	
+
+	public function hapusTesti($id)
+	{
+		$model = new testimonialModel();
+		$model_gambar = $model->find($id);
+		unlink('gambar/testi/' . $model_gambar['testimonial_gambar']);
+		$session = session();
+		$model->delete($id);
+		$session->setFlashdata('pesan', 'Data berhasil dihapus');
+		return redirect()->to('/dashboard/datatestimonial');
+	}	
+>>>>>>> Stashed changes
 
 }
