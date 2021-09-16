@@ -85,7 +85,7 @@
                             <th class="text-center align-middle">Title</th>
                             <th class="text-center align-middle">Gambar</th>
                             <th class="text-center align-middle">Keterangan</th>
-                            <th>Action</th>
+                            <th class="text-center align-middle">Action</th>
                         </tr>
                         <?php foreach ($user as $u) : ?>
                             <tr>
