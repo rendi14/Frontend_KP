@@ -2,7 +2,9 @@
     <video autoplay loop muted>
         <source src="/assets/img/video/toyota2.mp4">
     </video>
-    <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
+    <h1>Akademi Komunitas <span class="typed-text"></span><span class="TypeCursor">&nbsp;</span></h1>
+    <!-- <h1>Akademi Komunitas<span>Toyota Indonesia</span></h1>
+    <h1>Coding is <span class="typed-text"></span><span class="TypeCursor">&nbsp;</span></h1> -->
     <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
         <a href="https://www.youtube.com/embed/3LkA9dBLAlo" class="play-btn"></a>
     </div>

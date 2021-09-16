@@ -9,7 +9,7 @@
             <div class="row gy-4">
                 <div class="col-lg-8">
                     <div class="gambarjudul">
-                        <a href="<?= $statis['statis_gambar']; ?>">
+                        <a href="#">
                             <img src="/gambar/statis/<?= $statis['statis_gambar']; ?>" alt="<?= $statis['statis_judul']; ?>" class="image-prodi">
                         </a>
                     </div>

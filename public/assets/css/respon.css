@@ -957,6 +957,17 @@
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.08);
   }
 
+  /* hero gelombang */
+  .hero-waves {
+    display: block;
+    margin-top: 137%;
+    width: 100%;
+    height: 80px;
+    z-index: 5;
+    position: relative;
+  }
+  /* gelombang */
+
   /* footerr */
 
   #footer .footer-top {

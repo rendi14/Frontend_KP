@@ -13,11 +13,11 @@
                         </p>
 
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://twitter.com/rendiii_k" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-google-plus"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-pinterest"></i></a>
+                            <a href="https://www.instagram.com/reendii.k/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="http://www.crop.co.id/" class="google-plus"><i class="bx bxl-google-plus"></i></a>
+                            <a href="https://github.com/rendi14/Frontend_KP" class="linkedin"><i class="bx bxl-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         <li><i class=""> </i> <a href="/">Beranda</a></li>
                         <li><i class=""></i> <a href="/Halaman/akademik">Akademik</a></li>
 
-                        <li><i class=""></i> <a href="/Halaman/tentang">Akti</a></li>
+                        <li><i class=""></i> <a href="/Halaman/statis">Akti</a></li>
                         <li><i class=""></i> <a href="/Halaman/agenda">Agenda</a></li>
                         <li><i class=""></i> <a href="/Halaman/Kontak">Kontak</a></li>
                     </ul>
