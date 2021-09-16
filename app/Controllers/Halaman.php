@@ -254,7 +254,7 @@ class Halaman extends BaseController
         }
         $data = [
             'tittle' => 'Agenda || PT.CROP',
-            'agenda_user' => $agenda->paginate(4, 'agenda'),
+            'agenda_user' => $agenda->paginate(2, 'agenda'),
             'pager' => $agenda->pager,
             'currentPage' => $currentPage,
         ];

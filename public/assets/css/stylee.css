@@ -5403,6 +5403,10 @@ Search Overlay CSS
   font-size: 25px;
 }
 
+.history-timeline .timeline-block .timeline-content .image {
+  max-width: 300;
+}
+
 /* end agenda */
 
 /* tentang tpmo */

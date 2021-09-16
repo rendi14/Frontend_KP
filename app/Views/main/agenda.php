@@ -37,13 +37,17 @@
                             </div>
                             <div class="col-lg-5 col-md-12">
                                 <div class="image">
-                                    <img src="/gambar/prodi/1610957984-tata-operasi-perakitan-kendaraan-roda-4-topkr4.png" alt="image">
+                                    <img src="/gambar/agenda/<?= $a['agenda_gambar'] ?>" class="img-fluid rounded-start" alt="<?= $a['agenda_tema'] ?>">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
+
             <?php endforeach; ?>
+            <?= $pager->links('agenda', 'dosen_data') ?>
+
         </ol>
+
     </div>
 </section>

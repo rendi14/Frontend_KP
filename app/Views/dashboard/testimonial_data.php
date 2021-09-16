@@ -16,19 +16,19 @@
             </div>
             <div class="modal-body mx-3">
                 <form action="/dashboard/tambahTesti" method="post" enctype="multipart/form-data">
-                   <?= csrf_field(); ?>
+                    <?= csrf_field(); ?>
                     <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Nama</label>
                         <input type="text" required id="defaultForm-nama" class="form-control validate" name="nama">
                     </div>
-                     <div class="md-form mb-3">
+                    <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Kerja Testimonial</label>
                         <input type="text" required id="defaultForm-kerja" class="form-control validate" name="kerja">
                     </div>
                     <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Sumber Testimonial</label>
                         <input type="text" required id="defaultForm-sumber" class="form-control validate" name="sumber">
-                    </div>                                       
+                    </div>
                     <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Jabatan</label>
                         <input type="text" required id="defaultForm-jabatan" class="form-control validate" name="jabatan">
@@ -36,11 +36,11 @@
                     <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Deskripsi</label>
                         <textarea required type="text" class="form-control validate" name="deskripsi"></textarea>
-                    </div>                            
+                    </div>
                     <div class="md-form mb-3">
                         <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Gambar</label>
                         <input type="file" required class="form-control" id="poto" name="poto">
-                    </div>             
+                    </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <button class="btn btn-primary" type="submit">Simpan</button>
@@ -110,19 +110,19 @@
                                 <td class="text-center align-middle"><?= $u['testimonial_kerja']; ?></td>
                                 <td class="text-center align-middle"><?= $u['testimonial_jabatan']; ?></td>
                                 <td class="text-center align-middle"><?= $u['testimonial_deskripsi']; ?></td>
-                                <td class="text-center"><img src="/gambar/testi/<?= $u['testimonial_gambar']; ?>" alt="<?= $u['testimonial_nama']; ?>" width="100px;" height="100px;"></td>
+                                <td class="text-center"><img src="/gambar/testimonial/<?= $u['testimonial_gambar']; ?>" alt="<?= $u['testimonial_nama']; ?>" width="100px;" height="100px;"></td>
                                 <td class="text-center align-middle"><?= $u['testimonial_waktu']; ?></td>
                                 <td class="text-center align-middle">
-                                <form action="/dashboard/updateTestimonial/<?= $u['testimonial_id']; ?>" method="post" class="d-inline">
-                                    <?= csrf_field(); ?>
-                                    <input type="hidden" name="_method" value="POST">
-                                    <button type="submit" class="btn btn-primary"><i class="fas fa-pen"></i> Ubah</button>
-                                </form>            
-                                <form action="/dashboard/deleteTestimonial/<?= $u['testimonial_id']; ?>" method="post" class="d-inline">
-                                    <?= csrf_field(); ?>
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
-                                </form>
+                                    <form action="/dashboard/updateTestimonial/<?= $u['testimonial_id']; ?>" method="post" class="d-inline">
+                                        <?= csrf_field(); ?>
+                                        <input type="hidden" name="_method" value="POST">
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-pen"></i> Ubah</button>
+                                    </form>
+                                    <form action="/dashboard/deleteTestimonial/<?= $u['testimonial_id']; ?>" method="post" class="d-inline">
+                                        <?= csrf_field(); ?>
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                                    </form>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
