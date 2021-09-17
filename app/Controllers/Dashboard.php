@@ -699,12 +699,12 @@ class Dashboard extends Controller
 	{
 		$model = new videoModel();
 		$model_gambar = $model->find($id);
-		unlink('assets/img/video/' . $model_gambar['video_link']);		
+		unlink('assets/img/video/' . $model_gambar['video_link']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Video telah dihapus');
 		return redirect()->to('/dashboard');
-	}	
+	}
 
 	public function tambahMitra()
 	{
@@ -820,7 +820,7 @@ class Dashboard extends Controller
 		$model = new testimonialModel();
 		$session = session();
 		$fileGambar = $this->request->getFile('poto');
-		$fileGambar->move('gambar/testi/');
+		$fileGambar->move('gambar/testimonial/');
 		$namaGambar = $fileGambar->getName();
 		$data = [
 			'testimonial_nama' => $this->request->getVar('nama'),
@@ -833,17 +833,16 @@ class Dashboard extends Controller
 		$model->save($data);
 		$session->setFlashdata('pesan', 'Data berhasil ditambahkan');
 		return redirect()->to('/dashboard/datatestimonial');
-	}	
+	}
 
 	public function hapusTesti($id)
 	{
 		$model = new testimonialModel();
 		$model_gambar = $model->find($id);
-		unlink('gambar/testi/' . $model_gambar['testimonial_gambar']);
+		unlink('gambar/testimonial/' . $model_gambar['testimonial_gambar']);
 		$session = session();
 		$model->delete($id);
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
 		return redirect()->to('/dashboard/datatestimonial');
-	}	
-
+	}
 }

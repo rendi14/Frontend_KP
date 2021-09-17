@@ -88,7 +88,7 @@ class Halaman extends BaseController
         $data = [
             'tittle' => 'Dashboard || PT.CROP',
             'album_count' => $album_count,
-            'album' => $album->paginate(3),
+            'album' => $album->paginate(100),
             'album_galeri' => $album->findAll(),
             'currentPage' => $currentPage,
         ];
@@ -116,7 +116,7 @@ class Halaman extends BaseController
         $data = [
             'tittle' => 'video  || PT.CROP',
             'currentPage' => $currentPage,
-            'video' => $video->paginate(3),
+            'video' => $video->paginate(100),
         ];
         echo view('layout/header');
         echo view('main/galerivideo', $data);

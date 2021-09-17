@@ -38,7 +38,7 @@
                     <h4>Keahlian</h4>
                     <ul>
                         <li><i class=""></i> <a href="/Halaman/TPMO">Teknik Pemeliharaan Mesin Otomasi</a></li>
-                        <li><i class=""></i> <a href="/Halaman/iTOPKR4">Tata Operasi Perakitan Kendaraan Roda 4</a></li>
+                        <li><i class=""></i> <a href="/Halaman/TOPKR4">Tata Operasi Perakitan Kendaraan Roda 4</a></li>
 
                     </ul>
                 </div>
@@ -46,10 +46,9 @@
                 <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Alamat</h4>
                     <ul class="footer-contact-info">
-                        <li><i class='bx bx-map'></i><a href="">PT. Crop Inspirasi Digital, Alamat: Jl. Cibogo Atas No.144 sukawarna, Sukajadi-Bandung</a></li>
-                        <li><i class='bx bx-phone-call'></i><a href="tel:+11234567890">+62 892102489012</a></li>
-                        <li><i class='bx bx-envelope'></i><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#573f323b3b3817333e353e2d7934383a"><span class="__cf_email__" data-cfemail="afc7cac3c3c0efcbc6cdc6d581ccc0c2">Praktikkerja@mhs.itenas.ac.id</span></a></li>
-                        <li><i class='bx bxs-inbox'></i><a href="tel:+557854578964">+55 785 4578964</a></li>
+                        <li><i class='bx bx-map'></i><a> PT. Crop Inspirasi Digital, Alamat: Jl. Cibogo Atas No.144 sukawarna, Sukajadi-Bandung</a></li>
+                        <li><i class='bx bx-phone-call'></i><a>+62 892102489012</a></li>
+                        <li><i class='bx bx-envelope'></i><a><span class="__cf_email__" data-cfemail="afc7cac3c3c0efcbc6cdc6d581ccc0c2">Praktikkerja@mhs.itenas.ac.id</span></a></li>
 
                 </div>
             </div>
@@ -59,7 +58,6 @@
     <div class="credits">
         Designed by <a href="http://www.crop.co.id/">PT CROP INSPIRASI DIGITAL</a>
     </div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="btn"></i></a>
 </footer>
 <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

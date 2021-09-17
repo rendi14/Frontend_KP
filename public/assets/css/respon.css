@@ -3,6 +3,10 @@
     font-size: 14px;
   }
 
+  .mg-kanan-38-udahsiapgabung {
+    margin: 0 0 0 28%;
+  }
+
   .search-overlay .search-overlay-form {
     max-width: 290px;
     width: 290px;
@@ -633,11 +637,11 @@
     text-align: center;
     border-radius: 55px;
     height: 49%;
-    background-color: rgb(209, 224, 72);
+    background-color: rgb(230, 155, 44);
   }
 
   .card-item5 .content {
-    background-color: rgb(209, 224, 72);
+    background-color: rgb(230, 155, 44);
     text-align: left;
     padding: 130px 25px 25px;
     border-radius: 55px 55px 0px 0px;

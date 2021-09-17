@@ -13,7 +13,7 @@
 
             <div class="section-title">
                 <h2>KONTAK</h2>
-                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+
             </div>
             <div class="row">
                 <div class="col-lg-6">
@@ -47,26 +47,26 @@
                     <form action="/Halaman/tambahAktikontak" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="text" name="pengirim" class="form-control" id="pengirim" placeholder="Your Name" required>
+                                <input type="text" name="pengirim" class="form-control" id="pengirim" placeholder="Masukan Nama" required>
                             </div>
                             <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Masukan Email" required>
                             </div>
                         </div>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Your phone" required>
+                            <div class="col-mt-3 form-group">
+                                <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Masukan Nomor Telepone" required>
                             </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="datetime-local" class="form-control" name="waktu">
-                            </div>
-                        </div>
 
+                        </div>
+                        <!-- <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input hidden type="datetime-local" class="form-control" name="waktu">
+                        </div> -->
 
 
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="deskripsi" rows="5" placeholder="Message" required></textarea>
+                            <textarea class="form-control" name="deskripsi" rows="5" placeholder="Masukan Pesan" required></textarea>
                         </div>
 
 

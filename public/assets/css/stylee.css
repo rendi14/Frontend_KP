@@ -1,13 +1,15 @@
 /*================================================
 Default CSS
 =================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap");
 :root {
   /* --fontFamily: "Nunito", sans-serif; */
-  --fontFamily: "Poppins", sans-serif;
+  /* --fontFamily: "Poppins", sans-serif; */
+  --fontFamily: "Rajdhani", sans-serif;
   --mainColor: #fe4c1c;
   /* --mainColor: #ff7810; */
-  --optionalColor: #4b5280;
+  --optionalColor: #191e42;
   --whiteColor: #ffffff;
   /* --background: #f1f8ff; */
   --background: #ecf5ff;
@@ -37,6 +39,9 @@ h4,
 h5,
 h6 {
   font-weight: 800;
+  font-family: "Rajdhani", sans-serif;
+  color: #3a414e;
+  line-height: 1.25;
 }
 
 a {
@@ -128,6 +133,10 @@ p:last-child {
 
 .mg-kanan-32 {
   margin: 0 0 0 32%;
+}
+
+.mg-kanan-38-udahsiapgabung {
+  margin: 0 0 0 38%;
 }
 
 /*section-title*/
@@ -3197,7 +3206,8 @@ Search Overlay CSS
   transition: var(--transition);
   background-color: var(--whiteColor);
   -webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1); */
+  box-shadow: 9px 10px 5px #0007;
 }
 
 .single-boxes-box .icon {
@@ -3441,7 +3451,7 @@ Search Overlay CSS
 .single-portfolio-item {
   margin-bottom: 30px;
   text-align: center;
-  border-radius: 55px;
+  border-radius: 1%;
   height: 70%;
 }
 
@@ -3451,7 +3461,7 @@ Search Overlay CSS
 }
 
 .single-portfolio-item .image img {
-  border-radius: 55px 55px 0 0;
+  border-radius: 50px 50px 0 0;
   width: 100%;
   height: 60%;
 }
@@ -3460,8 +3470,9 @@ Search Overlay CSS
   background-color: var(--whiteColor);
   text-align: left;
   padding: 30px 25px 25px;
-  border-radius: 0 0 55px 55px;
+  border-radius: 0 0 50px 50px;
   position: relative;
+  height: 20%;
 }
 
 .single-portfolio-item .content h3 {
@@ -3499,7 +3510,7 @@ Search Overlay CSS
 .portfolio-slides.owl-theme .owl-nav {
   margin-top: 0;
   position: absolute;
-  top: -105px;
+  top: -85px;
   right: 21%;
 }
 
@@ -3569,10 +3580,12 @@ Search Overlay CSS
   margin-bottom: 0;
   margin-top: -45%;
   font-size: 24px;
+  font-family: var(--fontFamily);
 }
 
 .card-item1 .content h3 a {
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 
 .card-slides {
@@ -3666,10 +3679,12 @@ Search Overlay CSS
   margin-bottom: 0;
   margin-top: -45%;
   font-size: 24px;
+  font-family: var(--fontFamily);
 }
 
 .card-item2 .content h3 a {
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 
 .card-slides {
@@ -3763,10 +3778,12 @@ Search Overlay CSS
   margin-bottom: 0;
   margin-top: -45%;
   font-size: 24px;
+  font-family: var(--fontFamily);
 }
 
 .card-item3 .content h3 a {
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 .card-slides {
   left: calc((100% - 1280px) / 2);
@@ -3859,10 +3876,12 @@ Search Overlay CSS
   margin-bottom: 0;
   margin-top: -45%;
   font-size: 24px;
+  font-family: var(--fontFamily);
 }
 
 .card-item4 .content h3 a {
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 .card-slides {
   left: calc((100% - 1280px) / 2);
@@ -3956,10 +3975,12 @@ Search Overlay CSS
   margin-top: -45%;
   font-size: 24px;
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 
 .card-item5 .content h3 a {
   color: var(--whiteColor);
+  font-family: var(--fontFamily);
 }
 .card-slides {
   left: calc((100% - 1280px) / 2);
@@ -4562,9 +4583,9 @@ Search Overlay CSS
   right: 15px;
 }
 
-.portfoio .galeriitem:hover img {
+/* .portfoio .galeriitem:hover img {
   top: -30px;
-}
+} */
 
 .portfoio .galeriitem:hover .portfolio-info {
   opacity: 1;
@@ -5151,12 +5172,12 @@ Search Overlay CSS
   color: #fff;
   /* border: 2px solid var(--whiteColor); */
   /* background: rgba(35, 170, 233, 0.8); */
-
   border-radius: 10px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
+  width: 120;
+  height: 120;
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
@@ -5251,7 +5272,9 @@ Search Overlay CSS
   border-radius: 20px;
   background: #fff;
   transition: ease-in-out 0.7s;
-  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08); */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  height: 90%;
 }
 
 .akademik .icon-box img {
@@ -5411,7 +5434,8 @@ Search Overlay CSS
 
 /* tentang tpmo */
 .about {
-  background-color: #f1f8ff;
+  /* background-color: #f1f8ff; */
+  background-color: var(--background);
 }
 
 .about .content h3 {
@@ -5438,6 +5462,10 @@ Search Overlay CSS
   margin-bottom: 0;
 }
 
+.about .image-prodi {
+  margin-top: -20%;
+}
+
 /* end tentang tpmo */
 
 /* tenaga kerj */
@@ -5448,14 +5476,18 @@ Search Overlay CSS
 .tenagakerja .member {
   text-align: center;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
   background: #fff;
   position: relative;
+  width: 100%;
+  border-radius: 10px;
+  transition: var(--transition);
 }
 
 .tenagakerja .member img {
-  max-width: 50%;
+  width: 150;
+  height: 150;
   border-radius: 50%;
   margin: 0 0 30px 0;
 }
@@ -5496,6 +5528,12 @@ Search Overlay CSS
   font-size: 18px;
   margin: 0 2px;
 }
+
+.tenagakerja .member:hover {
+  transform: scale(1.09);
+  border-radius: 10px;
+}
+
 /* tenaga kerja end */
 
 /*--------------------------------------------------------------
@@ -5584,8 +5622,8 @@ Search Overlay CSS
 .portfolioalbum .portfolio-wrap img {
   transition: 1s;
   /* max-height: 50%; */
-  width: 100%;
-  height: 100%;
+  width: 300;
+  height: 300;
 }
 
 .portfolioalbum .article-video iframe {
@@ -5987,7 +6025,9 @@ Search Overlay CSS
   padding: 20px;
   transition: ease-in-out 0.3s;
   background-color: var(--whiteColor);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  border-radius: 10px;
 }
 
 .features .icon-box i {
@@ -6113,7 +6153,8 @@ Search Overlay CSS
   height: 200px;
   position: relative;
   background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
 
 .services .icon {
@@ -6298,7 +6339,7 @@ Pagination CSS
 
 .hero-waves {
   display: block;
-  margin-top: 13%;
+  margin-top: 15%;
   width: 100%;
   height: 80px;
   z-index: 5;
@@ -6584,6 +6625,7 @@ Go Top CSS
   z-index: 4;
   width: 43px;
   text-align: center;
+  border-radius: 50%;
   height: 45px;
   opacity: 0;
   visibility: hidden;

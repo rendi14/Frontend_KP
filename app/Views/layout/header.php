@@ -131,7 +131,7 @@
                 </div>
                 <div class="search-overlay-form">
                     <form>
-                        <input type="text" class="input-search" placeholder="Search here..." name="cari">
+                        <input type="text" class="input-search" placeholder="Cari Data ..." name="cari">
                         <button type="submit"><i class="flaticon-search"></i></button>
                     </form>
                 </div>

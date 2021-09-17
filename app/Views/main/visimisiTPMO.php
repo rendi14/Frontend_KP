@@ -2,7 +2,7 @@
     <div class="carousel-item active">
         <div class="section-title-bgorange ptb-70">
             <h1>Kenali ,TPMO</h1>
-            <h1>lebih dekat Tentang TPMO</h1>
+            <h1>lebih dekat Dengan TPMO</h1>
         </div>
     </div>
 </section>
@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2 data-aos="fade-in">VISI DAN MISI</h2>
-                    <p data-aos="fade-in">visi dan misi <?= $p['prodi_nama']?></p>
+                    <p data-aos="fade-in">visi dan misi <?= $p['prodi_nama'] ?></p>
                 </div>
 
                 <div class="row content">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
-        
+
 
     </section>
 

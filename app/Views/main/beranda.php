@@ -171,7 +171,7 @@
                             <h2>Udah siap gabung
                                 Bersama AKTI?</h2>
                         </div>
-                        <a href="/Halaman/statis" class="default-btn mg-kanan-32">Selengkapnya</a>
+                        <a href="/Halaman/statis" class="default-btn mg-kanan-38-udahsiapgabung">Selengkapnya</a>
                     </div>
                 </div>
             </div>

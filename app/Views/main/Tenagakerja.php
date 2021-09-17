@@ -4,6 +4,7 @@
             <h1>Akti Kuat Bersama</h1>
             <h1>Tenaga Kerja</h1>
         </div>
+
     </div>
 </section>
 
@@ -45,12 +46,12 @@
                                             <p>
                                                 <?= $p['dosen_jabatan'] ?>
                                             </p>
-                                            <div class="social">
+                                            <!-- <div class="social">
                                                 <a href=""><i class="bx bxl-twitter"></i></a>
                                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                     </div>
@@ -75,12 +76,12 @@
                                             <p>
                                                 <?= $p['dosen_jabatan'] ?>
                                             </p>
-                                            <div class="social">
+                                            <!-- <div class="social">
                                                 <a href=""><i class="bx bxl-twitter"></i></a>
                                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                     </div>
@@ -104,12 +105,12 @@
                                             <p>
                                                 <?= $p['dosen_jabatan'] ?>
                                             </p>
-                                            <div class="social">
+                                            <!-- <div class="social">
                                                 <a href=""><i class="bx bxl-twitter"></i></a>
                                                 <a href=""><i class="bx bxl-facebook"></i></a>
                                                 <a href=""><i class="bx bxl-instagram"></i></a>
                                                 <a href=""><i class="bx bxl-linkedin"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                     </div>
