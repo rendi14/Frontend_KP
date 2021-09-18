@@ -70,7 +70,7 @@
                           <?=session()->getFlashdata('pesan')?>
                           <a href="" class="" data-toggle="modal" data-target="#modalLoginForm">, Atur Menu Level Sekarang</a>
                           <!-- <a href="" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a> -->
-                          <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     <?php endif;?>
                     <!-- DataTales Example -->
@@ -98,12 +98,12 @@
                                           <td class="align-middle"><?=$u['menu_site'];?></td>
                                          
                                         <td class="align-middle">
-                                            <form action="/dashboard/updateMenu/<?= $u['menu_admin_kode']; ?>" method="post" class="d-inline">
+                                            <form action="/dashboard/updateMenu/<?= $u['menu_kode']; ?>" method="post" class="d-inline">
                                             <?= csrf_field(); ?>
                                             <input type="hidden" name="_method" value="POST">
                                             <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Ubah</button>
                                             </form>   
-                                            <form action="/dashboard/deleteMenu/<?= $u['menu_admin_kode']; ?>" method="post" class="d-inline">
+                                            <form action="/dashboard/deleteMenu/<?= $u['menu_kode']; ?>" method="post" class="d-inline">
                                             <?= csrf_field(); ?>
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>

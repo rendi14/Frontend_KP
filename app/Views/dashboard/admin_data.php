@@ -16,6 +16,7 @@
               </div>
               <div class="modal-body mx-3">
                 <form action="/dashboard/tambahAdmin" method="post">
+                <?= csrf_field(); ?>
                 <div class="md-form mb-3">
                   <i class="fas fa-envelope prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="defaultForm-username" class="mb-2">Username</label>

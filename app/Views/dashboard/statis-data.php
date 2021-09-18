@@ -15,6 +15,7 @@
       </div>
       <div class="modal-body mx-2">
         <form action="/dashboard/tambahStatis" method="post" enctype="multipart/form-data" class="row g-3">
+          <?= csrf_field(); ?>
           <div class="md-form mb-2">
             <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Statis</label>
             <input type="text" id="defaultForm-Name" class="form-control validate" name="judul">
