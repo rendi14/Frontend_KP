@@ -98,7 +98,7 @@
             <input hidden type="text" id="defaultForm-Name" class="form-control validate" name="type" value="Link">
           <div class="md-form">
             <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Video Link</label>
-            <input type="text" class="form-control" name="link">
+            <input type="link" class="form-control" name="link">
           </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
@@ -276,11 +276,13 @@
             <?php endforeach; ?>
         </div>
       <?php endif ?>
+      <div class="container mt-5">
       <?php if ($album_count <= 3) : ?>
         <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
       <?php else : ?>
         <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
       <?php endif ?>
+      </div>
       </div>
     </div>
   </div>
@@ -374,11 +376,13 @@
       <?php endforeach; ?>
     </div>
     <?php endif ?>
-  <?php if ($album_count <= 3) : ?>
-    <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+    <div class="container mt-5">
+  <?php if ($video_count <= 3) : ?>
+    <a href="" hidden data-toggle="modal" data-target="#modalVideoData" class="ms-4">Selengkapnya...</a>
   <?php else : ?>
-    <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+    <a class="ms-3 mt-5" href="" data-toggle="modal" data-target="#modalVideoData" class="ms-4">Selengkapnya...</a>
   <?php endif ?>
+    </div>
   </div>
 </div>
 </div>
@@ -441,11 +445,13 @@
       <?php endforeach; ?>
   </div>
 <?php endif ?>
+<div class="container mt-5">
 <?php if ($mitra_count <= 3) : ?>
   <a href="" hidden data-toggle="modal" class="ms-4">Selengkapnya...</a>
 <?php else : ?>
-  <a class="mt-5" href="" data-toggle="modal" data-target="#modalMitraData" class="ms-4">Selengkapnya...</a>
+  <a href="" data-toggle="modal" data-target="#modalMitraData" class="ms-4">Selengkapnya...</a>
 <?php endif ?>
+</div>
 </div>
 </div>
 </div>
@@ -560,7 +566,66 @@
     </div>
   </div>
 <!-- Akhir Mitra -->
+<!-- Modal Video -->
+  <div class="modal fade" id="modalVideoData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Video Gallery</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row mt-3">
+            <?php foreach ($video_full as $p) : ?>
+                <div class="col-12 col-lg-6 mb-3">
+                  <div class="container">
+                    <div class="polaroid">
+                    <?php if ($p['video_type'] === 'Link') : ?>
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                    <iframe class="embed-responsive-item" src="<?= $p['video_link'] ?>"
+                      allowfullscreen></iframe>
+                    </div>  
+                      <div class="container-text mt-2">
+                        <p><?= $p['video_judul'] ?></p>
+                        <p><?= $p['video_deskripsi'] ?></p>
+                          <form action="/dashboard/deleteVideo/<?= $p['video_id']; ?>" method="post" class="d-inline">
+                          <?= csrf_field(); ?>
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Buang</button>
+                          </form>
+                        </div>
+                        </div>
+                      <?php else : ?>
+                      <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="/assets/img/video/<?= $p['video_link'] ?>" allowfullscreen></iframe>
+                    </div>  
+                      <div class="container-text mt-2">
+                        <p><?= $p['video_judul'] ?></p>
+                        <p><?= $p['video_deskripsi'] ?></p>
+                          <form action="/dashboard/deleteVideoUpload/<?= $p['video_id']; ?>" method="post" class="d-inline">
+                          <?= csrf_field(); ?>
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button type="submit" class="border-0 dropdown-item"><i class="fas fa-trash"></i> Hapus</button>
+                          </form>
+                        </div>
+                        <?php endif ?>          
+                    </div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+
+<!-- Akhir Modal Video -->
 <!-- Modal Foto -->
   <div class="modal fade" id="modalFotoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">

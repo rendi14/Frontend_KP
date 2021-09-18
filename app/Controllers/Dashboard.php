@@ -53,6 +53,7 @@ class Dashboard extends Controller
 			'album' => $album->paginate(3),
 			'album_galeri' => $album->findAll(),
 			'mitra_full' => $mitra->findAll(),
+			'video_full' => $video->findAll(),
 			'sidebar' => $sidebar_side
 		];
 		return view('dashboard/dashboard', $data);
