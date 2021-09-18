@@ -11,7 +11,7 @@ class mitraModel extends Model
     protected $allowedFields = ['mitra_gambar', 'mitra_link'];
     protected $createdField = 'mitra_waktu';
 
-    public function getVideo($id)
+    public function getMitra($id)
     {
         return $this->where(['mitra_id' => $id])->first();
     }

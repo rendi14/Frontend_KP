@@ -225,7 +225,12 @@
         </div>
       </div>
     </div>
-
+    <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('pesan') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
     <!-- Album -->
     <div class="col-12">
       <div class="card shadow mb-4 mt-2 pb-5">
@@ -417,7 +422,7 @@
           <div class="col-12 col-lg-4">
             <div class="container">
               <div class="polaroid">
-                <a href="/dashboard/editMitra/<?= $p['mitra_id'] ?>"><img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+                <img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%">
                 <div class="container-text">
                   <p><?= $p['mitra_link'] ?></p>
                   <p><?= $p['mitra_waktu'] ?></p>
@@ -426,7 +431,12 @@
                       <span title="Setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-fw fa-pen"></i></span>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a href="<?= $p['mitra_id'] ?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
+                        <li>
+                        <form action="/dashboard/updateMitra/<?= $p['mitra_id']; ?>" method="post">
+                            <?= csrf_field(); ?>
+                            <input type="hidden" name="_method" value="POST">
+                            <button type="submit" class="boder-0 dropdown-item"><i class="fas fa-eye"></i> View</button>
+                        </form>
                         <li>
                           <form action="/dashboard/deleteMitra/<?= $p['mitra_id']; ?>" method="post">
                             <?= csrf_field(); ?>
@@ -545,7 +555,11 @@
                   <div class="container-text">
                     <p><?= $p['mitra_link'] ?></p>
                     <p><?= $p['mitra_waktu'] ?></p>
-                    <a href="/dashboard/updateMitra/<?= $p['mitra_id'] ?>" class="btn btn-primary">Lihat</a>
+                    <form action="/dashboard/updateMitra/<?= $p['mitra_id']; ?>" method="post" class="d-inline">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="_method" value="POST">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-pen"></i> Ubah</button>
+                    </form>
                     <form action="/dashboard/deleteMitra/<?= $p['mitra_id']; ?>" method="post" class="d-inline">
                       <?= csrf_field(); ?>
                       <input type="hidden" name="_method" value="DELETE">

@@ -490,7 +490,7 @@ class Dashboard extends Controller
 		];
 		$model->save($data);
 		$session->setFlashdata('pesan', 'Album telah diperbarui');
-		return redirect()->to('/dashboard/');
+		return redirect()->to('/dashboard');
 	}
 
 	public function deleteAlbum($id)
@@ -734,6 +734,37 @@ class Dashboard extends Controller
 		return redirect()->to('/dashboard');
 	}
 
+	public function tampilEditMitra($id)
+	{
+		$user = new mitraModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$data = [
+			'tittle' => 'Edit Mitra || PT.CROP',
+			'user' => $user->getMitra($id),
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/pages/editFormMitra', $data);
+	}
+	
+	public function editMitra()
+	{
+		$model = new mitraModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('assets/img/clients');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'mitra_id' => $this->request->getVar('id'),
+			'mitra_gambar' => $namaGambar,
+			'mitra_link' => $this->request->getVar('link'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Mitra telah berhasil diubah');
+		return redirect()->to('/dashboard');
+	}
 	// -------------------------------------------------
 	public function datafakta()
 	{
