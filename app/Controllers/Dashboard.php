@@ -879,4 +879,40 @@ class Dashboard extends Controller
 		$session->setFlashdata('pesan', 'Data berhasil dihapus');
 		return redirect()->to('/dashboard/datatestimonial');
 	}
+
+	public function editTestimonial()
+	{
+		$model = new testimonialModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/testimonial/');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'testimonial_id' => $this->request->getVar('id'),
+			'testimonial_nama' => $this->request->getVar('nama'),
+			'testimonial_sumber' => $this->request->getVar('sumber'),
+			'testimonial_kerja' => $this->request->getVar('kerja'),
+			'testimonial_jabatan' => $this->request->getVar('jabatan'),
+			'testimonial_deskripsi' => $this->request->getVar('deskripsi'),
+			'testimonial_gambar' => $namaGambar
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Data berhasil diubah');
+		return redirect()->to('/dashboard/datatestimonial');
+	}	
+	
+	public function tampilEditTesti($id)
+	{
+		$user = new testimonialModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$data = [
+			'tittle' => 'Edit Fakta || PT.CROP',
+			'user' => $user->gettestimonial($id),
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/pages/editFormTesti', $data);
+	}	
 }
