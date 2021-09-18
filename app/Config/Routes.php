@@ -84,10 +84,10 @@ $routes->post('/dashboard/updateAkademik/(:num)', 'Dashboard::tampilEditAkademik
 $routes->post('/dashboard/updateProdi/(:num)', 'Dashboard::tampilEditProdi/$1');
 $routes->post('/dashboard/updateBerita/(:num)', 'Dashboard::tampilEditBerita/$1');
 $routes->post('/dashboard/updateMenu/(:num)', 'MenuDashboard::tampilDataMenu/$1');
-$routes->post('/dashboard/updateFakta/(:num)', 'Dashboard::tampilDataFakta/$1');
-$routes->post('/dashboard/updateTesti/(:num)', 'Dashboard::tampilDataTesti/$1');
-$routes->post('/dashboard/updateMitra/(:num)', 'Dashboard::tampilDataMitra/$1');
-$routes->post('/dashboard/updateVideo/(:num)', 'Dashboard::tampilDataVideo/$1');
+$routes->post('/dashboard/updateFakta/(:num)', 'Dashboard::tampilEditFakta/$1');
+$routes->post('/dashboard/updateTesti/(:num)', 'Dashboard::tampilEditTesti/$1');
+$routes->post('/dashboard/updateMitra/(:num)', 'Dashboard::tampilEditMitra/$1');
+$routes->post('/dashboard/updateVideo/(:num)', 'Dashboard::tampilEditVideo/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

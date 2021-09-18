@@ -789,6 +789,39 @@ class Dashboard extends Controller
 		return redirect()->to('/dashboard/datafakta');
 	}
 
+	public function tampilEditFakta($id)
+	{
+		$user = new faktaModel;
+		$sidebar = new sidebarModel;
+		/*$user_model = $user->findAll();*/
+		$side = $sidebar->where('menu_site', 'A')->findAll();
+		$sidebar_side = $sidebar->getSide();
+		$data = [
+			'tittle' => 'Edit Fakta || PT.CROP',
+			'user' => $user->getFakta($id),
+			'sidebar' => $sidebar_side
+		];
+		return view('dashboard/pages/editFormFakta', $data);
+	}
+
+	public function editFakta()
+	{
+		$model = new faktaModel();
+		$session = session();
+		$fileGambar = $this->request->getFile('poto');
+		$fileGambar->move('gambar/fakta');
+		$namaGambar = $fileGambar->getName();
+		$data = [
+			'id' => $this->request->getVar('id'),
+			'title' => $this->request->getVar('title'),
+			'katerangan' => $this->request->getVar('katerangan'),
+			'gambar' => $namaGambar,
+			'admin_nama' => $this->request->getVar('admin_nama'),
+		];
+		$model->save($data);
+		$session->setFlashdata('pesan', 'Fakta telah diperbarui');
+		return redirect()->to('/dashboard/datafakta');
+	}
 
 	// -------------------------------------------------
 	public function datatestimonial()

@@ -92,7 +92,12 @@
                                 <td class="text-center align-middle"><?= $u['title']; ?></td>
                                 <td class="text-center"><img src="/gambar/fakta/<?= $u['gambar']; ?>" alt="<?= $u['keterangan']; ?>" width="100px;" height="100px;"></td>
                                 <td class="text-center align-middle"><?= $u['keterangan']; ?></td>
-                                <td class="text-center align-middle"><a href="" class="btn btn-primary"><span><i class="fas fa-pen"></i></span> Edit</a>
+                                <td class="text-center align-middle">
+                                <form action="/dashboard/updateFakta/<?= $u['id']; ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="POST">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-pen"></i> Ubah</button>
+                                </form>  
                                 <form action="/dashboard/deleteFakta/<?= $u['id']; ?>" method="post" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">

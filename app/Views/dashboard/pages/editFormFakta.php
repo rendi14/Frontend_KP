@@ -19,36 +19,30 @@
         <div class="row justify-content-md-center">
             <div class="col-10 p-5 form-data-editDosen form-data border border-2">
                 <h3 class="mb-2">Edit Data Fakta</h3>
-                <form action="/dashboard/editDataFakta" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                <form action="/dashboard/editFakta" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                   <?= csrf_field(); ?>
                     <div class="mb-3">
                         <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['id']?>">
                     </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                         <label for="InputForNIP" class="form-label">Judul</label>
-                        <input type="text" name="title" class="form-control p-2" id="InputForNIP" value="<?=$user['title_nip']?>" required>
+                        <input type="text" name="title" class="form-control p-2" id="InputForJudul" value="<?=$user['title']?>" required>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="InputForNama" class="form-label">Nama Dosen</label>
-                        <input type="text" required name="nama" class="form-control p-2" id="InputForNama" value="<?=$user['dosen_nama']?>">
+                    <div class="col-md-12 mb-3">
+                        <label for="InputForNama" class="form-label">Keterangan</label>
+                        <textarea type="text" required name="keterangan" class="form-control p-2" id="editor" value="<?=$user['keterangan']?>"><?=$user['keterangan']?></textarea>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="InputForJabatan" class="form-label">Jabatan</label>
-                        <input type="text" required name="jabatan" class="form-control p-2" id="InputForJabatan" value="<?=$user['dosen_jabatan']?>">
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="InputForAdmin" class="form-label">Admin</label>
-                        <input type="text" readonly name="admin_nama" class="form-control p-2" id="InputForAdmin" value="<?=$user['admin_nama']?>">
-                    </div>
+                        <input type="text" hidden readonly name="admin_nama" class="form-control p-2" id="InputForAdmin" value="<?=$user['admin_nama']?>">
                     <div class="md-form mb-3">
                     <img src="/gambar/fakta/<?=$user['gambar']?>" alt="<?=$user['title']?>"  width="200px;" height="200px;">
                     </div>
                     <div class="md-form mb-3">
-                        <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Foto</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Gambar</label>
                         <input type="file" required class="form-control" id="poto" name="poto">
                     </div>
                     <div class="button d-flex justify-content-center">
                     <button type="submit" class="btn rounded-pill button-login">Simpan</button>
-                    <a href="/dashboard/dataDosen" class="btn rounded-pill button-login-profile button-login">Kembali</a>
+                    <a href="/dashboard/datafakta" class="btn rounded-pill button-login-profile button-login">Kembali</a>
                     </div>
                 </form>
             </div>
