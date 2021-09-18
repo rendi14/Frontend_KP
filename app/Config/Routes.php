@@ -76,6 +76,7 @@ $routes->delete('/dashboard/deleteGaleri/(:num)', 'Dashboard::deleteAlbum/$1');
 $routes->delete('/dashboard/deleteMenu/(:num)', 'MenuDashboard::hapusMenu/$1');
 $routes->delete('/dashboard/deleteAgenda/(:num)', 'Agenda::hapusAgenda/$1');
 $routes->delete('/dashboard/deleteFakta/(:num)', 'Dashboard::hapusFakta/$1');
+$routes->delete('/dashboard/deleteMitra/(:num)', 'Dashboard::hapusMitra/$1');
 $routes->delete('/dashboard/deleteTestimonial/(:num)', 'Dashboard::hapusTesti/$1');
 $routes->post('/dashboard/updateStatis/(:num)', 'Dashboard::tampilEditStatis/$1');
 $routes->post('/dashboard/updateDosen/(:num)', 'Dashboard::tampilEditData/$1');

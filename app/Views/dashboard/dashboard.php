@@ -418,6 +418,22 @@
               <div class="container-text">
                 <p><?= $p['mitra_link'] ?></p>
                 <p><?= $p['mitra_waktu'] ?></p>
+                <div class="d-flex justify-content-end">
+                 <div class="dropdown">
+                <span title="Setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-fw fa-pen"></i></span>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href="<?= $p['mitra_id']?>" class="dropdown-item" type="button"><i class="fas fa-fw fa-eye"></i> View</a></li>
+                    <li>
+                      <form action="/dashboard/deleteMitra/<?= $p['mitra_id']; ?>" method="post">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button type="submit" class="border-0 dropdown-item"><i class="fas fa-trash"></i> Hapus</button>
+                      </form>
+                    </li>
+                </ul>
+              </div>
+                </div>
               </div>
             </div>
           </div>
@@ -426,9 +442,9 @@
   </div>
 <?php endif ?>
 <?php if ($mitra_count <= 3) : ?>
-  <a href="" hidden data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+  <a href="" hidden data-toggle="modal" class="ms-4">Selengkapnya...</a>
 <?php else : ?>
-  <a class="mt-5" href="" data-toggle="modal" data-target="#modalAlbumData" class="ms-4">Selengkapnya...</a>
+  <a class="mt-5" href="" data-toggle="modal" data-target="#modalMitraData" class="ms-4">Selengkapnya...</a>
 <?php endif ?>
 </div>
 </div>
@@ -497,7 +513,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -510,7 +525,50 @@
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold">Mitra</h4>
+          <h4 class="modal-title w-100 font-weight-bold">Mitra Kerja</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row mt-3">
+            <?php foreach ($mitra_full as $p) : ?>
+              <div class="col-12 col-lg-6 mb-3">
+                <div class="container">
+                  <div class="polaroid">
+                    <a href="/dashboard/albumGaleri/<?= $p['mitra_id'] ?>"><img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%"></a>
+                    <div class="container-text">
+                      <p><?= $p['mitra_link'] ?></p>
+                      <p><?= $p['mitra_waktu'] ?></p>
+                      <a href="/dashboard/albumGaleri/<?= $p['mitra_id'] ?>" class="btn btn-primary">Ubah</a>
+                      <form action="/dashboard/deleteMitra/<?= $p['mitra_id']; ?>" method="post" class="d-inline">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Buang</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Akhir -->
+<!-- Mitra Data Full -->
+<!-- Modal -->
+  <div class="modal fade" id="modalMitraData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Album Gallery</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -526,7 +584,11 @@
                       <p><?= $p['mitra_link'] ?></p>
                       <p><?= $p['mitra_waktu'] ?></p>
                       <a href="/dashboard/albumGaleri/<?= $p['mitra_id'] ?>" class="btn btn-primary">Lihat</a>
-                      <a href="/dashboard/hapusMitra/<?= $p['mitra_id'] ?>" class="btn btn-danger">Buang</a>
+                        <form action="/dashboard/deleteAlbum/<?= $p['mitra_id']; ?>" method="post" class="d-inline">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Buang</button>
+                        </form>
                     </div>
                   </div>
                 </div>
@@ -541,11 +603,9 @@
       </div>
     </div>
   </div>
+<!-- Akhir Mitra -->
 
-
-<!-- Akhir -->
-
-
+<!-- Modal Foto -->
   <div class="modal fade" id="modalFotoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
