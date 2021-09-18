@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="/assets/css/respon.css">
     <title>PT Crop Inspirasi Digital</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/logoatas.ico">
-
 </head>
 
 <body>

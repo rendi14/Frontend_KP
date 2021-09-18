@@ -3,7 +3,7 @@
   width: 50% !important;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #fd7e14 !important;
+  background-color: #fe4c1c !important;
   color: white !important;
   font-weight: bold !important;
   border: none !important;
@@ -16,7 +16,7 @@
   padding-left: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #fd7e14 !important;
+  background-color: #fe4c1c !important;
   color: white !important;
   font-weight: bold !important;
   border: none !important;
@@ -25,7 +25,7 @@
 .button-login-profile {
   width: 50% !important;
   /*  height: 50px !important;*/
-  background-color: #fd7e14 !important;
+  background-color: #fe4c1c !important;
   color: white !important;
   font-weight: bold !important;
   border: none !important;
@@ -76,13 +76,14 @@
 
 .kembali {
   margin-top: 50px;
+  background-color: #fe4c1c;
 }
 
 /*Button dashboard*/
 .button-simpan {
   width: 500px;
   height: 50px;
-  background-color: #fd7e14;
+  background-color: #fe4c1c;
   color: white;
   font-weight: bold;
   border: none;
@@ -175,7 +176,7 @@
 }
 
 .bg-orange {
-  background-color: orangered;
+  background-color: #fe4c1c;
 }
 
 .sidebar-divider {
@@ -232,7 +233,7 @@
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #fd7e14 !important;
+    background-color: #fe4c1c !important;
     color: white !important;
     font-weight: bold !important;
     border: none !important;
