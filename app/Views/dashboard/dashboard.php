@@ -443,8 +443,8 @@
           </div>
         </div>
       <?php endforeach; ?>
+    <?php endif ?>
   </div>
-<?php endif ?>
 <div class="container mt-5">
 <?php if ($mitra_count <= 3) : ?>
   <a href="" hidden data-toggle="modal" class="ms-4">Selengkapnya...</a>
