@@ -420,7 +420,7 @@
       <?php else : ?>
         <?php foreach ($mitra as $p) : ?>
           <div class="col-12 col-lg-4">
-            <div class="container">
+            <div class="container xl-mb-0 mb-3">
               <div class="polaroid">
                 <img src="/assets/img/clients/<?= $p['mitra_gambar'] ?>" alt="5 Terre" style="width:100%">
                 <div class="container-text">
@@ -454,7 +454,7 @@
         <?php endforeach; ?>
       <?php endif ?>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-2">
       <?php if ($mitra_count <= 3) : ?>
         <a href="" hidden data-toggle="modal" class="ms-4">Selengkapnya...</a>
       <?php else : ?>

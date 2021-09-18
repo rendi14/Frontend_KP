@@ -18,29 +18,28 @@
                     <div class="card shadow mb-4 mt-2">
                         <div class="card-body">
                             <div class="row justify-content-md-center">
-                               <div class="col-10 p-5 form-data-editDosen form-data border border-2">
-                            <h3 class="mb-3">Edit Data Prodi</h3>
-                            <form action="/dashboard/editAktiProdi" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                               <div class="col-12 col-lg-10 form-data border border-2">
+                            <form action="/dashboard/editAktiProdi" method="post" class="form-data-login" enctype="multipart/form-data">
                                 <div>
                                     <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForId" value="<?=$user['prodi_id']?>">
                                 </div>
-                                  <div class="col-md-12 mb-3">
+                                  <div class="md-form mb-3 mt-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Nama Prodi</label>
                                   <input type="text" id="defaultForm-Name" required class="form-control validate" name="nama" value="<?=$user['prodi_nama']?>">
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <div class="md-form mb-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Tentang</label>
                                   <textarea type="text" required id="defaultForm-tentang" class="form-control validate" value="<?=$user['prodi_tentang']?>"  style="height: 200px" name="tentang"><?=$user['prodi_tentang']?></textarea>
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <div class="md-form mb-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Prodi Kurikulum</label>
                                   <textarea type="text" required id="defaultForm-tentang" class="form-control validate" value="<?=$user['prodi_kurikulum']?>"  style="height: 200px" name="kurikulum"><?=$user['prodi_kurikulum']?></textarea>
                                 </div>                               
-                                <div class="col-md-12 mb-3">
+                                <div class="md-form mb-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-visi" class="mb-2">Visi</label>
                                   <textarea type="text" required id="defaultForm-visi" class="form-control validate" name="visi"  style="height: 150px" value="<?=$user['prodi_visi']?>"><?=$user['prodi_visi']?></textarea>
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <div class="md-form  mb-3">
                                   <label data-error="wrong" data-success="right" for="defaultForm-misi" class="mb-2">Misi</label>
                                   <textarea type="text" required id="editor" class="form-control validate" name="misi"  style="height: 200px;" value="<?=$user['prodi_misi']?>"><?=$user['prodi_misi']?></textarea>
                                 </div>
