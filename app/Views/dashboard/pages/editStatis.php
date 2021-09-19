@@ -18,17 +18,18 @@
     <div class="card shadow mb-4 mt-2">
         <div class="card-body">
             <div class="row justify-content-md-center">
-                <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+                <div class="col-12 col-lg-10 form-data border border-2">
             <h3 class="mb-3">Edit Data Statis</h3>
             <form action="/dashboard/editStatis" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                <?= csrf_field(); ?>
                 <div>
                     <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForId" value="<?=$user['statis_id']?>">
                 </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-Name" class="mb-2">Judul Statis</label>
                     <input type="text" id="defaultForm-Name" required class="form-control validate" name="judul" value="<?=$user['statis_judul']?>">
                 </div>
-                <div class="col-md-12 mb-3">
+                <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-tentang" class="mb-2">Tentang</label>
                     <textarea type="text" required id="editor" class="form-control validate" value="<?=$user['statis_deskripsi']?>"  style="height: 200px" name="deskripsi"><?=$user['statis_deskripsi']?></textarea>
                 </div>

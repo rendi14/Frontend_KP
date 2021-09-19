@@ -17,14 +17,14 @@
 <div class="card shadow mb-4 mt-2">
     <div class="card-body">
         <div class="row justify-content-md-center">
-            <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+            <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
                 <h3 class="mb-2">Edit Data Mitra</h3>
                 <form action="/dashboard/editMitra" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
                    <?= csrf_field(); ?>
                     <div class="mb-3">
                         <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['mitra_id']?>">
                     </div>
-                        <div class="col-md-12 mb-3">
+                        <div class="md-form mb-3">
                         <label for="InputForNIP" class="form-label">Link Mitra</label>
                         <input type="text" name="link" class="form-control p-2" id="InputForJudul" value="<?=$user['mitra_link']?>" required>
                     </div>

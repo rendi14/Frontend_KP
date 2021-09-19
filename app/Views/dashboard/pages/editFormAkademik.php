@@ -18,25 +18,26 @@
                     <div class="card shadow mb-4 mt-2">
                         <div class="card-body">
                     <div class="row justify-content-md-center">
-                                <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+                                <div class="col-12 col-lg-10 form-data border border-2">
                                     <h3 class="mb-3">Edit Data Akademik</h3>
                                     <form action="/dashboard/editAktiAkademik" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                                        <?= csrf_field(); ?>
                                         <div>
                                             <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForId" value="<?=$user['akademik_id']?>">
                                         </div>
-                                          <div class="col-md-12 mb-3">
+                                          <div class="md-form mb-3">
                                             <label for="InputForJudul" class="form-label">Judul</label>
                                             <input type="text" name="judul" required class="form-control p-2" id="InputForJudul" value="<?=$user['akademik_title']?>">
                                         </div>
-                                        <div class="col-md-12 mb-3">
+                                        <div class="md-form-12 mb-3">
                                             <label for="InputForDeskripsi" class="form-label">Deskripsi</label>
                                             <textarea type="text" name="deskripsi" required class="form-control p-2" id="InputForDeskripsi" value="<?=$user['akademik_deskripsi']?>"><?=$user['akademik_deskripsi']?></textarea>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="md-form mb-3">
                                             <label for="InputForDeskripsi" class="form-label">Kategori</label>
                                             <input type="text" name="kategori" required class="form-control p-2" id="InputForKategori" value="<?=$user['akademik_kategori']?>">
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="md-form mb-3">
                                             <label for="InputForAdmin" class="form-label">Admin</label>
                                             <input type="text" readonly name="admin_nama" class="form-control p-2" id="InputForAdmin" value="<?=$user['admin_nama']?>">
                                         </div>
@@ -47,7 +48,7 @@
                                               <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Foto</label>
                                               <input type="file" required class="form-control" id="poto" name="gambar">
                                             </div>
-                                          <div class="col-md-12">
+                                          <div class="md-form">
                                           <label data-error="wrong" data-success="right" for="defaultForm-misi" class="mb-2">Keterangan</label>
                                           <textarea type="text" required id="editor" class="form-control validate" name="keterangan" value="<?=$user['akademik_keterangan']?>"><?=$user['akademik_keterangan']?></textarea>
                                         </div>

@@ -549,7 +549,7 @@ class Dashboard extends Controller
 		/*$user_model = $user->findAll();*/
 		$data = [
 			'tittle' => 'Data Statis || PT.CROP',
-			'user' => $model->paginate(2, 'user'),
+			'user' => $model->paginate(1, 'user'),
 			'pager' => $model->pager,
 			'currentPage' => $currentPage,
 			'sidebar' => $sidebar_side

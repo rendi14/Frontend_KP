@@ -111,7 +111,11 @@
                                 <p class="card-text">Agenda Mulai : <?= $a['agenda_mulai'] ?></p>
                                 <p class="card-text">Agenda Mulai : <?= $a['agenda_selesai'] ?></p>
                                 <p class="card-text"><small class="text-muted">Posting terakhir : <?= $a['agenda_posting'] ?></small></p>
-                                <a href="" class="btn btn-primary">Edit</a>
+                              <form action="/dashboard/updateAgenda/<?= $a['agenda_id']; ?>" method="post" class="d-inline">
+                              <?= csrf_field(); ?>
+                              <input type="hidden" name="_method" value="POST">
+                              <button type="submit" class="btn btn-primary"><i class="fas fa-pen"></i> Ubah</button>
+                              </form> 
                               <form action="/dashboard/deleteAgenda/<?= $a['agenda_id']; ?>" method="post" class="d-inline">
                               <?= csrf_field(); ?>
                               <input type="hidden" name="_method" value="DELETE">

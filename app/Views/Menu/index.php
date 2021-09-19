@@ -11,7 +11,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                             <div class="modal-header text-center">
-                                <h4 class="modal-title w-100 font-weight-bold">Tambah Data Admin</h4>
+                                <h4 class="modal-title w-100 font-weight-bold">Tambah Data Menu</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
@@ -77,22 +77,22 @@
                     <div class="card shadow mb-4 mt-2">
                         <div class="card-body">
                                 <div class="row justify-content-md-center">
-                                    <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+                                    <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
                                         <h3 class="mb-3">Website Menu</h3>
                                         <form action="/MenuDashboard/tambahWeb" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
-                                              <div class="col-md-6 mb-3">
+                                              <div class="md-form col-xl-6 col-12 mb-3">
                                                 <label for="InputForNama" class="form-label">Nama Menu</label>
                                                 <input type="text" name="nama" class="form-control p-2" id="InputForNama"  required>
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="md-form col-xl-6 col-12 mb-3">
                                                 <label for="InputForDeskripsi" class="form-label">Icon Menu</label>
                                                 <input type="text" name="deskripsi" class="form-control p-2" id="InputForDeskripsi" placeholder="examples : fa-home">
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="md-form col-xl-6 col-12 mb-3">
                                                 <label for="InputForJabatan" class="form-label">Link Menu atau URL</label>
                                                 <input type="text" required name="menu-url" class="form-control p-2" id="InputForJabatan" >
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="md-form col-xl-6 col-12 mb-3">
                                             <label for="InputForSite" class="form-label">Menu Site</label>
                                             <select class="form-select" name="menu-site" required aria-label="Default select example">
                                             <option selected>Pilih</option>
@@ -100,7 +100,7 @@
                                             <option value="H">Halaman User</option>
                                             </select>
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="md-form col-xl-6 col-12 mb-3">
                                             <label for="InputForlevel" class="form-label">Menu Access</label>
                                             <select class="form-select" name="menu-access" required aria-label="Default select example">
                                             <option selected>Pilih</option>
@@ -109,7 +109,7 @@
                                             <option value="3">Operator</option>
                                             </select>
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="md-form col-xl-6 col-12 mb-3">
                                                 <label for="InputForUrutan" class="form-label">Menu Urutan</label>
                                                 <input type="text" required name="urutan" class="form-control p-2" id="InputForUrutan" >
                                             </div>                                            

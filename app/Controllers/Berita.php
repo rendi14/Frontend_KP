@@ -29,7 +29,7 @@ class Berita extends Controller
 		$data = [
 			'tittle' => 'Berita || PT.CROP',
 			'side' => $side,
-			'berita' => $berita->paginate(2, 'berita'),
+			'berita' => $berita->paginate(1, 'berita'),
 			'user_model' => $user_model,
 			'sidebar' => $sidebar_side,
 			'currentPage' => $currentPage,

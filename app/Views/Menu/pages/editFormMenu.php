@@ -36,23 +36,23 @@
     <div class="card shadow mb-4 mt-2">
         <div class="card-body">
                 <div class="row justify-content-md-center">
-                    <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+                    <div class="col-12 col-lg-10 form-data border border-2">
                         <h3 class="mb-3">Website Menu</h3>
                         <form action="/MenuDashboard/editMenu" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
-                                <div class="col-md-6 mb-3">
+                                <div class="md-form mb-3">
                                 <label for="InputForNama" class="form-label">Nama Menu</label>
                                 <input type="text" name="id" class="form-control p-2" hidden readonly id="InputForNama" value="<?= $tampil['menu_kode']?> ">
                                 <input type="text" name="nama" class="form-control p-2" id="InputForNama" value="<?= $tampil['menu_nama']?> ">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="md-form mb-3">
                                 <label for="InputForDeskripsi" class="form-label">Icon Menu</label>
                                 <input type="text" value="<?= $tampil['menu_deskripsi']?>" name="deskripsi" class="form-control p-2" id="InputForDeskripsi" placeholder="examples : fa-home">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="md-form mb-3">
                                 <label for="InputForJabatan" class="form-label">Link Menu atau URL</label>
                                 <input type="text" value="<?= $tampil['menu_url']?>" name="menu-url" class="form-control p-2" id="InputForJabatan" >
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="md-form mb-3">
                             <label for="InputForSite" class="form-label">Menu Site</label>
                             <select class="form-select" name="menu-site" aria-label="Default select example">
                             <?php if ($tampil['menu_site'] === 'A'): ?>
@@ -64,7 +64,7 @@
                             <?php endif ?>                            
                             </select>
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="md-form mb-3">
                             <label for="InputForlevel" class="form-label">Menu Access</label>
                             <select class="form-select" name="menu-access" aria-label="Default select example">
                             <option value="1">Superadmin</option>
@@ -72,7 +72,7 @@
                             <option value="3">Operator</option>
                             </select>
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="md-form mb-3">
                                 <label for="InputForUrutan" class="form-label">Menu Urutan</label>
                                 <input type="text" value="<?= $tampil['menu_urutan']?>" name="urutan" class="form-control p-2" id="InputForUrutan" >
                             </div>                                            

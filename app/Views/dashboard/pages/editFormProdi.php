@@ -18,9 +18,10 @@
                     <div class="card shadow mb-4 mt-2">
                         <div class="card-body">
                             <div class="row justify-content-md-center">
-                               <div class="col-12 col-lg-10 form-data border border-2">
+                               <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
                             <form action="/dashboard/editAktiProdi" method="post" class="form-data-login" enctype="multipart/form-data">
-                                <div>
+                               <?= csrf_field(); ?>
+                               <div>
                                     <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForId" value="<?=$user['prodi_id']?>">
                                 </div>
                                   <div class="md-form mb-3 mt-3">

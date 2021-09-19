@@ -13,7 +13,7 @@
     For more information about DataTables, please visit the <a target="_blank"
         href="https://datatables.net">official DataTables documentation</a>.</p> -->
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Simpan Data Gambar Baru</h4>
@@ -45,26 +45,27 @@
     <div class="card shadow mb-4 mt-2">
         <div class="card-body">
                 <div class="row justify-content-md-center">
-                    <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+                    <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
                         <h3 class="mb-2">Edit Data Berita</h3>
                         <form action="/berita/editDataBerita" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
                             <div class="mb-3">
                                 <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['berita_id']?>">
                             </div>
-                            <div class="col-md-12 mb-3">
+                            <div class="md-form mb-3">
                                 <label for="InputForNama" class="form-label">Judul Berita</label>
                                 <input type="text" required name="judul" class="form-control p-2" id="InputForNama" value="<?=$user['berita_judul']?>">
                             </div>                            
-                                <div class="col-md-12 mb-3">
+                                <div class="md-form mb-3">
                                 <label for="InputForNIP" class="form-label">Berita Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control p-2" id="editor" required><?=$user['berita_deskripsi']?></textarea>
                             </div>
-                            <div class="md-form mb-1">
+                            <div class="md-form mb-3">
                             <img src="/gambar/berita/<?=$user['berita_gambar']?>" alt="<?=$user['berita_judul']?>" width="400" height="200" class="image-prodi-response mb-3">
                             <input hidden type="text" required name="gambar" class="form-control p-2" id="InputForNama" value="<?=$user['berita_gambar']?>">
-                            <div class="col-md-6">
-                                <a class="btn rounded-pill button-login-profile button-login" data-toggle="modal" data-target="#modalLoginForm">Ubah Gambar</a>
-                                </div>
+                            </div>
+                            <div class="md-form mb-3">
+                                <a class="btn rounded-pill btn-primary" data-toggle="modal" data-target="#modalLoginForm">Ubah Gambar</a>
                             </div>
                             <input hidden type="text" class="form-control" name="waktu" value="<?=$user['berita_waktu']?>">
                             <div class="md-form mb-2">

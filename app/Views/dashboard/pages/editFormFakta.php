@@ -17,18 +17,18 @@
 <div class="card shadow mb-4 mt-2">
     <div class="card-body">
         <div class="row justify-content-md-center">
-            <div class="col-10 p-5 form-data-editDosen form-data border border-2">
+            <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
                 <h3 class="mb-2">Edit Data Fakta</h3>
                 <form action="/dashboard/editFakta" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
                    <?= csrf_field(); ?>
                     <div class="mb-3">
                         <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['id']?>">
                     </div>
-                        <div class="col-md-12 mb-3">
+                        <div class="md-form mb-3">
                         <label for="InputForNIP" class="form-label">Judul</label>
                         <input type="text" name="title" class="form-control p-2" id="InputForJudul" value="<?=$user['title']?>" required>
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form mb-3">
                         <label for="InputForNama" class="form-label">Keterangan</label>
                         <textarea type="text" required name="keterangan" class="form-control p-2" id="editor" value="<?=$user['keterangan']?>"><?=$user['keterangan']?></textarea>
                     </div>

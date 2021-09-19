@@ -17,30 +17,30 @@
 <div class="card shadow mb-4 mt-2">
     <div class="card-body">
         <div class="row justify-content-md-center">
-            <div class="col-10 p-5 form-data-editDosen form-data border border-2">
-                <h3 class="mb-2">Edit Data Fakta</h3>
+            <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
+                <h3 class="mb-2">Edit Data testimonial</h3>
                 <form action="/dashboard/editTestimonial" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
                    <?= csrf_field(); ?>
                     <div class="mb-3">
                         <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['testimonial_id']?>">
                     </div>
-                        <div class="col-md-12 mb-3">
+                        <div class="md-form col-xl-6 col-12 mb-3">
                         <label for="InputForNIP" class="form-label">Nama</label>
                         <input type="text" name="nama" class="form-control p-2" id="InputForJudul" value="<?=$user['testimonial_nama']?>" required>
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form col-xl-6 col-12 mb-3">
                          <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Kerja Testimonial</label>
                         <input type="text" id="defaultForm-kerja" class="form-control validate" name="kerja" value="<?=$user['testimonial_kerja']?>">
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form col-xl-6 col-12 mb-3">
                          <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Sumber Testimonial</label>
                         <input type="text" id="defaultForm-sumber" class="form-control validate" name="sumber" value="<?=$user['testimonial_sumber']?>">
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form col-xl-6 col-12 mb-3">
                          <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Jabatan</label>
                         <input type="text" id="defaultForm-jabatan" class="form-control validate" name="jabatan" value="<?=$user['testimonial_jabatan']?>">
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="md-form mb-3">
                          <label data-error="wrong" data-success="right" for="defaultForm-NIP" class="mb-2">Deskripsi</label>
                         <textarea required type="text" id="editor" class="form-control validate" name="deskripsi"><?=$user['testimonial_deskripsi']?></textarea>
                     </div>  

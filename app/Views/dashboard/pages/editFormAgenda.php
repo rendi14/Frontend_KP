@@ -8,7 +8,7 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Edit Data Dosen</h1>
+<h1 class="h3 mb-2 text-gray-800">Edit Data Agenda</h1>
 <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
     For more information about DataTables, please visit the <a target="_blank"
         href="https://datatables.net">official DataTables documentation</a>.</p> -->
@@ -18,38 +18,46 @@
     <div class="card-body">
             <div class="row justify-content-md-center">
                 <div class="col-12 col-lg-10 p-xl-5 form-data border border-2">
-                    <h3 class="mb-2">Edit Data Dosen</h3>
-                    <form action="/dashboard/editDataDosen" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
-                        <?= csrf_field(); ?>
+                    <h3 class="mb-2">Edit Data Agenda</h3>
+                    <form action="/Agenda/editAgenda" method="post" class="form-data-login row g-3" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['dosen_id']?>">
+                            <input type="text" readonly hidden name="id" class="form-control p-2" id="InputForPoto" value="<?=$user['agenda_id']?>">
                         </div>
                             <div class="md-form col-xl-6 col-12 mb-3">
-                            <label for="InputForNIP" class="form-label">NIP</label>
-                            <input type="text" name="nip" class="form-control p-2" id="InputForNIP" value="<?=$user['dosen_nip']?>" required>
+                            <label for="InputForNIP" class="form-label">Agenda Tema</label>
+                            <input type="text" name="tema" class="form-control p-2" id="InputForNIP" value="<?=$user['agenda_tema']?>" required>
                         </div>
                         <div class="md-form col-xl-6 col-12 mb-3">
-                            <label for="InputForNama" class="form-label">Nama Dosen</label>
-                            <input type="text" required name="nama" class="form-control p-2" id="InputForNama" value="<?=$user['dosen_nama']?>">
+                            <label for="InputForJabatan" class="form-label">Agenda Tempat</label>
+                            <input type="text" required name="tempat" class="form-control p-2" id="InputForJabatan" value="<?=$user['agenda_tempat']?>">
+                        </div>                           
+                        <div class="md-form mb-3">
+                            <label for="InputForNama" class="form-label">Agenda Deskripsi</label>
+                            <textarea type="text" required name="deskripsi" class="form-control p-2" id="editor"><?=$user['agenda_deskripsi']?></textarea>
                         </div>
-                        <div class="md-form col-xl-6 col-12 mb-3">
-                            <label for="InputForJabatan" class="form-label">Jabatan</label>
-                            <input type="text" required name="jabatan" class="form-control p-2" id="InputForJabatan" value="<?=$user['dosen_jabatan']?>">
+                        <div class="col-md-6 mb-3">
+                            <label for="InputForJabatan" class="form-label">Agenda Mulai</label>
+                            <input type="date" required name="agenda_mulai" class="form-control p-2" id="InputForJabatan" value="<?=$user['agenda_mulai']?>">
                         </div>
-                        <div class="md-form col-xl-6 col-12 mb-3">
-                            <label for="InputForAdmin" class="form-label">Admin</label>
-                            <input type="text" readonly name="admin_nama" class="form-control p-2" id="InputForAdmin" value="<?=$user['admin_nama']?>">
+                        <div class="col-md-6 mb-3">
+                            <label for="InputForJabatan" class="form-label">Agenda Selesai</label>
+                            <input type="date" required name="agenda_selesai" class="form-control p-2" id="InputForJabatan" value="<?=$user['agenda_selesai']?>">
+                        </div>   
+                        <div class="col-md-6 mb-3">
+                            <label for="InputForJabatan" class="form-label">Agenda Jam</label>
+                            <input type="text" required name="jam" class="form-control p-2" id="InputForJabatan" value="<?=$user['agenda_jam']?>">
+                        </div>                                                                  
+                            <input type="text" readonly hidden name="admin" class="form-control p-2" id="InputForAdmin" value="<?=session()->get('user_name');?>">
+                        <div class="md-form mb-3">
+                        <img src="/gambar/agenda/<?=$user['agenda_gambar']?>" alt="<?=$user['agenda_tema']?>"  width="200px;" height="200px;">
                         </div>
                         <div class="md-form mb-3">
-                        <img src="/gambar/dosen/<?=$user['dosen_foto']?>" alt="<?=$user['dosen_nama']?>"  width="200px;" height="200px;">
-                        </div>
-                        <div class="md-form mb-3">
-                            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Foto</label>
+                            <label data-error="wrong" data-success="right" for="defaultForm-Foto" class="mb-2">Agenda Gambar</label>
                             <input type="file" required class="form-control" id="poto" name="poto">
                         </div>
                         <div class="button d-flex justify-content-center">
                         <button type="submit" class="btn rounded-pill button-login">Simpan</button>
-                        <a href="/dashboard/dataDosen" class="btn rounded-pill button-login-profile button-login">Kembali</a>
+                        <a href="/Agenda" class="btn rounded-pill button-login-profile button-login">Kembali</a>
                         </div>
                     </form>
                 </div>
