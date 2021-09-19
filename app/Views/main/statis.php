@@ -29,7 +29,10 @@
                 </div>
             <?php endforeach; ?>
         </div>
+
         <?= $pager->links('user', 'dosen_data') ?>
+
+
     </div>
 
     </div>
